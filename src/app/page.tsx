@@ -152,11 +152,12 @@ export default function Home() {
               <CardContent className="px-7 pb-8">
                 <div className="rounded-md border border-hero-foreground/10 bg-hero-foreground/[0.03] p-5">
                   <p className="font-heading text-lg leading-snug">
-                    Think Nancy Duarte for the generation entering work now.
+                    The skills no one teaches your generation entering work now.
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-hero-foreground/60">
-                    Practical, direct, and built for the age of AI, not theory
-                    for executives who already have a corner office.
+                    Practical, direct, and built for the age of AI. Storytelling,
+                    leadership, and executive presence from ten years coaching
+                    college students and young professionals.
                   </p>
                 </div>
               </CardContent>
