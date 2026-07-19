@@ -24,7 +24,7 @@ const skills = [
     label: "Core skill",
     title: "Storytelling",
     description:
-      "Turn your experiences into narratives people remember. Build storytelling that cuts through in interviews, presentations, and the moments that define your work.",
+      "Turn your experiences into narratives people remember. Build storytelling that cuts through in presentations, meetings, and the moments that define your work.",
     highlight: "Stories that stick",
   },
   {
@@ -32,22 +32,22 @@ const skills = [
     label: "Core skill",
     title: "Leadership",
     description:
-      "Lead before you have the title. Influence peers, earn trust, and move work forward when you are not the obvious choice.",
-    highlight: "Lead without the title",
+      "Show up as a leader before you have the title. Lead with clarity when the stakes are high, earn trust, and move work forward when you are not the obvious choice.",
+    highlight: "Lead with confidence in any room",
   },
   {
     icon: Mic2,
     label: "Core skill",
     title: "Calm Confidence",
     description:
-      "Project the calm confidence that makes people listen. Show up with clarity and presence in rooms where first impressions matter.",
+      "Project the calm confidence that makes people listen. Show up with clarity and presence when the stakes are high.",
     highlight: "Make people listen",
   },
 ];
 
 const audiencePoints = [
-  "People preparing to enter the workforce in any field",
-  "Career changers, new hires, and anyone stepping into a new role",
+  "Professionals in any field who want to stand out with substance",
+  "Anyone stepping into a new role or raising their presence",
   "Anyone who knows AI can do the work, but not the presence",
 ];
 
@@ -55,7 +55,7 @@ const methodPoints = [
   {
     title: "Built for real moments",
     description:
-      "Interviews, team meetings, networking events, and the defining moments of any career, not abstract theory.",
+      "Team meetings, client conversations, presentations, and the defining moments of professional life, not abstract theory.",
   },
   {
     title: "Capability, not hype",
@@ -65,7 +65,7 @@ const methodPoints = [
   {
     title: "Book, workshops, and guides",
     description:
-      "A field guide you can read, sessions you can attend, and resources you can use on the job from day one.",
+      "A field guide you can read, sessions you can attend, and resources you can use on the job right away.",
   },
   {
     title: "Human skills in the AI era",
@@ -75,7 +75,11 @@ const methodPoints = [
 ];
 
 const stats = [
-  { value: "10", suffix: " yrs", label: "Developing people entering the workforce" },
+  {
+    value: "10",
+    suffix: " yrs",
+    label: "Developing professionals who show up with substance",
+  },
   { value: "3", suffix: "", label: "Core skills that compound" },
   {
     value: "3",
@@ -85,10 +89,10 @@ const stats = [
 ];
 
 const proofPoints = [
-  "People entering any field",
-  "Career changers and new hires",
-  "Professionals building their presence",
-  "Workforce readiness programs",
+  "Professionals in any field",
+  "Anyone in a new or expanded role",
+  "Leaders building their presence",
+  "Team development programs",
 ];
 
 export default function Home() {
@@ -110,10 +114,10 @@ export default function Home() {
                 <span className="mt-2 block text-accent">And within reach.</span>
               </h1>
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-hero-foreground/72 md:text-xl">
-                A field guide, workshops, and practical guides for anyone
-                entering the workforce: storytelling, leadership, and calm
-                confidence that help you stand out with substance when AI is
-                everywhere.
+                A field guide, workshops, and practical guides for anyone in
+                any job or professional setting: storytelling, leadership, and
+                calm confidence that help you stand out with substance when AI
+                is everywhere.
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Button
@@ -157,12 +161,13 @@ export default function Home() {
               <CardContent className="px-7 pb-8">
                 <div className="rounded-md border border-hero-foreground/10 bg-hero-foreground/[0.03] p-5">
                   <p className="font-heading text-lg leading-snug">
-                    The skills no one teaches people entering work now.
+                    The skills no one teaches for standing out with substance.
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-hero-foreground/60">
                     A field guide, workshops, and guides built for the age of
                     AI. Storytelling, leadership, and calm confidence from ten
-                    years coaching people as they enter and grow in their careers.
+                    years coaching professionals to tell stronger stories, lead
+                    with influence, and show up with calm confidence.
                   </p>
                 </div>
               </CardContent>
@@ -174,7 +179,7 @@ export default function Home() {
       <section className="border-b border-border/70 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-14">
           <p className="text-center text-xs font-semibold tracking-[0.22em] text-muted-foreground uppercase">
-            Built for anyone entering the workforce
+            Built for anyone who wants to stand out
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
             {proofPoints.map((point) => (
@@ -204,9 +209,9 @@ export default function Home() {
           <div className="space-y-6 text-base leading-relaxed text-muted-foreground md:text-lg">
             <p>
               <span className="font-medium text-foreground">Be Remarkable</span>{" "}
-              exists because people entering today&apos;s workforce are armed
-              with tools, prompts, and polished resumes, but rarely taught the
-              skills that actually separate them.
+              exists because professionals today are armed with tools, prompts,
+              and polished deliverables, but rarely taught the skills that
+              actually separate them.
             </p>
             <p>
               This is a field guide for standing out with substance: how to tell
@@ -216,9 +221,9 @@ export default function Home() {
             </p>
             <p>
               The goal isn&apos;t hype. It&apos;s capability, so you can walk
-              into interviews, team meetings, and high-stakes moments knowing
-              you bring something AI never will. The book, workshops, and guides
-              give you practical tools for any role.
+              into team meetings, client conversations, and high-stakes moments
+              knowing you bring something AI never will. The book, workshops,
+              and guides give you practical tools for any role.
             </p>
           </div>
         </div>
@@ -286,12 +291,12 @@ export default function Home() {
               Built for
             </p>
             <h2 className="mt-5 font-heading text-3xl leading-[1.08] md:text-4xl lg:text-[2.75rem]">
-              Anyone entering the workforce who refuses to blend in.
+              Anyone in any job who refuses to blend in.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-hero-foreground/70 md:text-lg">
-              Whether you are entering a new role, changing paths, or leveling
-              up your presence, the book, workshops, and guides meet you where
-              you are.
+              Whether you are in a new role, changing paths, or leveling up
+              your presence, the book, workshops, and guides meet you where you
+              are.
             </p>
           </div>
           <ul className="space-y-4">
@@ -315,18 +320,18 @@ export default function Home() {
           <div>
             <p className="section-label">Why trust this</p>
             <h2 className="section-title mt-5">
-              A decade developing people entering the workforce.
+              A decade developing professionals who stand out.
             </h2>
             <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               <p>
-                For ten years, the author has worked directly with people
-                entering the workforce, coaching storytelling, leadership, and
-                calm confidence in the moments that shape lasting success.
+                For ten years, the author has worked directly with professionals
+                across roles and industries, coaching storytelling, leadership,
+                and calm confidence in the moments that shape lasting success.
               </p>
               <p>
                 That focus isn&apos;t a side project. It&apos;s the reason this
-                work exists, and why a career built on developing people who show
-                up with substance continues to accelerate.
+                work exists, and why a career built on developing people who
+                show up with substance continues to accelerate.
               </p>
               <p className="font-medium text-foreground">
                 No one else is teaching these skills at the moment that matters.
@@ -358,7 +363,7 @@ export default function Home() {
             <h2 className="section-title mt-5">The Be Remarkable approach</h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               For ten years, this framework has shaped how people show up in
-              interviews, team meetings, and pivotal moments across every
+              team meetings, presentations, and pivotal moments across every
               field.
             </p>
           </div>
@@ -408,8 +413,7 @@ export default function Home() {
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             Join the waitlist for launch updates, early excerpts, and practical
-            guides for anyone entering the workforce who wants to lead with
-            presence, not just prompts.
+            guides for anyone who wants to lead with presence, not just prompts.
           </p>
           <div className="mx-auto mt-10 max-w-xl">
             <WaitlistForm />

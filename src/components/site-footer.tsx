@@ -29,8 +29,8 @@ export function SiteFooter() {
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-hero-foreground/70">
               A field guide, workshops, and guides on storytelling, leadership,
-              and calm confidence for anyone entering the workforce in the age
-              of AI.
+              and calm confidence for anyone in any job or professional setting
+              in the age of AI.
             </p>
           </div>
 
