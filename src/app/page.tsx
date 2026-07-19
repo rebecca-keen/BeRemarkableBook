@@ -76,7 +76,7 @@ const methodPoints = [
 
 const stats = [
   {
-    value: "10",
+    value: "15",
     suffix: " yrs",
     label: "Developing professionals who show up with substance",
   },
@@ -165,8 +165,8 @@ export default function Home() {
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-hero-foreground/60">
                     A field guide, workshops, and guides built for the age of
-                    AI. Storytelling, leadership, and calm confidence from ten
-                    years coaching professionals to tell stronger stories, lead
+                    AI. Storytelling, leadership, and calm confidence from over
+                    15 years coaching professionals to tell stronger stories, lead
                     with influence, and show up with calm confidence.
                   </p>
                 </div>
@@ -320,11 +320,11 @@ export default function Home() {
           <div>
             <p className="section-label">Why trust this</p>
             <h2 className="section-title mt-5">
-              A decade developing professionals who stand out.
+              Over 15 years developing professionals who stand out.
             </h2>
             <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               <p>
-                For ten years, the author has worked directly with professionals
+                For over 15 years, the author has worked directly with professionals
                 across roles and industries, coaching storytelling, leadership,
                 and calm confidence in the moments that shape lasting success.
               </p>
@@ -362,7 +362,7 @@ export default function Home() {
             <p className="section-label">Why it works</p>
             <h2 className="section-title mt-5">The Be Remarkable approach</h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-              For ten years, this framework has shaped how people show up in
+              For over 15 years, this framework has shaped how people show up in
               team meetings, presentations, and pivotal moments across every
               field.
             </p>
