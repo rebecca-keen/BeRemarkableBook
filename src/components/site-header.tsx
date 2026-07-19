@@ -7,9 +7,10 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
+  { href: "#why-different", label: "Why us" },
   { href: "#mission", label: "Mission" },
   { href: "#skills", label: "Skills" },
-  { href: "#about", label: "About" },
+  { href: "#faq", label: "FAQ" },
   { href: "#waitlist", label: "Waitlist" },
 ];
 
@@ -35,7 +36,10 @@ export function SiteHeader() {
           </div>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav
+          aria-label="Main navigation"
+          className="hidden items-center gap-8 md:flex"
+        >
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -69,7 +73,10 @@ export function SiteHeader() {
           open ? "block" : "hidden",
         )}
       >
-        <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4">
+        <nav
+          aria-label="Mobile navigation"
+          className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4"
+        >
           {navLinks.map((link) => (
             <a
               key={link.href}

@@ -145,4 +145,41 @@
   .section-title {
     @apply font-heading text-3xl leading-[1.08] text-foreground md:text-4xl lg:text-[2.75rem];
   }
+  .hero-accent {
+    animation: hero-accent-rise 900ms ease-out both;
+  }
+  .value-strip-item {
+    animation: fade-up 700ms ease-out both;
+  }
+  .value-strip-item:nth-child(2) {
+    animation-delay: 120ms;
+  }
+  .value-strip-item:nth-child(3) {
+    animation-delay: 240ms;
+  }
+  .value-strip-item:nth-child(4) {
+    animation-delay: 360ms;
+  }
+}
+
+@keyframes hero-accent-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
