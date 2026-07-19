@@ -1,7 +1,7 @@
 import {
   ArrowRight,
   BookOpen,
-  GraduationCap,
+  Briefcase,
   Mic2,
   Quote,
   Users,
@@ -24,16 +24,16 @@ const skills = [
     label: "Core skill",
     title: "Storytelling",
     description:
-      "Learn to tell the story only you can tell. Turn your experiences into narratives people remember in interviews, presentations, and the moments that define your early career.",
-    highlight: "Tell the story only you can tell",
+      "Turn your experiences into narratives people remember. Build storytelling that cuts through in interviews, presentations, and the moments that define your work.",
+    highlight: "Stories that stick",
   },
   {
     icon: Users,
     label: "Core skill",
     title: "Leadership",
     description:
-      "Lead when you are the youngest person in the room. Influence peers, earn trust, and move work forward before you have a title.",
-    highlight: "Lead when you are the youngest in the room",
+      "Lead before you have the title. Influence peers, earn trust, and move work forward when you are not the obvious choice.",
+    highlight: "Lead without the title",
   },
   {
     icon: Mic2,
@@ -46,16 +46,16 @@ const skills = [
 ];
 
 const audiencePoints = [
-  "College students preparing to enter the workforce in any field",
-  "Recent graduates, career changers, and new hires in their first roles",
-  "Anyone starting out who knows AI can do the work, but not the presence",
+  "People preparing to enter the workforce in any field",
+  "Career changers, new hires, and anyone stepping into a new role",
+  "Anyone who knows AI can do the work, but not the presence",
 ];
 
 const methodPoints = [
   {
     title: "Built for real moments",
     description:
-      "Interviews, team meetings, networking events, and the first years of any career, not abstract theory.",
+      "Interviews, team meetings, networking events, and the defining moments of any career, not abstract theory.",
   },
   {
     title: "Capability, not hype",
@@ -75,7 +75,7 @@ const methodPoints = [
 ];
 
 const stats = [
-  { value: "10", suffix: " yrs", label: "Developing people at career starts" },
+  { value: "10", suffix: " yrs", label: "Developing people entering the workforce" },
   { value: "3", suffix: "", label: "Core skills that compound" },
   {
     value: "3",
@@ -85,9 +85,9 @@ const stats = [
 ];
 
 const proofPoints = [
-  "College students in any field",
+  "People entering any field",
   "Career changers and new hires",
-  "Early-career professionals",
+  "Professionals building their presence",
   "Workforce readiness programs",
 ];
 
@@ -162,7 +162,7 @@ export default function Home() {
                   <p className="mt-2 text-sm leading-relaxed text-hero-foreground/60">
                     A field guide, workshops, and guides built for the age of
                     AI. Storytelling, leadership, and calm confidence from ten
-                    years coaching people at the start of their careers.
+                    years coaching people as they enter and grow in their careers.
                   </p>
                 </div>
               </CardContent>
@@ -210,15 +210,15 @@ export default function Home() {
             </p>
             <p>
               This is a field guide for standing out with substance: how to tell
-              the story only you can tell, how to lead when you&apos;re the
-              youngest person in the room, and how to project the calm
-              confidence that makes people listen.
+              stories with clarity, how to lead with influence before you have
+              authority, and how to project the calm confidence that makes
+              people listen.
             </p>
             <p>
               The goal isn&apos;t hype. It&apos;s capability, so you can walk
-              into interviews, internships, and early roles knowing you bring
-              something AI never will. The book, workshops, and guides give you
-              practical tools for any job, not just those chasing a degree.
+              into interviews, team meetings, and high-stakes moments knowing
+              you bring something AI never will. The book, workshops, and guides
+              give you practical tools for any role.
             </p>
           </div>
         </div>
@@ -232,9 +232,9 @@ export default function Home() {
               Three skills. One unfair advantage.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-              How to tell the story only you can tell, lead when you&apos;re the
-              youngest person in the room, and project the calm confidence that
-              makes people listen.
+              How to tell stories with clarity, lead with influence before you
+              have authority, and project the calm confidence that makes people
+              listen.
             </p>
           </div>
 
@@ -289,9 +289,9 @@ export default function Home() {
               Anyone entering the workforce who refuses to blend in.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-hero-foreground/70 md:text-lg">
-              Whether you are finishing a degree, starting your first job, or
-              changing paths, the book, workshops, and guides meet you where you
-              are.
+              Whether you are entering a new role, changing paths, or leveling
+              up your presence, the book, workshops, and guides meet you where
+              you are.
             </p>
           </div>
           <ul className="space-y-4">
@@ -300,7 +300,7 @@ export default function Home() {
                 key={point}
                 className="flex gap-4 rounded-md border border-hero-foreground/10 bg-hero-foreground/[0.04] p-5"
               >
-                <GraduationCap className="mt-0.5 size-5 shrink-0 text-accent" />
+                <Briefcase className="mt-0.5 size-5 shrink-0 text-accent" />
                 <span className="text-sm leading-relaxed md:text-base">
                   {point}
                 </span>
@@ -315,18 +315,18 @@ export default function Home() {
           <div>
             <p className="section-label">Why trust this</p>
             <h2 className="section-title mt-5">
-              A decade developing people at the start of their careers.
+              A decade developing people entering the workforce.
             </h2>
             <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               <p>
-                For ten years, the author has worked directly with people at the
-                start of their careers, coaching storytelling, leadership, and
-                calm confidence in the moments that shape early success.
+                For ten years, the author has worked directly with people
+                entering the workforce, coaching storytelling, leadership, and
+                calm confidence in the moments that shape lasting success.
               </p>
               <p>
                 That focus isn&apos;t a side project. It&apos;s the reason this
-                work exists, and why a career built on developing emerging talent
-                continues to accelerate.
+                work exists, and why a career built on developing people who show
+                up with substance continues to accelerate.
               </p>
               <p className="font-medium text-foreground">
                 No one else is teaching these skills at the moment that matters.
@@ -358,7 +358,7 @@ export default function Home() {
             <h2 className="section-title mt-5">The Be Remarkable approach</h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               For ten years, this framework has shaped how people show up in
-              interviews, team meetings, and their first roles across every
+              interviews, team meetings, and pivotal moments across every
               field.
             </p>
           </div>
