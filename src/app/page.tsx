@@ -1,7 +1,13 @@
-import { ArrowRight, BookOpen, Mic2, Sparkles, Users } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpen,
+  GraduationCap,
+  Mic2,
+  Quote,
+  Users,
+} from "lucide-react";
 
 import { WaitlistForm } from "@/components/waitlist-form";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -15,21 +21,27 @@ import { Separator } from "@/components/ui/separator";
 const skills = [
   {
     icon: BookOpen,
+    label: "Core skill",
     title: "Storytelling",
     description:
       "Turn ideas into narratives people remember — in interviews, presentations, and the moments that define your early career.",
+    highlight: "Write your story to influence",
   },
   {
     icon: Users,
+    label: "Core skill",
     title: "Leadership",
     description:
       "Lead before you have a title. Influence peers, earn trust, and move work forward when no one is officially in charge.",
+    highlight: "Lead your team to success",
   },
   {
     icon: Mic2,
+    label: "Core skill",
     title: "Executive Presence",
     description:
       "Show up with clarity and confidence in rooms where first impressions matter — from campus to your first real role.",
+    highlight: "Deliver with calm confidence",
   },
 ];
 
@@ -39,61 +51,70 @@ const audiencePoints = [
   "Young professionals who know AI can do the work — but not the presence",
 ];
 
+const methodPoints = [
+  {
+    title: "Built for real moments",
+    description:
+      "Campus presentations, group projects, networking events, and the first years of your career — not abstract theory.",
+  },
+  {
+    title: "Practical, not performative",
+    description:
+      "Actionable frameworks you can use tomorrow — in interviews, meetings, and the rooms where careers are made.",
+  },
+  {
+    title: "Empathy-first communication",
+    description:
+      "Learn to read the room, adapt your message, and connect with the people who decide your next opportunity.",
+  },
+  {
+    title: "Human skills in the AI era",
+    description:
+      "When everyone has the same prompts, presence, story, and leadership become your unfair advantage.",
+  },
+];
+
+const stats = [
+  { value: "10", suffix: " yrs", label: "Developing this generation" },
+  { value: "3", suffix: "", label: "Core skills that compound" },
+  { value: "1", suffix: "", label: "Book built for young adults" },
+];
+
+const proofPoints = [
+  "Campus career centers",
+  "Student leadership programs",
+  "Early-career professionals",
+  "Internship & new grad cohorts",
+];
+
 export default function Home() {
   return (
-    <div className="relative overflow-hidden">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,oklch(0.62_0.14_45/0.18),transparent)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-24 top-40 h-72 w-72 rounded-full bg-primary/5 blur-3xl"
-      />
-
-      <header className="relative mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 md:px-8">
-        <a href="#" className="group flex items-center gap-3">
-          <span className="flex size-10 items-center justify-center rounded-full border border-primary/15 bg-card font-heading text-lg text-primary shadow-sm">
-            B
-          </span>
-          <div>
-            <p className="font-heading text-lg leading-none text-foreground">
-              Be Remarkable
-            </p>
-            <p className="text-xs tracking-[0.18em] text-muted-foreground uppercase">
-              beremarkablebook.com
-            </p>
-          </div>
-        </a>
-        <Button asChild variant="outline" className="hidden rounded-full sm:inline-flex">
-          <a href="#waitlist">Join waitlist</a>
-        </Button>
-      </header>
-
-      <main>
-        <section className="relative mx-auto max-w-6xl px-6 pb-20 pt-10 md:px-8 md:pt-16">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+    <div className="overflow-hidden">
+      <section className="relative bg-hero text-hero-foreground">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_80%_0%,oklch(0.58_0.13_45/0.14),transparent)]"
+        />
+        <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-14 md:px-8 md:pb-28 md:pt-20">
+          <div className="grid items-end gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
             <div>
-              <Badge
-                variant="secondary"
-                className="mb-6 rounded-full border border-accent/20 bg-accent/10 px-4 py-1.5 text-xs font-semibold tracking-[0.16em] text-accent uppercase"
-              >
-                Coming soon
-              </Badge>
-              <h1 className="font-heading text-4xl leading-[1.05] text-foreground sm:text-5xl md:text-6xl">
-                Stand out when AI is{" "}
-                <span className="italic text-accent">everywhere.</span>
-              </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-                A new kind of guide for college students and recent graduates —
-                the human skills that launch careers: storytelling, leadership,
-                and executive presence.
+              <p className="text-xs font-semibold tracking-[0.24em] text-hero-foreground/55 uppercase">
+                Coming soon · beremarkablebook.com
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <h1 className="mt-6 font-heading text-[2.75rem] leading-[1.02] tracking-tight sm:text-5xl md:text-6xl lg:text-[4.25rem]">
+                Human skills are power.
+                <span className="mt-2 block text-accent">And within reach.</span>
+              </h1>
+              <p className="mt-7 max-w-xl text-lg leading-relaxed text-hero-foreground/72 md:text-xl">
+                A new kind of guide for college students and recent graduates —
+                the storytelling, leadership, and executive presence that launch
+                careers when AI is everywhere.
+              </p>
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Button
                   asChild
                   size="lg"
-                  className="h-12 rounded-xl bg-primary px-6 text-base hover:bg-primary/90"
+                  className="h-12 rounded-md bg-accent px-7 text-base font-semibold text-accent-foreground hover:bg-accent/90"
                 >
                   <a href="#waitlist">
                     Get early access
@@ -102,161 +123,198 @@ export default function Home() {
                 </Button>
                 <Button
                   asChild
-                  variant="ghost"
+                  variant="outline"
                   size="lg"
-                  className="h-12 rounded-xl px-6 text-base"
+                  className="h-12 rounded-md border-hero-foreground/20 bg-transparent px-7 text-base text-hero-foreground hover:bg-hero-foreground/8 hover:text-hero-foreground"
                 >
                   <a href="#mission">Read the mission</a>
                 </Button>
               </div>
             </div>
 
-            <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-              <div className="absolute -left-4 top-8 hidden h-28 w-28 rounded-full border border-dashed border-accent/30 md:block" />
-              <Card className="relative overflow-hidden rounded-[2rem] border-primary/10 bg-card/90 shadow-xl backdrop-blur-sm">
-                <div className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-transparent via-accent to-transparent" />
-                <CardHeader className="gap-4 px-8 pt-10 pb-4">
-                  <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
-                    The gap no one fills
+            <Card className="rounded-lg border-hero-foreground/10 bg-hero-foreground/[0.04] text-hero-foreground shadow-none backdrop-blur-sm">
+              <CardHeader className="gap-4 px-7 pt-8 pb-3">
+                <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
+                  The gap no one fills
+                </p>
+                <CardTitle className="font-heading text-2xl leading-tight md:text-3xl">
+                  Machines can generate answers.
+                  <span className="mt-1 block text-hero-foreground/90">
+                    Only you can be remarkable.
+                  </span>
+                </CardTitle>
+                <CardDescription className="text-base leading-relaxed text-hero-foreground/65">
+                  In a world flooded with AI output, the edge belongs to people
+                  who communicate with clarity, lead with intention, and show up
+                  like leaders before the title arrives.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="px-7 pb-8">
+                <div className="rounded-md border border-hero-foreground/10 bg-hero-foreground/[0.03] p-5">
+                  <p className="font-heading text-lg leading-snug">
+                    Think Nancy Duarte — for the generation entering work now.
                   </p>
-                  <CardTitle className="font-heading text-3xl leading-tight">
-                    Machines can generate answers.
-                    <span className="block text-primary">
-                      Only you can be remarkable.
-                    </span>
-                  </CardTitle>
-                  <CardDescription className="text-base leading-relaxed">
-                    In a world flooded with AI output, the edge belongs to
-                    people who communicate with clarity, lead with intention,
-                    and show up like leaders before the title arrives.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="px-8 pb-10">
-                  <div className="rounded-2xl border border-border/70 bg-secondary/60 p-5">
-                    <p className="font-heading text-lg text-foreground">
-                      Think Nancy Duarte — for the generation entering work now.
-                    </p>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      Practical, direct, and built for the age of AI — not
-                      theory for executives who already have a corner office.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+                  <p className="mt-2 text-sm leading-relaxed text-hero-foreground/60">
+                    Practical, direct, and built for the age of AI — not theory
+                    for executives who already have a corner office.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="mission" className="border-y border-border/70 bg-card/60">
-          <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[0.9fr_1.1fr] md:px-8">
-            <div>
-              <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
-                Mission
-              </p>
-              <h2 className="mt-4 font-heading text-3xl leading-tight text-foreground md:text-4xl">
-                Inspire a generation to become remarkable — on purpose.
-              </h2>
-            </div>
-            <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-              <p>
-                <span className="font-medium text-foreground">Be Remarkable</span>{" "}
-                exists because young adults are entering the most competitive
-                talent market in history — armed with degrees, prompts, and
-                polished resumes, but rarely taught the skills that actually
-                separate them.
-              </p>
-              <p>
-                This book is a field guide for standing out with substance:
-                how to tell the story only you can tell, how to lead when
-                you&apos;re the youngest person in the room, and how to project
-                the calm confidence that makes people listen.
-              </p>
-              <p>
-                The goal isn&apos;t hype. It&apos;s capability — so you can
-                walk into interviews, internships, and early roles knowing you
-                bring something AI never will.
-              </p>
-            </div>
+      <section className="border-b border-border/70 bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-14">
+          <p className="text-center text-xs font-semibold tracking-[0.22em] text-muted-foreground uppercase">
+            Built for the generation entering work now
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+            {proofPoints.map((point) => (
+              <span
+                key={point}
+                className="font-heading text-base text-foreground/75 md:text-lg"
+              >
+                {point}
+              </span>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-6xl px-6 py-20 md:px-8">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
-              What you&apos;ll build
+      <section id="mission" className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
+        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+          <div>
+            <p className="section-label">Mission</p>
+            <h2 className="section-title mt-5">
+              Inspire a generation to become remarkable — on purpose.
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
+              They know the résumé isn&apos;t enough. What separates candidates
+              is the ability to persuade, lead, and show up with presence.
             </p>
-            <h2 className="mt-4 font-heading text-3xl leading-tight text-foreground md:text-4xl">
+          </div>
+          <div className="space-y-6 text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p>
+              <span className="font-medium text-foreground">Be Remarkable</span>{" "}
+              exists because young adults are entering the most competitive
+              talent market in history — armed with degrees, prompts, and
+              polished resumes, but rarely taught the skills that actually
+              separate them.
+            </p>
+            <p>
+              This book is a field guide for standing out with substance: how to
+              tell the story only you can tell, how to lead when you&apos;re the
+              youngest person in the room, and how to project the calm confidence
+              that makes people listen.
+            </p>
+            <p>
+              The goal isn&apos;t hype. It&apos;s capability — so you can walk
+              into interviews, internships, and early roles knowing you bring
+              something AI never will.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" className="border-y border-border/70 bg-secondary/35">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
+          <div className="max-w-2xl">
+            <p className="section-label">What you&apos;ll build</p>
+            <h2 className="section-title mt-5">
               Three skills. One unfair advantage.
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               Each chapter is designed for real situations — campus presentations,
               group projects, networking events, and the first years of your
               career.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {skills.map((skill) => (
-              <Card
+          <div className="mt-14 divide-y divide-border/80 rounded-lg border border-border/80 bg-background">
+            {skills.map((skill, index) => (
+              <div
                 key={skill.title}
-                className="rounded-[1.75rem] border-border/80 bg-background/80 shadow-sm transition-transform duration-300 hover:-translate-y-1"
+                className="grid gap-6 p-7 md:grid-cols-[1fr_1.4fr] md:items-start md:p-9"
               >
-                <CardHeader className="gap-4">
-                  <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/8 text-primary">
-                    <skill.icon className="size-5" />
+                <div>
+                  <div className="flex items-center gap-3">
+                    <div className="flex size-11 items-center justify-center rounded-md bg-primary/8 text-primary">
+                      <skill.icon className="size-5" />
+                    </div>
+                    <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+                      {skill.label}
+                    </p>
                   </div>
-                  <CardTitle className="font-heading text-2xl">
+                  <h3 className="mt-4 font-heading text-2xl text-foreground md:text-3xl">
                     {skill.title}
-                  </CardTitle>
-                  <CardDescription className="text-base leading-relaxed">
+                  </h3>
+                </div>
+                <div>
+                  <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
                     {skill.description}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+                  </p>
+                  <p className="mt-4 text-sm font-medium text-foreground">
+                    {skill.highlight}
+                  </p>
+                  {index < skills.length - 1 ? null : (
+                    <Button asChild variant="link" className="mt-2 h-auto p-0">
+                      <a href="#waitlist">
+                        Join the waitlist
+                        <ArrowRight className="size-4" />
+                      </a>
+                    </Button>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="bg-primary text-primary-foreground">
-          <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:px-8">
-            <div>
-              <p className="text-xs font-semibold tracking-[0.2em] text-primary-foreground/70 uppercase">
-                Built for
-              </p>
-              <h2 className="mt-4 font-heading text-3xl leading-tight md:text-4xl">
-                College students & recent grads who refuse to blend in.
-              </h2>
-            </div>
-            <ul className="space-y-4">
-              {audiencePoints.map((point) => (
-                <li
-                  key={point}
-                  className="flex gap-3 rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-4 text-sm leading-relaxed md:text-base"
-                >
-                  <Sparkles className="mt-0.5 size-4 shrink-0 text-accent" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
+      <section className="bg-hero text-hero-foreground">
+        <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:px-8 md:py-28">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.22em] text-hero-foreground/50 uppercase">
+              Built for
+            </p>
+            <h2 className="mt-5 font-heading text-3xl leading-[1.08] md:text-4xl lg:text-[2.75rem]">
+              College students & recent grads who refuse to blend in.
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-hero-foreground/70 md:text-lg">
+              Every chapter meets you where you are — preparing to enter the
+              workforce or fighting for your first real opportunities.
+            </p>
           </div>
-        </section>
+          <ul className="space-y-4">
+            {audiencePoints.map((point) => (
+              <li
+                key={point}
+                className="flex gap-4 rounded-md border border-hero-foreground/10 bg-hero-foreground/[0.04] p-5"
+              >
+                <GraduationCap className="mt-0.5 size-5 shrink-0 text-accent" />
+                <span className="text-sm leading-relaxed md:text-base">
+                  {point}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
-        <section className="mx-auto max-w-6xl px-6 py-20 md:px-8">
-          <div className="grid gap-10 rounded-[2rem] border border-border/80 bg-card p-8 shadow-sm md:grid-cols-[1fr_1.2fr] md:p-12">
-            <div>
-              <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
-                Why trust this
-              </p>
-              <h2 className="mt-4 font-heading text-3xl leading-tight text-foreground md:text-4xl">
-                A decade developing this exact generation.
-              </h2>
-            </div>
-            <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+      <section id="about" className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+          <div>
+            <p className="section-label">Why trust this</p>
+            <h2 className="section-title mt-5">
+              A decade developing this exact generation.
+            </h2>
+            <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               <p>
                 For ten years, the author has worked directly with college
                 students and young professionals — coaching communication,
-                leadership, and presence in the moments that shape early
-                careers.
+                leadership, and presence in the moments that shape early careers.
               </p>
               <p>
                 That focus isn&apos;t a side project. It&apos;s the reason this
@@ -269,54 +327,96 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
 
-        <section
-          id="waitlist"
-          className="border-t border-border/70 bg-[linear-gradient(180deg,oklch(0.975_0.012_85),oklch(0.955_0.018_78))]"
-        >
-          <div className="mx-auto max-w-3xl px-6 py-20 text-center md:px-8">
-            <p className="text-xs font-semibold tracking-[0.2em] text-accent uppercase">
-              Stay in the loop
-            </p>
-            <h2 className="mt-4 font-heading text-3xl leading-tight text-foreground md:text-4xl">
-              Be first when the book launches.
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Join the waitlist for launch updates, early excerpts, and
-              resources for students and recent grads who want to lead with
-              presence — not just prompts.
-            </p>
-            <div className="mx-auto mt-8 max-w-xl">
-              <WaitlistForm />
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground">
-              Questions?{" "}
-              <a
-                href="mailto:hello@beremarkablebook.com"
-                className="font-medium text-foreground underline-offset-4 hover:underline"
-              >
-                hello@beremarkablebook.com
-              </a>
-            </p>
-          </div>
-        </section>
-      </main>
-
-      <footer className="border-t border-border/70">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between md:px-8">
-          <p>© {new Date().getFullYear()} Be Remarkable. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <a href="#mission" className="hover:text-foreground">
-              Mission
-            </a>
-            <Separator orientation="vertical" className="h-4" />
-            <a href="#waitlist" className="hover:text-foreground">
-              Waitlist
-            </a>
+          <div className="flex flex-col justify-center">
+            <blockquote className="relative rounded-lg border border-border/80 bg-card p-8 md:p-10">
+              <Quote className="size-8 text-accent/80" aria-hidden />
+              <p className="mt-5 font-heading text-2xl leading-snug text-foreground md:text-3xl">
+                &ldquo;In a world where everyone has the same AI-generated
+                answers, the people who communicate with clarity and presence
+                will win.&rdquo;
+              </p>
+              <footer className="mt-6 text-sm text-muted-foreground">
+                — The premise behind Be Remarkable
+              </footer>
+            </blockquote>
           </div>
         </div>
-      </footer>
+      </section>
+
+      <section className="border-y border-border/70 bg-secondary/35">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-24">
+          <div className="max-w-2xl">
+            <p className="section-label">Why it works</p>
+            <h2 className="section-title mt-5">The Be Remarkable approach</h2>
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+              For ten years, this empathy-powered framework has shaped how young
+              adults show up — in interviews, on campus, and in their first roles.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 sm:grid-cols-2">
+            {methodPoints.map((point) => (
+              <div
+                key={point.title}
+                className="rounded-lg border border-border/80 bg-background p-7"
+              >
+                <h3 className="font-heading text-xl text-foreground">
+                  {point.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  {point.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <Separator className="my-14" />
+
+          <div className="grid gap-10 sm:grid-cols-3">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center sm:text-left">
+                <p className="font-heading text-5xl leading-none text-foreground md:text-6xl">
+                  {stat.value}
+                  <span className="text-accent">{stat.suffix}</span>
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="waitlist"
+        className="border-t border-border/70 bg-[linear-gradient(180deg,oklch(0.985_0.006_85),oklch(0.965_0.014_78))]"
+      >
+        <div className="mx-auto max-w-3xl px-6 py-20 text-center md:px-8 md:py-28">
+          <p className="section-label">Stay in the loop</p>
+          <h2 className="section-title mt-5">
+            Be first when the book launches.
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            Join the waitlist for launch updates, early excerpts, and resources
+            for students and recent grads who want to lead with presence — not
+            just prompts.
+          </p>
+          <div className="mx-auto mt-10 max-w-xl">
+            <WaitlistForm />
+          </div>
+          <p className="mt-5 text-sm text-muted-foreground">
+            Questions?{" "}
+            <a
+              href="mailto:hello@beremarkablebook.com"
+              className="font-medium text-foreground underline-offset-4 hover:underline"
+            >
+              hello@beremarkablebook.com
+            </a>
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
