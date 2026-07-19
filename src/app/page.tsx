@@ -62,6 +62,39 @@ const heroValueProps = [
   "15 years developing professionals who stand out",
 ];
 
+const supportingSkills = [
+  {
+    title: "Personal branding",
+    description:
+      "Define how you show up online and in the room before someone else defines it for you.",
+  },
+  {
+    title: "Active listening",
+    description:
+      "Read the room, ask sharper questions, and make people feel heard in meetings and one-on-ones.",
+  },
+  {
+    title: "Interview presence",
+    description:
+      "Walk into interviews with clarity and substance, not rehearsed answers or AI-generated scripts.",
+  },
+  {
+    title: "Difficult conversations",
+    description:
+      "Navigate feedback, conflict, and hard topics with directness and respect early in your career.",
+  },
+  {
+    title: "Self-advocacy",
+    description:
+      "Ask for opportunities, credit, and growth without waiting for someone to notice your work.",
+  },
+  {
+    title: "Written communication",
+    description:
+      "Write emails, messages, and updates that get read, remembered, and acted on.",
+  },
+];
+
 const skills = [
   {
     icon: BookOpen,
@@ -499,6 +532,40 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section
+          id="supporting-skills"
+          className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28"
+        >
+          <div className="max-w-2xl">
+            <p className="section-label">Supporting skills</p>
+            <h2 className="section-title mt-5">
+              You&apos;ll also build real-world capability.
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+              The three core skills compound over time. These supporting skills
+              round out how you show up in interviews, meetings, and everyday
+              work, built from 15 years coaching young adults and early career
+              professionals.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {supportingSkills.map((skill) => (
+              <div
+                key={skill.title}
+                className="rounded-lg border border-border/80 bg-card p-6"
+              >
+                <h3 className="font-heading text-lg text-foreground md:text-xl">
+                  {skill.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  {skill.description}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
