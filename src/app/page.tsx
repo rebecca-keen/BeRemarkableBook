@@ -46,16 +46,16 @@ const skills = [
 ];
 
 const audiencePoints = [
-  "Professionals in any field who want to stand out with substance",
-  "Anyone stepping into a new role or raising their presence",
-  "Anyone who knows AI can do the work, but not the presence",
+  "Young adults entering the workforce, with or without a degree",
+  "Early career entrants building professional presence in any field",
+  "Anyone preparing to start work who knows AI can do the work, but not the presence",
 ];
 
 const methodPoints = [
   {
     title: "Built for real moments",
     description:
-      "Team meetings, client conversations, presentations, and the defining moments of professional life, not abstract theory.",
+      "First interviews, team meetings, client conversations, and the defining moments of early career life, not abstract theory.",
   },
   {
     title: "Capability, not hype",
@@ -89,10 +89,10 @@ const stats = [
 ];
 
 const proofPoints = [
-  "Professionals in any field",
-  "Anyone in a new or expanded role",
-  "Leaders building their presence",
-  "Team development programs",
+  "Young adults in any field",
+  "Early career entrants and new hires",
+  "College, trade school, or straight to work",
+  "Career changers starting fresh",
 ];
 
 export default function Home() {
@@ -114,10 +114,10 @@ export default function Home() {
                 <span className="mt-2 block text-accent">And within reach.</span>
               </h1>
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-hero-foreground/72 md:text-xl">
-                A field guide, workshops, and practical guides for anyone in
-                any job or professional setting: storytelling, leadership, and
-                calm confidence that help you stand out with substance when AI
-                is everywhere.
+                A field guide, workshops, and practical guides for young adults
+                and early career entrants: storytelling, leadership, and calm
+                confidence that help you stand out with substance when AI is
+                everywhere.
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Button
@@ -179,7 +179,7 @@ export default function Home() {
       <section className="border-b border-border/70 bg-card">
         <div className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-14">
           <p className="text-center text-xs font-semibold tracking-[0.22em] text-muted-foreground uppercase">
-            Built for anyone who wants to stand out
+            Built for young adults entering work
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
             {proofPoints.map((point) => (
@@ -291,12 +291,11 @@ export default function Home() {
               Built for
             </p>
             <h2 className="mt-5 font-heading text-3xl leading-[1.08] md:text-4xl lg:text-[2.75rem]">
-              Anyone in any job who refuses to blend in.
+              Young adults and early career entrants who refuse to blend in.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-hero-foreground/70 md:text-lg">
-              Whether you are in a new role, changing paths, or leveling up
-              your presence, the book, workshops, and guides meet you where you
-              are.
+              Whether you are heading to college, trade school, or straight to
+              work, the book, workshops, and guides meet you where you are.
             </p>
           </div>
           <ul className="space-y-4">
@@ -413,7 +412,8 @@ export default function Home() {
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             Join the waitlist for launch updates, early excerpts, and practical
-            guides for anyone who wants to lead with presence, not just prompts.
+            guides for young adults who want to lead with presence, not just
+            prompts.
           </p>
           <div className="mx-auto mt-10 max-w-xl">
             <WaitlistForm />
