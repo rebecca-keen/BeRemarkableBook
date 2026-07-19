@@ -9,6 +9,9 @@ import {
   Users,
   X,
 } from "lucide-react";
+import Image from "next/image";
+
+import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 
 import { StructuredData } from "@/components/structured-data";
 import { WaitlistForm } from "@/components/waitlist-form";
@@ -540,11 +543,15 @@ export default function Home() {
           <div className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
             <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
               <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-                <div
-                  className="flex size-36 items-center justify-center rounded-full border-2 border-accent/30 bg-background font-heading text-4xl text-foreground shadow-sm md:size-40 md:text-5xl"
-                  aria-hidden="true"
-                >
-                  {siteConfig.author.initials}
+                <div className="relative size-36 shrink-0 overflow-hidden rounded-full border-2 border-accent/30 bg-background shadow-sm md:size-40">
+                  <Image
+                    src={siteConfig.author.image}
+                    alt={`Portrait of ${siteConfig.author.name}`}
+                    fill
+                    sizes="(max-width: 768px) 144px, 160px"
+                    className="object-cover object-[center_20%]"
+                    priority
+                  />
                 </div>
                 <p className="mt-6 text-xs font-semibold tracking-[0.22em] text-accent uppercase">
                   About the author
@@ -558,6 +565,21 @@ export default function Home() {
                 <p className="mt-2 text-sm font-medium text-muted-foreground md:text-base">
                   {siteConfig.author.title}
                 </p>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="mt-6 rounded-md"
+                >
+                  <a
+                    href={siteConfig.author.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LinkedinIcon />
+                    Connect on LinkedIn
+                  </a>
+                </Button>
                 <blockquote className="mt-8 w-full rounded-lg border border-border/80 bg-background p-6 text-left md:p-8">
                   <Quote
                     className="size-7 text-accent/80"

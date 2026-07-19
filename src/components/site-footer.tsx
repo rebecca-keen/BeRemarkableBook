@@ -1,4 +1,6 @@
+import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 import { Separator } from "@/components/ui/separator";
+import { siteConfig } from "@/lib/site-config";
 
 const footerLinks = {
   explore: [
@@ -13,6 +15,11 @@ const footerLinks = {
     {
       href: "mailto:hello@beremarkablebook.com",
       label: "hello@beremarkablebook.com",
+    },
+    {
+      href: siteConfig.author.linkedin,
+      label: "LinkedIn",
+      external: true,
     },
   ],
 };
@@ -63,8 +70,14 @@ export function SiteFooter() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-hero-foreground/75 transition-colors hover:text-hero-foreground"
+                    className="inline-flex items-center gap-2 text-sm text-hero-foreground/75 transition-colors hover:text-hero-foreground"
+                    {...("external" in link && link.external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
                   >
+                    {"external" in link && link.external ? (
+                      <LinkedinIcon />
+                    ) : null}
                     {link.label}
                   </a>
                 </li>

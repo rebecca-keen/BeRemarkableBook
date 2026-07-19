@@ -50,6 +50,7 @@ export function getPersonSchema() {
     description: siteConfig.author.bio,
     knowsAbout: siteConfig.author.expertise,
     email: siteConfig.email,
+    sameAs: [siteConfig.author.linkedin],
   };
 }
 

@@ -8,6 +8,8 @@ export const siteConfig = {
   author: {
     name: "Rebecca Keen",
     initials: "RK",
+    image: "/rebecca-keen.jpg",
+    linkedin: "https://www.linkedin.com/in/rebeccakeen/",
     title: "Author and professional development coach",
     bio: "For more than 15 years, Rebecca Keen has helped young adults and early career professionals build storytelling, leadership, and calm confidence before they have the title or the corner office.",
     expertise: [
