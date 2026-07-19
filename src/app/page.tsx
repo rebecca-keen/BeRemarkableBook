@@ -24,7 +24,7 @@ const skills = [
     label: "Core skill",
     title: "Storytelling",
     description:
-      "Turn ideas into narratives people remember — in interviews, presentations, and the moments that define your early career.",
+      "Turn ideas into narratives people remember in interviews, presentations, and the moments that define your early career.",
     highlight: "Write your story to influence",
   },
   {
@@ -40,7 +40,7 @@ const skills = [
     label: "Core skill",
     title: "Executive Presence",
     description:
-      "Show up with clarity and confidence in rooms where first impressions matter — from campus to your first real role.",
+      "Show up with clarity and confidence in rooms where first impressions matter, from campus to your first real role.",
     highlight: "Deliver with calm confidence",
   },
 ];
@@ -48,19 +48,19 @@ const skills = [
 const audiencePoints = [
   "College juniors and seniors preparing to enter the workforce",
   "Recent graduates navigating interviews, internships, and early promotions",
-  "Young professionals who know AI can do the work — but not the presence",
+  "Young professionals who know AI can do the work, but not the presence",
 ];
 
 const methodPoints = [
   {
     title: "Built for real moments",
     description:
-      "Campus presentations, group projects, networking events, and the first years of your career — not abstract theory.",
+      "Campus presentations, group projects, networking events, and the first years of your career, not abstract theory.",
   },
   {
     title: "Practical, not performative",
     description:
-      "Actionable frameworks you can use tomorrow — in interviews, meetings, and the rooms where careers are made.",
+      "Actionable frameworks you can use tomorrow in interviews, meetings, and the rooms where careers are made.",
   },
   {
     title: "Empathy-first communication",
@@ -106,7 +106,7 @@ export default function Home() {
                 <span className="mt-2 block text-accent">And within reach.</span>
               </h1>
               <p className="mt-7 max-w-xl text-lg leading-relaxed text-hero-foreground/72 md:text-xl">
-                A new kind of guide for college students and recent graduates —
+                A new kind of guide for college students and recent graduates:
                 the storytelling, leadership, and executive presence that launch
                 careers when AI is everywhere.
               </p>
@@ -152,10 +152,10 @@ export default function Home() {
               <CardContent className="px-7 pb-8">
                 <div className="rounded-md border border-hero-foreground/10 bg-hero-foreground/[0.03] p-5">
                   <p className="font-heading text-lg leading-snug">
-                    Think Nancy Duarte — for the generation entering work now.
+                    Think Nancy Duarte for the generation entering work now.
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-hero-foreground/60">
-                    Practical, direct, and built for the age of AI — not theory
+                    Practical, direct, and built for the age of AI, not theory
                     for executives who already have a corner office.
                   </p>
                 </div>
@@ -188,7 +188,7 @@ export default function Home() {
           <div>
             <p className="section-label">Mission</p>
             <h2 className="section-title mt-5">
-              Inspire a generation to become remarkable — on purpose.
+              Inspire a generation to become remarkable on purpose.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
               They know the résumé isn&apos;t enough. What separates candidates
@@ -199,7 +199,7 @@ export default function Home() {
             <p>
               <span className="font-medium text-foreground">Be Remarkable</span>{" "}
               exists because young adults are entering the most competitive
-              talent market in history — armed with degrees, prompts, and
+              talent market in history, armed with degrees, prompts, and
               polished resumes, but rarely taught the skills that actually
               separate them.
             </p>
@@ -210,7 +210,7 @@ export default function Home() {
               that makes people listen.
             </p>
             <p>
-              The goal isn&apos;t hype. It&apos;s capability — so you can walk
+              The goal isn&apos;t hype. It&apos;s capability, so you can walk
               into interviews, internships, and early roles knowing you bring
               something AI never will.
             </p>
@@ -226,7 +226,7 @@ export default function Home() {
               Three skills. One unfair advantage.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-              Each chapter is designed for real situations — campus presentations,
+              Each chapter is designed for real situations: campus presentations,
               group projects, networking events, and the first years of your
               career.
             </p>
@@ -283,7 +283,7 @@ export default function Home() {
               College students & recent grads who refuse to blend in.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-hero-foreground/70 md:text-lg">
-              Every chapter meets you where you are — preparing to enter the
+              Every chapter meets you where you are, preparing to enter the
               workforce or fighting for your first real opportunities.
             </p>
           </div>
@@ -313,12 +313,12 @@ export default function Home() {
             <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               <p>
                 For ten years, the author has worked directly with college
-                students and young professionals — coaching communication,
+                students and young professionals, coaching communication,
                 leadership, and presence in the moments that shape early careers.
               </p>
               <p>
                 That focus isn&apos;t a side project. It&apos;s the reason this
-                work exists — and why a career built on developing young talent
+                work exists, and why a career built on developing young talent
                 continues to accelerate.
               </p>
               <p className="font-medium text-foreground">
@@ -337,7 +337,7 @@ export default function Home() {
                 will win.&rdquo;
               </p>
               <footer className="mt-6 text-sm text-muted-foreground">
-                — The premise behind Be Remarkable
+                The premise behind Be Remarkable
               </footer>
             </blockquote>
           </div>
@@ -351,7 +351,7 @@ export default function Home() {
             <h2 className="section-title mt-5">The Be Remarkable approach</h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               For ten years, this empathy-powered framework has shaped how young
-              adults show up — in interviews, on campus, and in their first roles.
+              adults show up in interviews, on campus, and in their first roles.
             </p>
           </div>
 
@@ -400,7 +400,7 @@ export default function Home() {
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             Join the waitlist for launch updates, early excerpts, and resources
-            for students and recent grads who want to lead with presence — not
+            for students and recent grads who want to lead with presence, not
             just prompts.
           </p>
           <div className="mx-auto mt-10 max-w-xl">

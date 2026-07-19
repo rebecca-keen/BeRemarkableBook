@@ -29,7 +29,7 @@ export function SiteFooter() {
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-hero-foreground/70">
               Practical skills in storytelling, leadership, and executive presence
-              for college students and recent graduates — in the age of AI.
+              for college students and recent graduates in the age of AI.
             </p>
           </div>
 

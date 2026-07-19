@@ -19,12 +19,12 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: "Be Remarkable | Stand Out in the Age of AI",
   description:
-    "Practical skills in storytelling, leadership, and executive presence for college students and recent graduates — taught by someone with a decade of experience developing this generation.",
+    "Practical skills in storytelling, leadership, and executive presence for college students and recent graduates, taught by someone with a decade of experience developing this generation.",
   metadataBase: new URL("https://beremarkablebook.com"),
   openGraph: {
     title: "Be Remarkable | Stand Out in the Age of AI",
     description:
-      "The skills no one teaches young adults — storytelling, leadership, and executive presence for a world where AI is everywhere.",
+      "The skills no one teaches young adults: storytelling, leadership, and executive presence for a world where AI is everywhere.",
     url: "https://beremarkablebook.com",
     siteName: "Be Remarkable",
     type: "website",
