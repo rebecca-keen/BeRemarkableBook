@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import type { FaqItem } from "@/lib/structured-data";
+import { siteConfig } from "@/lib/site-config";
 
 const faqItems: FaqItem[] = [
   {
@@ -533,49 +534,102 @@ export default function Home() {
 
         <section
           id="about"
-          className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28"
+          aria-labelledby="about-heading"
+          className="border-y border-border/70 bg-secondary/35"
         >
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
-            <div>
-              <p className="section-label">Why trust this</p>
-              <h2 className="section-title mt-5">
-                Over 15 years developing professionals who stand out.
-              </h2>
-              <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-                <p>
-                  For over 15 years, the author has worked directly with
-                  professionals across roles and industries, coaching
-                  storytelling, leadership, and calm confidence in the moments
-                  that shape lasting success.
-                </p>
-                <p>
-                  That focus isn&apos;t a side project. It&apos;s the reason
-                  this work exists, and why a career built on developing people
-                  who show up with substance continues to accelerate.
-                </p>
-                <p className="font-medium text-foreground">
-                  No one else is teaching these skills at the moment that
-                  matters. This work fills that gap with a book, workshops, and
-                  guides.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col justify-center">
-              <blockquote className="relative rounded-lg border border-border/80 bg-card p-8 md:p-10">
-                <Quote
-                  className="size-8 text-accent/80"
+          <div className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
+            <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+              <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+                <div
+                  className="flex size-36 items-center justify-center rounded-full border-2 border-accent/30 bg-background font-heading text-4xl text-foreground shadow-sm md:size-40 md:text-5xl"
                   aria-hidden="true"
-                />
-                <p className="mt-5 font-heading text-2xl leading-snug text-foreground md:text-3xl">
-                  &ldquo;In a world where everyone has the same AI-generated
-                  answers, the people who communicate with clarity and presence
-                  will win.&rdquo;
+                >
+                  {siteConfig.author.initials}
+                </div>
+                <p className="mt-6 text-xs font-semibold tracking-[0.22em] text-accent uppercase">
+                  About the author
                 </p>
-                <footer className="mt-6 text-sm text-muted-foreground">
-                  The premise behind Be Remarkable
-                </footer>
-              </blockquote>
+                <h2
+                  id="about-heading"
+                  className="mt-3 font-heading text-3xl leading-tight text-foreground md:text-4xl"
+                >
+                  {siteConfig.author.name}
+                </h2>
+                <p className="mt-2 text-sm font-medium text-muted-foreground md:text-base">
+                  {siteConfig.author.title}
+                </p>
+                <blockquote className="mt-8 w-full rounded-lg border border-border/80 bg-background p-6 text-left md:p-8">
+                  <Quote
+                    className="size-7 text-accent/80"
+                    aria-hidden="true"
+                  />
+                  <p className="mt-4 font-heading text-xl leading-snug text-foreground md:text-2xl">
+                    &ldquo;Executive coaches teach polish. I teach capability.
+                    That is the difference young professionals actually
+                    need.&rdquo;
+                  </p>
+                  <footer className="mt-4 text-sm text-muted-foreground">
+                    {siteConfig.author.name}
+                  </footer>
+                </blockquote>
+              </div>
+
+              <div>
+                <p className="section-label">About me</p>
+                <h3 className="section-title mt-5">
+                  Fifteen years building the skills AI cannot replace.
+                </h3>
+                <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+                  <p>
+                    I am {siteConfig.author.name}, and for more than 15 years I
+                    have worked directly with young adults and early career
+                    entrants: people stepping into their first real roles,
+                    whether they came through college, trade school, or straight
+                    to work. My focus has always been the same: storytelling
+                    that people remember, leadership that moves work forward,
+                    and calm confidence when the stakes are high.
+                  </p>
+                  <p>
+                    Be Remarkable is not a side project or a rebrand of
+                    executive coaching. It is the work I have been doing all
+                    along, now shaped into a field guide, workshops, and
+                    practical guides for the moment that actually matters: when
+                    you are starting out, not when you already have the title.
+                  </p>
+                  <p>
+                    Most communication training assumes you are already in the
+                    room. Executive coaches rarely share a personal story about
+                    why this work matters at the starting line. I do, because I
+                    have spent my career with people who needed substance, not
+                    hype, before anyone was watching.
+                  </p>
+                  <p className="font-medium text-foreground">
+                    My mission is simple: help you stand out with capability in
+                    an age of AI. When everyone has the same prompts, presence,
+                    story, and leadership become your edge. The book, workshops,
+                    and guides exist to give you that edge on purpose.
+                  </p>
+                </div>
+                <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+                  {[
+                    "15+ years with young adults and early career pros",
+                    "College, trade school, or straight to work",
+                    "Book, workshops, and guides, not courses alone",
+                    "Capability over hype, every time",
+                  ].map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-2.5 text-sm leading-relaxed text-foreground md:text-base"
+                    >
+                      <Check
+                        className="mt-0.5 size-4 shrink-0 text-accent"
+                        aria-hidden="true"
+                      />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>

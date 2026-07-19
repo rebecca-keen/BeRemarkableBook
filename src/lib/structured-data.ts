@@ -40,6 +40,19 @@ export function getWebSiteSchema() {
   };
 }
 
+export function getPersonSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: siteConfig.author.name,
+    url: siteConfig.url,
+    jobTitle: siteConfig.author.title,
+    description: siteConfig.author.bio,
+    knowsAbout: siteConfig.author.expertise,
+    email: siteConfig.email,
+  };
+}
+
 export function getBookSchema() {
   return {
     "@context": "https://schema.org",
@@ -49,7 +62,8 @@ export function getBookSchema() {
     url: siteConfig.url,
     author: {
       "@type": "Person",
-      name: siteConfig.name,
+      name: siteConfig.author.name,
+      url: siteConfig.url,
     },
     publisher: {
       "@type": "Organization",
@@ -87,6 +101,7 @@ export function getStructuredDataGraph(faqItems: FaqItem[]) {
     "@graph": [
       getOrganizationSchema(),
       getWebSiteSchema(),
+      getPersonSchema(),
       getBookSchema(),
       getFaqSchema(faqItems),
     ],

@@ -10,6 +10,7 @@ const navLinks = [
   { href: "#why-different", label: "Why us" },
   { href: "#mission", label: "Mission" },
   { href: "#skills", label: "Skills" },
+  { href: "#about", label: "About" },
   { href: "#faq", label: "FAQ" },
   { href: "#waitlist", label: "Waitlist" },
 ];
