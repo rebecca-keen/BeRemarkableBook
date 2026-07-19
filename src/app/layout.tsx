@@ -17,14 +17,14 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Be Remarkable | Stand Out in the Age of AI",
+  title: "Be Remarkable | Stand Out with Substance in the Age of AI",
   description:
-    "Practical skills in storytelling, leadership, and executive presence for college students and recent graduates, taught by someone with a decade of experience developing this generation.",
+    "A field guide, workshops, and practical guides on storytelling, leadership, and calm confidence for anyone entering the workforce. Build capability, not hype.",
   metadataBase: new URL("https://beremarkablebook.com"),
   openGraph: {
-    title: "Be Remarkable | Stand Out in the Age of AI",
+    title: "Be Remarkable | Stand Out with Substance in the Age of AI",
     description:
-      "The skills no one teaches young adults: storytelling, leadership, and executive presence for a world where AI is everywhere.",
+      "A field guide for standing out with substance: storytelling, leadership, and calm confidence for anyone entering the workforce in the age of AI.",
     url: "https://beremarkablebook.com",
     siteName: "Be Remarkable",
     type: "website",

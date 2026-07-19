@@ -28,8 +28,9 @@ export function SiteFooter() {
               <p className="font-heading text-lg">Be Remarkable</p>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-hero-foreground/70">
-              Practical skills in storytelling, leadership, and executive presence
-              for college students and recent graduates in the age of AI.
+              A field guide, workshops, and guides on storytelling, leadership,
+              and calm confidence for anyone entering the workforce in the age
+              of AI.
             </p>
           </div>
 
@@ -75,7 +76,7 @@ export function SiteFooter() {
         <div className="flex flex-col gap-3 text-sm text-hero-foreground/55 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Be Remarkable. All rights reserved.</p>
           <p className="text-xs tracking-[0.16em] uppercase">
-            Stand out when AI is everywhere.
+            Stand out with substance when AI is everywhere.
           </p>
         </div>
       </div>

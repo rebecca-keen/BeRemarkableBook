@@ -28,7 +28,7 @@ export function WaitlistForm() {
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           We&apos;ll reach out at{" "}
           <span className="font-medium text-foreground">{email}</span> when the
-          book and early resources are ready.
+          book, workshops, and guides are ready.
         </p>
       </div>
     );
@@ -44,7 +44,7 @@ export function WaitlistForm() {
         required
         value={email}
         onChange={(event) => setEmail(event.target.value)}
-        placeholder="you@school.edu"
+        placeholder="you@email.com"
         aria-label="Email address"
         className="h-12 rounded-md border-border/80 bg-background px-4 text-base shadow-sm"
       />
