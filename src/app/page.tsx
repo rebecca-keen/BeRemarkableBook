@@ -103,6 +103,7 @@ const skills = [
     description:
       "Turn your experiences into narratives people remember. Build storytelling skills that cut through in presentations, meetings, and the moments that define your work.",
     highlight: "Stories that stick",
+    guideHref: "/guides/storytelling-that-gets-you-remembered",
   },
   {
     icon: Users,
@@ -111,6 +112,7 @@ const skills = [
     description:
       "Show up as a leader before you have the title. Lead with clarity when the stakes are high, earn trust, and move work forward when you are not the obvious choice.",
     highlight: "Lead with confidence in any room",
+    guideHref: "/guides/lead-before-you-have-the-title",
   },
   {
     icon: Mic2,
@@ -119,6 +121,7 @@ const skills = [
     description:
       "Project the calm confidence that makes people listen. Show up with clarity and executive presence when the stakes are high.",
     highlight: "Make people listen",
+    guideHref: "/guides/calm-confidence-under-pressure",
   },
 ];
 
@@ -516,18 +519,16 @@ export default function Home() {
                     <p className="mt-4 text-sm font-medium text-foreground">
                       {skill.highlight}
                     </p>
-                    {index < skills.length - 1 ? null : (
-                      <Button
-                        asChild
-                        variant="link"
-                        className="mt-2 h-auto p-0"
-                      >
-                        <a href="#waitlist">
-                          Join the waitlist
-                          <ArrowRight className="size-4" aria-hidden="true" />
-                        </a>
-                      </Button>
-                    )}
+                    <Button
+                      asChild
+                      variant="link"
+                      className="mt-2 h-auto p-0"
+                    >
+                      <a href={skill.guideHref}>
+                        Read the guide
+                        <ArrowRight className="size-4" aria-hidden="true" />
+                      </a>
+                    </Button>
                   </div>
                 </div>
               ))}

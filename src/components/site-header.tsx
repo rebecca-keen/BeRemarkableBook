@@ -7,12 +7,13 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#why-different", label: "Why us" },
-  { href: "#mission", label: "Mission" },
-  { href: "#skills", label: "Skills" },
-  { href: "#about", label: "About" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#waitlist", label: "Waitlist" },
+  { href: "/#why-different", label: "Why us" },
+  { href: "/#mission", label: "Mission" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/guides", label: "Guides" },
+  { href: "/#about", label: "About" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#waitlist", label: "Waitlist" },
 ];
 
 export function SiteHeader() {
@@ -22,7 +23,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/90 backdrop-blur-lg">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:px-8">
         <a
-          href="#"
+          href="/"
           className="group flex items-center gap-3"
           onClick={() => setOpen(false)}
         >
@@ -54,7 +55,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <Button asChild size="sm" className="hidden rounded-md sm:inline-flex">
-            <a href="#waitlist">Join waitlist</a>
+            <a href="/#waitlist">Join waitlist</a>
           </Button>
           <button
             type="button"

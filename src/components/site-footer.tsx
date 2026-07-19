@@ -4,14 +4,15 @@ import { siteConfig } from "@/lib/site-config";
 
 const footerLinks = {
   explore: [
-    { href: "#why-different", label: "Why us" },
-    { href: "#mission", label: "Mission" },
-    { href: "#skills", label: "Skills" },
-    { href: "#faq", label: "FAQ" },
-    { href: "#about", label: "About" },
+    { href: "/#why-different", label: "Why us" },
+    { href: "/#mission", label: "Mission" },
+    { href: "/#skills", label: "Skills" },
+    { href: "/guides", label: "Guides" },
+    { href: "/#faq", label: "FAQ" },
+    { href: "/#about", label: "About" },
   ],
   connect: [
-    { href: "#waitlist", label: "Join waitlist" },
+    { href: "/#waitlist", label: "Join waitlist" },
     {
       href: "mailto:hello@beremarkablebook.com",
       label: "hello@beremarkablebook.com",

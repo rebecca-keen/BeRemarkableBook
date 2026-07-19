@@ -1,3 +1,4 @@
+import type { Guide } from "@/lib/guides";
 import { siteConfig } from "@/lib/site-config";
 
 export type FaqItem = {
@@ -93,6 +94,42 @@ export function getFaqSchema(faqItems: FaqItem[]) {
         text: item.answer,
       },
     })),
+  };
+}
+
+export function getArticleSchema(guide: Guide) {
+  const url = `${siteConfig.url}/guides/${guide.slug}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: guide.title,
+    description: guide.description,
+    url,
+    datePublished: guide.publishedAt,
+    dateModified: guide.publishedAt,
+    author: {
+      "@type": "Person",
+      name: siteConfig.author.name,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    articleSection: guide.capability,
+    keywords: [
+      guide.capability.toLowerCase(),
+      "professional development",
+      "early career",
+      "young adults",
+    ],
+    inLanguage: "en-US",
   };
 }
 
