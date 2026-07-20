@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 
+import { DownloadWorkbookButton } from "@/components/download-workbook-button";
 import { PrintButton } from "@/components/print-button";
 import { WorkbookContent } from "@/components/workbook-content";
 import { hasWorkbookAccess } from "@/lib/workbook-access";
@@ -63,7 +64,8 @@ export default async function FullWorkbookPage({ params }: FullWorkbookPageProps
             Full access unlocked. Print this workbook or complete exercises on
             screen.
           </p>
-          <div className="mt-6 print:hidden">
+          <div className="mt-6 flex flex-wrap gap-3 print:hidden">
+            <DownloadWorkbookButton slug={workbook.slug} />
             <PrintButton />
           </div>
         </div>
