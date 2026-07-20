@@ -8,6 +8,7 @@ const footerLinks = {
     { href: "/#mission", label: "Mission" },
     { href: "/#skills", label: "Skills" },
     { href: "/guides", label: "Guides" },
+    { href: "/workbooks", label: "Workbooks" },
     { href: "/#faq", label: "FAQ" },
     { href: "/#about", label: "About" },
   ],

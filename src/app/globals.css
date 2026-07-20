@@ -183,3 +183,34 @@
     transform: translateY(0);
   }
 }
+
+@media print {
+  @page {
+    margin: 0.75in;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+  }
+
+  .workbook-page header {
+    padding-top: 0 !important;
+  }
+
+  .workbook-section {
+    break-inside: avoid-page;
+  }
+
+  .workbook-exercise,
+  .workbook-worksheet {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .workbook-content textarea {
+    border: none !important;
+    min-height: auto !important;
+  }
+}

@@ -107,6 +107,7 @@ const skills = [
       "Turn your experiences into narratives people remember. Build storytelling skills that cut through in presentations, meetings, and the moments that define your work.",
     highlight: "Stories that stick",
     guideHref: "/guides/storytelling-that-gets-you-remembered",
+    workbookHref: "/workbooks/storytelling-workbook",
   },
   {
     icon: Users,
@@ -116,6 +117,7 @@ const skills = [
       "Show up as a leader before you have the title. Lead with clarity when the stakes are high, earn trust, and move work forward at any career stage.",
     highlight: "Lead with confidence in any room",
     guideHref: "/guides/lead-before-you-have-the-title",
+    workbookHref: "/workbooks/leadership-workbook",
   },
   {
     icon: Mic2,
@@ -125,6 +127,7 @@ const skills = [
       "Project the calm confidence that makes people listen. Show up with clarity and presence when the stakes are high, from first interviews to executive rooms.",
     highlight: "Make people listen",
     guideHref: "/guides/calm-confidence-under-pressure",
+    workbookHref: "/workbooks/executive-presence-workbook",
   },
   {
     icon: Bot,
@@ -134,6 +137,7 @@ const skills = [
       "Use AI as leverage without outsourcing your judgment. Lead decisions, meetings, and teams while the tool handles speed and structure.",
     highlight: "Stay in charge of the call",
     guideHref: "/guides/lead-with-ai-not-behind-it",
+    workbookHref: "/workbooks/leadership-through-ai-workbook",
   },
   {
     icon: Brain,
@@ -143,6 +147,7 @@ const skills = [
       "Evaluate ideas and challenge assumptions when everyone has the same first answer. Make better recommendations that hold up under pressure.",
     highlight: "Think one layer deeper",
     guideHref: "/guides/critical-thinking-beyond-the-first-answer",
+    workbookHref: "/workbooks/critical-thinking-workbook",
   },
   {
     icon: TrendingUp,
@@ -152,6 +157,7 @@ const skills = [
       "Build the habits new and newly promoted leaders need: clarity, trust, and momentum in the first ninety days and beyond.",
     highlight: "Earn trust fast",
     guideHref: "/guides/emerging-leaders-first-ninety-days",
+    workbookHref: "/workbooks/emerging-leaders-workbook",
   },
 ];
 
@@ -556,16 +562,28 @@ export default function Home() {
                   <p className="mt-4 text-sm font-medium text-foreground">
                     {skill.highlight}
                   </p>
-                  <Button
-                    asChild
-                    variant="link"
-                    className="mt-2 h-auto justify-start p-0"
-                  >
-                    <a href={skill.guideHref}>
-                      Read the guide
-                      <ArrowRight className="size-4" aria-hidden="true" />
-                    </a>
-                  </Button>
+                  <div className="mt-2 flex flex-col items-start gap-1">
+                    <Button
+                      asChild
+                      variant="link"
+                      className="h-auto justify-start p-0"
+                    >
+                      <a href={skill.guideHref}>
+                        Read the guide
+                        <ArrowRight className="size-4" aria-hidden="true" />
+                      </a>
+                    </Button>
+                    <Button
+                      asChild
+                      variant="link"
+                      className="h-auto justify-start p-0 text-muted-foreground"
+                    >
+                      <a href={skill.workbookHref}>
+                        Get the workbook
+                        <ArrowRight className="size-4" aria-hidden="true" />
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               ))}
             </div>
