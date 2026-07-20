@@ -9,7 +9,8 @@ export type GuideCapability =
 export type GuideSection =
   | { type: "paragraph"; text: string }
   | { type: "heading"; level: 2 | 3; text: string }
-  | { type: "list"; items: string[] };
+  | { type: "list"; items: string[] }
+  | { type: "blockquote"; text: string; attribution: string };
 
 export type Guide = {
   slug: string;
@@ -29,15 +30,46 @@ export const guides: Guide[] = [
       "A practical framework for turning your experiences into stories that stick in interviews, meetings, and introductions. Built for professionals at any career stage who need substance, not scripts.",
     capability: "Storytelling",
     publishedAt: "2026-07-19",
-    readingTimeMinutes: 9,
+    readingTimeMinutes: 12,
     sections: [
       {
         type: "paragraph",
-        text: "Most people think storytelling is a talent you either have or you do not. In practice, it is a skill you can build. The professionals who get remembered in interviews, team meetings, and first introductions are not always the loudest or the most polished. They are the ones who know how to turn a real experience into a narrative that makes people lean in.",
+        text: "Most people treat storytelling like a gift you are born with. The research says otherwise. Chip and Dan Heath, who studied why some ideas stick while others fade, found that stories are not decoration. They are how humans encode meaning, emotion, and judgment in a form other people can actually remember.",
       },
       {
         type: "paragraph",
-        text: "This guide gives you a simple framework you can use tomorrow. No performance tricks. No slide-deck theater. Just a way to structure what you already know so other people can follow, care, and remember.",
+        text: "That matters more now, not less. AI can generate a polished answer in seconds. What it cannot generate is your specific experience, the tradeoff you made under pressure, or the reason you care about the work. Storytelling is how you show those things without sounding rehearsed. This guide translates decades of narrative research into a framework you can use in your next interview, meeting, or introduction.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What the research shows",
+      },
+      {
+        type: "paragraph",
+        text: "In the classroom experiment described in Made to Stick, Chip Heath asked Stanford students to deliver one-minute speeches on crime policy. The average speech included 2.5 statistics. Only one student in ten told a story. Ten minutes later, audiences remembered almost nothing from the data-heavy talks. Only 5% recalled any individual statistic. But 63% remembered the stories.",
+      },
+      {
+        type: "blockquote",
+        text: "When students are asked to recall the speeches, 63 percent remember the stories. Only 5 percent remember any individual statistic.",
+        attribution: "Chip Heath and Dan Heath, Made to Stick (2007)",
+      },
+      {
+        type: "paragraph",
+        text: "The Heaths call this the SUCCESs framework: Simple, Unexpected, Concrete, Credible, Emotional, Stories. You do not need every element in a two-minute answer. You do need a concrete story with emotional stakes when you want people to remember you, not just agree with you.",
+      },
+      {
+        type: "paragraph",
+        text: "Nancy Duarte, whose Resonate research analyzed history's most persuasive speeches, adds a second insight: in professional settings, you are not the hero of the story. Your listener is. Your job is to be the mentor who helps them see themselves in the outcome you are describing.",
+      },
+      {
+        type: "blockquote",
+        text: "You are not the hero who will save the audience; the audience is your hero.",
+        attribution: "Nancy Duarte, Resonate (2010)",
+      },
+      {
+        type: "paragraph",
+        text: "Stanford Graduate School of Business featured Duarte's work on audience-centered communication for a reason. When your story connects to what the listener needs to decide, adopt, or believe, it stops being self-promotion and starts being useful.",
       },
       {
         type: "heading",
@@ -46,11 +78,11 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Anyone can generate a clean answer now. What they cannot generate is your specific experience, your judgment in a hard moment, or the reason you care about the work. Storytelling is how you show those things without sounding like you memorized a script.",
+        text: "Generative AI raises the floor on fluency. Everyone in the room can sound articulate. The scarce skill is specificity: evidence that you have done real work, judgment under ambiguity, and the ability to make someone else care about an outcome.",
       },
       {
         type: "paragraph",
-        text: "In early career settings, stories do three jobs at once. They prove you have done real work. They show how you think under pressure. They help people picture you on their team. That is why a well-told two-minute story often beats a ten-slide presentation.",
+        text: "In early career settings, stories do three jobs at once. They prove you have handled real situations. They show how you think when the answer is not obvious. They give hiring managers and teammates something concrete to repeat after you leave the room. A well-structured two-minute story often outperforms a ten-slide deck because people remember people, not bullet points.",
       },
       {
         type: "heading",
@@ -59,7 +91,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Use CLEAR when you need a story that fits in an interview answer, a meeting update, or a quick introduction. Each letter is a beat, not a paragraph. Keep the whole thing under two minutes unless someone asks you to go deeper.",
+        text: "CLEAR combines narrative research with practical constraints: keep the whole story under two minutes unless someone asks you to go deeper. Each letter is a beat, not a paragraph.",
       },
       {
         type: "list",
@@ -72,6 +104,10 @@ export const guides: Guide[] = [
         ],
       },
       {
+        type: "paragraph",
+        text: "Pair CLEAR with Duarte's audience-as-hero principle on the relevance line. Do not end with \"and that is why I am great.\" End with \"and that is the same approach I would take here: find the friction, fix the first touchpoint, measure whether it worked.\"",
+      },
+      {
         type: "heading",
         level: 3,
         text: "Example: A project update in a team meeting",
@@ -81,13 +117,9 @@ export const guides: Guide[] = [
         text: "Context: \"Last month our onboarding docs were confusing new hires.\" Line: \"People were asking the same three questions in Slack every week.\" Effort: \"I interviewed five new teammates, rewrote the top ten pages, and added a one-page start-here guide.\" Aftermath: \"Support tickets dropped by half in two weeks.\" Relevance: \"That is the same approach I would take here: find the friction, fix the first touchpoint, measure whether it worked.\"",
       },
       {
-        type: "paragraph",
-        text: "Notice what is missing. No long backstory. No hero language. No vague claims about being a \"hard worker.\" Just a clear sequence someone can repeat after the meeting ends.",
-      },
-      {
         type: "heading",
         level: 2,
-        text: "Where to use stories in your week",
+        text: "What works in practice",
       },
       {
         type: "heading",
@@ -100,7 +132,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "When you hear \"Tell me about a time when...,\" do not reach for a new story. Pick from your five and adjust the relevance line for the role you want.",
+        text: "When you hear \"Tell me about a time when...,\" do not invent a new story. Pick from your five and adjust the relevance line for the role you want.",
       },
       {
         type: "heading",
@@ -109,7 +141,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Open status updates with a one-sentence context and a one-sentence result before you explain the steps. \"We were losing signups after step two. We simplified the form and recovered eighteen percent in a week. Here is what we changed.\" That structure respects people's time and makes your contribution easy to repeat to others.",
+        text: "Open status updates with a one-sentence context and a one-sentence result before you explain the steps. \"We were losing signups after step two. We simplified the form and recovered eighteen percent in a week. Here is what we changed.\" That structure respects people's time and makes your contribution easy to repeat.",
       },
       {
         type: "heading",
@@ -123,30 +155,53 @@ export const guides: Guide[] = [
       {
         type: "heading",
         level: 2,
-        text: "Common mistakes that make stories forgettable",
+        text: "Common mistakes the research warns against",
       },
       {
         type: "list",
         items: [
-          "Starting with chronology instead of stakes. Lead with why the story matters.",
+          "Leading with chronology instead of stakes. The Heaths found that concrete tension beats timeline.",
           "Hiding behind \"we\" when you need to show your specific contribution.",
           "Adding every detail instead of the one detail that makes the scene real.",
-          "Ending without relevance. Always tie the story back to the listener's world.",
+          "Making yourself the hero instead of connecting the story to the listener's decision.",
           "Sounding rehearsed. Practice the beats, not a word-for-word script.",
         ],
       },
       {
         type: "heading",
         level: 2,
-        text: "A weekly practice that compounds",
+        text: "Your weekly practice checklist",
+      },
+      {
+        type: "list",
+        items: [
+          "Every Friday, write down one moment from the week that taught you something.",
+          "Run it through CLEAR in five sentences.",
+          "Say it out loud once and time yourself (under two minutes).",
+          "Build a story bank of five core narratives you can adapt to any room.",
+          "Before high-stakes conversations, ask: who is the hero, and what do they need to hear?",
+        ],
       },
       {
         type: "paragraph",
-        text: "Every Friday, write down one moment from the week that taught you something. Run it through CLEAR in five sentences. Say it out loud once. Over a month you will have a story bank you can pull from in any room.",
+        text: "Storytelling is not about being entertaining. It is about being clear enough that people remember you for the right reasons. That is a professional skill, and it compounds every time you use it on purpose.",
       },
       {
         type: "paragraph",
-        text: "Storytelling is not about being entertaining. It is about being clear enough that people remember you for the right reasons. That is a professional skill, and it gets stronger every time you use it on purpose.",
+        text: "Want more field guides like this? Join the waitlist for launch updates, early excerpts, and new practical resources on storytelling, leadership, and the capabilities AI cannot replace.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Sources",
+      },
+      {
+        type: "list",
+        items: [
+          "Chip Heath and Dan Heath, Made to Stick: Why Some Ideas Survive and Others Die (Random House, 2007)",
+          "Nancy Duarte, Resonate: Present Visual Stories That Transform Audiences (Wiley, 2010)",
+          "Stanford Graduate School of Business, \"It's Not About You: Why Effective Communicators Put Others First\" (2023)",
+        ],
       },
     ],
   },
@@ -157,15 +212,47 @@ export const guides: Guide[] = [
       "Practical ways to lead with clarity and influence without formal authority. For professionals at any stage who want to move work forward in any setting.",
     capability: "Leadership",
     publishedAt: "2026-07-19",
-    readingTimeMinutes: 10,
+    readingTimeMinutes: 12,
     sections: [
       {
         type: "paragraph",
-        text: "Leadership is often treated like a promotion you wait for. In reality, the people who advance fastest are usually leading long before their title changes. They clarify messy problems. They bring others along. They make hard calls visible instead of hiding behind group indecision.",
+        text: "Leadership is often treated like a promotion you wait for. Decades of research say the opposite. James Kouzes and Barry Posner, who surveyed thousands of leaders for The Leadership Challenge, found that leadership is not a title. It is a relationship built on trust, clarity, and shared purpose.",
       },
       {
         type: "paragraph",
-        text: "You do not need a team, a budget, or a corner office to lead. You need clarity, follow-through, and the willingness to take responsibility for outcomes instead of tasks. This guide shows you how to do that in early career roles without overstepping or burning trust.",
+        text: "The professionals who advance fastest are usually leading long before their title changes. They clarify messy problems. They bring others along. They make hard calls visible instead of hiding behind group indecision. This guide translates that research into behaviors you can use this week, with or without formal authority.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What the research shows",
+      },
+      {
+        type: "blockquote",
+        text: "Leadership is a relationship between those who aspire to lead and those who choose to follow.",
+        attribution: "James M. Kouzes and Barry Z. Posner, The Leadership Challenge (2012)",
+      },
+      {
+        type: "paragraph",
+        text: "Kouzes and Posner define leadership as \"the art of mobilizing others to want to struggle for shared aspirations.\" That definition matters because it removes the excuse that you need a team, a budget, or a corner office to start. You need clarity, follow-through, and the willingness to take responsibility for outcomes instead of tasks.",
+      },
+      {
+        type: "blockquote",
+        text: "Leadership is not about titles, positions, or work hours. It is about relationships.",
+        attribution: "James M. Kouzes, The Leadership Challenge",
+      },
+      {
+        type: "paragraph",
+        text: "Liz Wiseman's Multipliers research adds a practical lens. Across 150 executives in 35 countries, Wiseman found that Diminishers got less than half of their team's available intelligence. Multipliers got nearly all of it, roughly 1.97 times more capability from the same people. The difference was not charisma. It was behavior: asking questions, creating space for others to think, and treating people as capable of figuring things out.",
+      },
+      {
+        type: "blockquote",
+        text: "Diminishers got less than half of their team's intelligence, knowledge and capabilities. Multipliers got all of it.",
+        attribution: "Liz Wiseman, Multipliers (2017 revised edition)",
+      },
+      {
+        type: "paragraph",
+        text: "You do not need seniority to lead like a Multiplier. You need to stop hoarding the thinking and start pulling intelligence into the room.",
       },
       {
         type: "heading",
@@ -178,7 +265,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Clarity does not mean having all the answers. It means separating facts from assumptions, naming what is blocked, and proposing a next step small enough to start today. People follow clarity more readily than confidence alone.",
+        text: "Clarity does not mean having all the answers. It means separating facts from assumptions, naming what is blocked, and proposing a next step small enough to start today. Kouzes and Posner's research consistently shows that people follow clarity more readily than confidence alone.",
       },
       {
         type: "heading",
@@ -282,21 +369,44 @@ export const guides: Guide[] = [
           "Taking ownership of every problem instead of the ones where you can actually move the outcome.",
           "Confusing urgency with importance. Not every fire needs your name on the hose.",
           "Waiting for permission on reversible decisions. Move on small calls. Ask on big ones.",
-          "Hoarding information to stay essential. Leaders share context so the team gets stronger.",
+          "Hoarding information to stay essential. Multipliers share context so the team gets stronger.",
         ],
       },
       {
         type: "heading",
         level: 2,
-        text: "A simple weekly leadership habit",
+        text: "Your weekly leadership checklist",
       },
       {
-        type: "paragraph",
-        text: "Pick one recurring problem on your team. Each week, write a one-page brief: what is happening, why it matters, two options, and your recommendation. Share it with the person who can act. Even if they choose differently, you become known as someone who thinks like an owner.",
+        type: "list",
+        items: [
+          "Pick one recurring problem on your team.",
+          "Write a one-page brief: what is happening, why it matters, two options, and your recommendation.",
+          "Share it with the person who can act.",
+          "Ask one question that invites others' thinking instead of presenting a finished answer.",
+          "Close the loop publicly on one commitment you made last week.",
+        ],
       },
       {
         type: "paragraph",
         text: "Titles come and go. The habit of creating clarity, earning trust, and moving work forward is what people remember. That is how you lead before the title catches up.",
+      },
+      {
+        type: "paragraph",
+        text: "Want more field guides like this? Join the waitlist for launch updates, early excerpts, and new practical resources on leadership, influence, and the capabilities AI cannot replace.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Sources",
+      },
+      {
+        type: "list",
+        items: [
+          "James M. Kouzes and Barry Z. Posner, The Leadership Challenge, 6th edition (Wiley, 2017)",
+          "Liz Wiseman, Multipliers: How the Best Leaders Make Everyone Smarter, revised edition (Harper Business, 2017)",
+          "Harvard Business Review, research on informal leadership and influence without authority",
+        ],
       },
     ],
   },
@@ -307,7 +417,7 @@ export const guides: Guide[] = [
       "How to project presence in high-stakes moments through preparation, body language, voice, and mindset. For professionals who need to be heard when the room gets tense.",
     capability: "Executive Presence",
     publishedAt: "2026-07-19",
-    readingTimeMinutes: 9,
+    readingTimeMinutes: 12,
     sections: [
       {
         type: "paragraph",
@@ -315,7 +425,29 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Calm confidence is not pretending you are unfazed. It is having enough preparation and self-awareness that your presence matches your substance. This guide covers what to do before, during, and after high-stakes moments so you show up steady when others default to noise.",
+        text: "Executive presence is not a mystery trait reserved for executives. Sylvia Ann Hewlett's research at the Center for Talent Innovation (now Coqual) found that presence accounts for 26 percent of what senior leaders say it takes to get promoted. It is learnable, measurable, and especially valuable when your experience on paper is still catching up to your capability.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What the research shows",
+      },
+      {
+        type: "blockquote",
+        text: "It is executive presence, and no man or woman attains a top job, lands an extraordinary deal, or develops a significant following without this heady combination of confidence, poise, and authenticity that convinces the rest of us we are in the presence of someone who is the real deal.",
+        attribution: "Sylvia Ann Hewlett, Executive Presence (2014)",
+      },
+      {
+        type: "paragraph",
+        text: "Hewlett's nationwide survey and focus groups identified three universal dimensions of executive presence: gravitas (how you act), communication (how you speak), and appearance (how you look). Senior executives rated gravitas as the most important by far, cited by 67 percent of respondents compared with 28 percent for communication and 5 percent for appearance.",
+      },
+      {
+        type: "paragraph",
+        text: "The top gravitas signal in her research was grace under fire: keeping your cool when the room turns tense. That is not pretending you are unfazed. It is having enough preparation and self-awareness that your presence matches your substance.",
+      },
+      {
+        type: "paragraph",
+        text: "Coqual's research also found that performance and hard work alone do not guarantee advancement. Leaders who lack presence often stall, while those who project steadiness earn the trust that unlocks bigger rooms. The good news: presence is built through repeatable habits, not innate charisma.",
       },
       {
         type: "heading",
@@ -333,7 +465,16 @@ export const guides: Guide[] = [
       {
         type: "heading",
         level: 2,
-        text: "Prepare the room in your body first",
+        text: "The three-pillar framework: gravitas, communication, appearance",
+      },
+      {
+        type: "paragraph",
+        text: "Use Hewlett's framework as a pre-flight checklist before high-stakes moments. Gravitas: Are you centered and decisive under pressure? Communication: Are you clear, concise, and tuned to the room? Appearance: Do you look prepared and appropriate for the context (without obsessing over perfection)?",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What works in practice: before the moment",
       },
       {
         type: "heading",
@@ -360,7 +501,7 @@ export const guides: Guide[] = [
       {
         type: "heading",
         level: 2,
-        text: "Use your voice on purpose",
+        text: "What works in practice: during the moment",
       },
       {
         type: "paragraph",
@@ -410,11 +551,11 @@ export const guides: Guide[] = [
       {
         type: "heading",
         level: 3,
-        text: "Plan for the punch",
+        text: "Plan for the pushback",
       },
       {
         type: "paragraph",
-        text: "Decide in advance how you will handle a challenge. When someone pushes back, use: pause, acknowledge, answer. \"That is a fair push. The reason I see it this way is...\" You do not need to win the exchange. You need to stay composed inside it.",
+        text: "Decide in advance how you will handle a challenge. When someone pushes back, use: pause, acknowledge, answer. \"That is a fair push. The reason I see it this way is...\" You do not need to win the exchange. You need to stay composed inside it. That is gravitas in action.",
       },
       {
         type: "heading",
@@ -432,15 +573,38 @@ export const guides: Guide[] = [
       {
         type: "heading",
         level: 2,
-        text: "After the moment: build the habit",
+        text: "Your executive presence checklist",
       },
       {
-        type: "paragraph",
-        text: "Within an hour of any high-stakes moment, write a short debrief. What landed? Where did you rush? What question surprised you? One paragraph is enough. Over time you will see patterns and fix them before the next room, not after.",
+        type: "list",
+        items: [
+          "Before: Run the gravitas, communication, appearance check. Write your three must-land points.",
+          "During: Start slow. Pause after key statements. Use short sentences.",
+          "After: Debrief within an hour. What landed? Where did you rush? What surprised you?",
+          "Weekly: Record one sixty-second answer to a hard question and review it.",
+          "Monthly: Ask one trusted colleague for specific feedback on how you show up under pressure.",
+        ],
       },
       {
         type: "paragraph",
         text: "Calm confidence is cumulative. Each prepared entrance, each steady answer, each clean close teaches your body that you can handle pressure without shrinking. That is executive presence in the making, and it is available long before the title says so.",
+      },
+      {
+        type: "paragraph",
+        text: "Want more field guides like this? Join the waitlist for launch updates, early excerpts, and new practical resources on executive presence and the capabilities AI cannot replace.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Sources",
+      },
+      {
+        type: "list",
+        items: [
+          "Sylvia Ann Hewlett, Executive Presence: The Missing Link Between Merit and Success (HarperBusiness, 2014)",
+          "Center for Talent Innovation (Coqual), Executive Presence: Key Findings research report (2012)",
+          "Coqual, Cracking the Code: Unlocking the Potential of Multicultural Professionals (2020)",
+        ],
       },
     ],
   },
@@ -451,15 +615,42 @@ export const guides: Guide[] = [
       "A practical guide to using AI as a leadership tool without outsourcing your judgment, voice, or credibility. For managers and individual contributors at every career stage.",
     capability: "Leadership through AI",
     publishedAt: "2026-07-20",
-    readingTimeMinutes: 10,
+    readingTimeMinutes: 12,
     sections: [
       {
         type: "paragraph",
-        text: "AI is now part of how work gets done. The mistake is treating it as a shortcut that replaces thinking. The opportunity is treating it as leverage that amplifies the judgment, clarity, and leadership you already bring.",
+        text: "AI is now part of how work gets done. McKinsey's 2024 global survey found that 65 percent of organizations were regularly using generative AI, nearly double the rate from ten months earlier. The mistake is treating it as a shortcut that replaces thinking. The opportunity is treating it as leverage that amplifies the judgment, clarity, and leadership you already bring.",
       },
       {
         type: "paragraph",
-        text: "Leading with AI is not about generating more output faster. It is about knowing when to use the tool, when to push back on it, and when to show up as the human who makes the call. This guide covers how to do that without losing credibility or sounding like everyone else in the room.",
+        text: "Ethan Mollick, who researches human-AI collaboration at the Wharton School, puts it plainly: you cannot know what these tools are good or bad at until you use them in your own work. Leadership through AI means staying accountable for outcomes while the tool handles repeatable tasks. You own the frame, the recommendation, and the conversation with stakeholders.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What the research shows",
+      },
+      {
+        type: "blockquote",
+        text: "My argument has always been to use it for everything, and that is how you figure out what it is good or bad at.",
+        attribution: "Ethan Mollick, Co-Intelligence (2024)",
+      },
+      {
+        type: "paragraph",
+        text: "Mollick's research with Boston Consulting Group found that consultants using AI on familiar tasks moved faster, but only when they stayed in the loop: evaluating outputs, correcting course, and knowing when to take work back. AI expanded options. Humans still owned the recommendation.",
+      },
+      {
+        type: "blockquote",
+        text: "As managers and leaders, you get to make these choices about how to deploy these systems to increase human flourishing.",
+        attribution: "Ethan Mollick, Big Think interview on leading with AI",
+      },
+      {
+        type: "paragraph",
+        text: "McKinsey's research on the human side of generative AI reinforces this. Organizations that set a people-centric talent strategy, where AI augments judgment rather than replacing it, gain a competitive edge as more work is affected by these tools.",
+      },
+      {
+        type: "paragraph",
+        text: "Mollick's organizational framework is simple: you need leadership (to set incentives), a lab (to experiment safely), and a crowd (everyone using the tools and sharing what works). Leaders who hide from AI lose credibility. Leaders who paste AI output without editing lose trust just as fast.",
       },
       {
         type: "heading",
@@ -468,33 +659,31 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Leadership through AI means you stay accountable for outcomes while AI handles repeatable tasks: drafting, summarizing, researching, structuring options. You own the frame, the recommendation, and the conversation with stakeholders. The tool assists. You decide.",
+        text: "Leadership through AI means you stay accountable for outcomes while AI handles drafting, summarizing, researching, and structuring options. The tool assists. You decide.",
       },
       {
         type: "paragraph",
-        text: "This matters at every level. Early career professionals who use AI to think more clearly stand out next to peers who paste generic answers. Job changers who use AI to translate experience into new contexts move faster than those who start from blank pages. Experienced hires who use AI to sharpen analysis without dulling their voice keep the edge that got them hired.",
+        text: "This matters at every level. Early career professionals who use AI to think more clearly stand out next to peers who paste generic answers. Job changers who use AI to translate experience into new contexts move faster. Experienced hires who sharpen analysis without dulling their voice keep the edge that got them hired.",
       },
       {
         type: "heading",
         level: 2,
-        text: "The three rules that keep you in charge",
+        text: "Mollick's co-intelligence principles in practice",
       },
       {
         type: "list",
         items: [
-          "Never send what you have not edited. AI drafts are starting points, not finished work.",
-          "Always add context AI cannot know: politics, history, relationships, and what your audience actually cares about.",
+          "Always invite AI to the table. Use it on tasks you know well so you can evaluate the output.",
+          "Be the human in the loop. Never send what you have not edited. Verify facts, numbers, and names.",
+          "Treat AI like a person (but remember it is software). Give it role, context, and constraints.",
+          "Ask it to be a skeptic. \"What is wrong with this plan? What am I missing?\"",
           "Make your recommendation visible. Leaders name a point of view. Tools do not.",
         ],
       },
       {
-        type: "paragraph",
-        text: "These rules sound simple. Most people break them under time pressure. That is exactly why following them builds trust. Your manager, client, or team learns that your work reflects your thinking, not a default template.",
-      },
-      {
         type: "heading",
         level: 2,
-        text: "Use AI to lead meetings and decisions better",
+        text: "What works in practice: meetings and decisions",
       },
       {
         type: "heading",
@@ -530,7 +719,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Weak prompts produce weak thinking. Strong prompts force clarity. Try these patterns on real work this week.",
+        text: "Weak prompts produce weak thinking. Strong prompts force clarity. Mollick notes that managers, teachers, and parents often prompt AI better than coders because they know how to give a person clear instructions. Try these patterns on real work this week.",
       },
       {
         type: "list",
@@ -540,10 +729,6 @@ export const guides: Guide[] = [
           "\"Rewrite this for a busy executive: one paragraph, clear ask, no jargon.\"",
           "\"Compare these two paths using criteria I care about: speed, risk, cost, and team capacity.\"",
         ],
-      },
-      {
-        type: "paragraph",
-        text: "Notice the pattern. You supply judgment. AI supplies structure and speed. The combination is what makes you useful in the age of AI.",
       },
       {
         type: "heading",
@@ -557,21 +742,44 @@ export const guides: Guide[] = [
           "Letting AI flatten your voice into corporate filler. Edit until it sounds like you.",
           "Using AI to avoid hard conversations. No tool replaces showing up in the room.",
           "Chasing every new feature instead of mastering one workflow that saves real time.",
-          "Assuming AI output is correct. Verify facts, numbers, and names every time.",
+          "Assuming AI output is correct. Mollick's research shows confident wrong answers are common.",
         ],
       },
       {
         type: "heading",
         level: 2,
-        text: "A weekly habit for AI-savvy leaders",
+        text: "Your weekly AI leadership checklist",
       },
       {
-        type: "paragraph",
-        text: "Pick one recurring task you own: status updates, project briefs, client emails, or team agendas. Build a personal template for how you use AI on that task: input you always provide, edits you always make, and a final check you never skip. Run it for four weeks. You will move faster and still sound like the person people trust to lead.",
+        type: "list",
+        items: [
+          "Pick one recurring task you own: status updates, briefs, client emails, or team agendas.",
+          "Build a personal template: input you always provide, edits you always make, final check you never skip.",
+          "Run it for four weeks and track time saved versus quality maintained.",
+          "Share one useful workflow with your team (that is leading, not hoarding).",
+          "Once a month, ask AI to challenge your own recommendation before you send it.",
+        ],
       },
       {
         type: "paragraph",
         text: "AI is not the competition. Professionals who combine tool speed with human judgment are. Leadership through AI is how you stay on the right side of that line.",
+      },
+      {
+        type: "paragraph",
+        text: "Want more field guides like this? Join the waitlist for launch updates, early excerpts, and new practical resources on leadership through AI and the capabilities that still require a human in the loop.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Sources",
+      },
+      {
+        type: "list",
+        items: [
+          "Ethan Mollick, Co-Intelligence: Living and Working with AI (Portfolio, 2024)",
+          "McKinsey Global Survey, The State of AI in Early 2024",
+          "McKinsey, The Human Side of Generative AI: Creating a Path to Productivity (2023)",
+        ],
       },
     ],
   },
@@ -582,15 +790,38 @@ export const guides: Guide[] = [
       "How to evaluate ideas, challenge assumptions, and make better decisions when AI makes the first draft easy for everyone. Practical tools for any role or career stage.",
     capability: "Critical Thinking",
     publishedAt: "2026-07-20",
-    readingTimeMinutes: 10,
+    readingTimeMinutes: 12,
     sections: [
       {
         type: "paragraph",
-        text: "When anyone can generate a plausible answer in seconds, the scarce skill is not information. It is judgment. Critical thinking is how you decide what to trust, what to test, and what to recommend when the easy answer is already on the table.",
+        text: "When anyone can generate a plausible answer in seconds, the scarce skill is not information. It is judgment. Daniel Kahneman, whose research on decision-making won the Nobel Prize in Economics, showed that our minds take shortcuts constantly. Often we answer an easier question than the one in front of us, and we do not notice the swap.",
       },
       {
         type: "paragraph",
-        text: "This guide gives you a practical toolkit for everyday work: meetings, emails, project plans, and the moments when someone says \"AI already handled that.\" You do not need a philosophy degree. You need habits that slow you down just enough to think clearly.",
+        text: "Critical thinking is how you decide what to trust, what to test, and what to recommend when the easy answer is already on the table. Richard Paul and Linda Elder of the Foundation for Critical Thinking define it as disciplined thinking that analyzes, assesses, and improves itself. This guide turns that research into habits you can use in meetings, emails, and project plans this week.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What the research shows",
+      },
+      {
+        type: "blockquote",
+        text: "This is the essence of intuitive heuristics: when faced with a difficult question, we often answer an easier one instead, usually without noticing the substitution.",
+        attribution: "Daniel Kahneman, Thinking, Fast and Slow (2011)",
+      },
+      {
+        type: "paragraph",
+        text: "Kahneman's System 1 (fast, intuitive) and System 2 (slow, deliberate) framework explains why polished AI drafts feel convincing. System 1 reads fluency as truth. Critical thinking is the practice of engaging System 2 when the stakes are high: hiring, budgets, strategy, and anything that is hard to undo.",
+      },
+      {
+        type: "blockquote",
+        text: "Everyone thinks; it is our nature to do so. But much of our thinking, left to itself, is biased, distorted, partial, uninformed or down-right prejudiced.",
+        attribution: "Richard Paul and Linda Elder, The Miniature Guide to Critical Thinking (2006)",
+      },
+      {
+        type: "paragraph",
+        text: "Paul and Elder's intellectual standards give you a practical audit: clarity, accuracy, precision, relevance, depth, breadth, significance, logic, and fairness. You do not need all nine in every email. You do need them before the group commits to an expensive yes.",
       },
       {
         type: "heading",
@@ -612,7 +843,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Use VERIFY when you receive a plan, a deck, an AI draft, or a colleague's recommendation. It takes five minutes and prevents expensive yeses.",
+        text: "Use VERIFY when you receive a plan, a deck, an AI draft, or a colleague's recommendation. It takes five minutes and prevents expensive yeses. Pair it with Paul and Elder's habit of asking: what is the purpose, what is the evidence, and what are we assuming?",
       },
       {
         type: "list",
@@ -626,17 +857,13 @@ export const guides: Guide[] = [
         ],
       },
       {
-        type: "paragraph",
-        text: "You do not need to block every idea. You need to know which questions still need answers before the group commits.",
-      },
-      {
         type: "heading",
         level: 2,
-        text: "Questions that upgrade any meeting",
+        text: "What works in practice: questions that upgrade any meeting",
       },
       {
         type: "paragraph",
-        text: "The best critical thinkers sound curious, not combative. Keep these in your pocket.",
+        text: "The best critical thinkers sound curious, not combative. Kahneman's research suggests the best we can do is learn to recognize situations where mistakes are likely and try harder when the stakes are high.",
       },
       {
         type: "list",
@@ -647,10 +874,6 @@ export const guides: Guide[] = [
           "\"What is the smallest test that would tell us if this is worth scaling?\"",
           "\"If we are wrong, how will we know, and how fast?\"",
         ],
-      },
-      {
-        type: "paragraph",
-        text: "One well-placed question can save a quarter of misaligned work. That is why critical thinking is a leadership behavior, not a niche skill for analysts.",
       },
       {
         type: "heading",
@@ -673,7 +896,7 @@ export const guides: Guide[] = [
       {
         type: "list",
         items: [
-          "Confusing confidence with accuracy. Loud certainty is not evidence.",
+          "Confusing confidence with accuracy. Kahneman showed we are often confident when we are wrong.",
           "Anchoring on the first answer because it arrived fastest.",
           "Treating consensus as proof. Groups can agree on the wrong frame.",
           "Over-researching to avoid deciding. Analysis without a deadline is avoidance.",
@@ -683,15 +906,38 @@ export const guides: Guide[] = [
       {
         type: "heading",
         level: 2,
-        text: "Build a daily critical thinking practice",
+        text: "Your daily critical thinking checklist",
       },
       {
-        type: "paragraph",
-        text: "Each day, pick one claim you accepted without question: a metric in a report, a assumption in a project plan, a headline summary. Spend ten minutes checking it. Follow one source upstream. Write one sentence on what you learned. Over a month you will catch patterns others miss and build a reputation for substance over speed.",
+        type: "list",
+        items: [
+          "Pick one claim you accepted without question today: a metric, an assumption, or an AI summary.",
+          "Spend ten minutes checking it. Follow one source upstream.",
+          "Run VERIFY on one proposal before your next meeting.",
+          "Write one sentence on what you learned.",
+          "Ask one question that tests the frame, not just the details.",
+        ],
       },
       {
         type: "paragraph",
         text: "Critical thinking is not about being negative. It is about being responsible. When everyone has the same first answer, the person who thinks one layer deeper is the one people follow.",
+      },
+      {
+        type: "paragraph",
+        text: "Want more field guides like this? Join the waitlist for launch updates, early excerpts, and new practical resources on critical thinking and the capabilities AI cannot replace.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Sources",
+      },
+      {
+        type: "list",
+        items: [
+          "Daniel Kahneman, Thinking, Fast and Slow (Farrar, Straus and Giroux, 2011)",
+          "Richard Paul and Linda Elder, Critical Thinking: Tools for Taking Charge of Your Learning and Your Life (Pearson, 2021)",
+          "Foundation for Critical Thinking, The Miniature Guide to Critical Thinking: Concepts and Tools (2006)",
+        ],
       },
     ],
   },
@@ -702,15 +948,42 @@ export const guides: Guide[] = [
       "A field guide for new and newly promoted leaders who need to earn trust, set direction, and show up with substance fast. For first-time managers and rising contributors.",
     capability: "Emerging Leaders",
     publishedAt: "2026-07-20",
-    readingTimeMinutes: 11,
+    readingTimeMinutes: 13,
     sections: [
       {
         type: "paragraph",
-        text: "The first ninety days as an emerging leader are not about proving you belong. They are about proving others can rely on you. That shift from individual contributor to leader, or from leader to leader of leaders, is where many talented people stumble. Not because they lack skill, but because no one taught them what to prioritize when the title changes.",
+        text: "The first ninety days as an emerging leader are not about proving you belong. They are about proving others can rely on you. Michael Watkins, whose Harvard Business Review research on leadership transitions has guided thousands of new leaders, found that small differences in your early actions can have disproportionate impact because everyone is forming impressions from very little data.",
       },
       {
         type: "paragraph",
-        text: "This guide is a practical map for that window: what to learn, what to say, what to decide, and what to defer. It works whether you were promoted internally, hired into a new team, or stepping up while you still look early career on paper.",
+        text: "That shift from individual contributor to leader is where many talented people stumble. Not because they lack skill, but because no one taught them what to prioritize when the title changes. Gallup's research adds urgency: managers account for 70 percent of the variance in team engagement, yet many first-time managers receive little or no formal training.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What the research shows",
+      },
+      {
+        type: "blockquote",
+        text: "The president of the United States gets 100 days to prove himself; you get 90. The actions you take during your first few months in a new role will largely determine whether you succeed or fail.",
+        attribution: "Michael D. Watkins, The First 90 Days (2003)",
+      },
+      {
+        type: "paragraph",
+        text: "Watkins surveyed more than 1,300 senior HR leaders. Nearly 90 percent said transitions into new roles are the most challenging times in a leader's professional life. About three-quarters agreed that success or failure during the first few months strongly predicts overall success in the job.",
+      },
+      {
+        type: "blockquote",
+        text: "Leadership ultimately is about influence and leverage. You are, after all, only one person. To be successful, you need to mobilize the energy of many others in your organization.",
+        attribution: "Michael D. Watkins, The First 90 Days",
+      },
+      {
+        type: "paragraph",
+        text: "The Center for Creative Leadership's research on emerging leaders found that personal, structural, and cultural barriers often keep young professionals from stepping into leadership or succeeding once they do. CCL's study of more than 10,000 Gen Z and Millennial workers found that 60 percent feel leadership opportunities for young adults are inequitable. Organizations that reduce those barriers and align values retain emerging talent.",
+      },
+      {
+        type: "paragraph",
+        text: "Gallup's manager development research reinforces Watkins' timeline. Managers who receive coaching and people development training see up to 18 percent higher engagement on their teams. The first ninety days is when you set the habits that determine whether you join that group or struggle alone.",
       },
       {
         type: "heading",
@@ -719,7 +992,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Your real job is not to fix everything. It is to build clarity, trust, and momentum in that order. Clarity means people know what matters. Trust means people believe you will follow through. Momentum means the team ships something visible that reflects shared priorities.",
+        text: "Your real job is not to fix everything. It is to build clarity, trust, and momentum in that order. Watkins calls this reaching the break-even point: the moment when you contribute more value than the disruption of your arrival cost the organization.",
       },
       {
         type: "paragraph",
@@ -729,6 +1002,10 @@ export const guides: Guide[] = [
         type: "heading",
         level: 2,
         text: "Days 1 to 30: Listen and learn",
+      },
+      {
+        type: "paragraph",
+        text: "Watkins' first imperative is to accelerate your learning. Effective learning gives you the foundational insights you need before you build your plan for the next sixty days.",
       },
       {
         type: "heading",
@@ -755,7 +1032,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Pick a pain point everyone mentions and fix it fast: a confusing ritual, a missing template, a recurring miscommunication. Keep it small. Ship it in thirty days. Early wins prove you listen and act.",
+        text: "Watkins calls these early wins. Pick a pain point everyone mentions and fix it fast: a confusing ritual, a missing template, a recurring miscommunication. Keep it small. Ship it in thirty days. Early wins prove you listen and act.",
       },
       {
         type: "heading",
@@ -800,7 +1077,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Use behavior, impact, next step. \"When the update went out without the numbers, the exec team lost confidence in our timeline. Next time, loop me in before you send.\" Specific beats vague. Frequent beats dramatic.",
+        text: "Gallup found that employees who receive meaningful feedback at least weekly are three times more likely to be engaged than those who receive it once a year or less. Use behavior, impact, next step: \"When the update went out without the numbers, the exec team lost confidence in our timeline. Next time, loop me in before you send.\"",
       },
       {
         type: "heading",
@@ -829,15 +1106,38 @@ export const guides: Guide[] = [
       {
         type: "heading",
         level: 2,
-        text: "Your ninety-day check-in with yourself",
+        text: "Your ninety-day checklist",
       },
       {
-        type: "paragraph",
-        text: "On day ninety, answer five questions in writing: Can my team state our top three priorities? Do people bring me problems early? Did we ship something that mattered? Where did I avoid a conversation I needed to have? What will I do differently in the next ninety days?",
+        type: "list",
+        items: [
+          "Days 1-30: Complete stakeholder conversations. Map workflow. Ship one early win.",
+          "Days 31-60: Publish three priorities with owners and decision rules.",
+          "Days 61-90: Establish weekly feedback rhythm. Run meetings with agendas and clear closes.",
+          "Day 90: Answer in writing: Can my team state our top three priorities? Do people bring me problems early? Did we ship something that mattered?",
+          "Ongoing: Invest in manager development. Gallup shows trained managers lift team engagement up to 18 percent.",
+        ],
       },
       {
         type: "paragraph",
         text: "Emerging leadership is not a personality type. It is a set of repeatable behaviors: listen, clarify, decide, follow through, develop others. Master those in your first ninety days and the title starts to mean something real.",
+      },
+      {
+        type: "paragraph",
+        text: "Want more field guides like this? Join the waitlist for launch updates, early excerpts, and new practical resources for emerging leaders at every career stage.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Sources",
+      },
+      {
+        type: "list",
+        items: [
+          "Michael D. Watkins, The First 90 Days: Critical Success Strategies for New Leaders at All Levels (Harvard Business Review Press, 2003)",
+          "Gallup, Manager Development Strategy and State of the Global Workplace reports",
+          "Center for Creative Leadership, It's You, Not Them: Why Emerging Leaders Need Your Support to Succeed (2021)",
+        ],
       },
     ],
   },

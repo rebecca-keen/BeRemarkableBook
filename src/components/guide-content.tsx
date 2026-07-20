@@ -35,6 +35,22 @@ export function GuideContent({ sections }: GuideContentProps) {
           );
         }
 
+        if (section.type === "blockquote") {
+          return (
+            <blockquote
+              key={`${section.type}-${index}`}
+              className="rounded-lg border border-border/80 bg-secondary/35 p-6 md:p-8"
+            >
+              <p className="font-heading text-lg leading-snug text-foreground md:text-xl">
+                &ldquo;{section.text}&rdquo;
+              </p>
+              <footer className="mt-4 text-sm text-muted-foreground">
+                {section.attribution}
+              </footer>
+            </blockquote>
+          );
+        }
+
         return <p key={`${section.type}-${index}`}>{section.text}</p>;
       })}
     </div>
