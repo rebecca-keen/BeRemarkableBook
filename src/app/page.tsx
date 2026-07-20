@@ -1,11 +1,14 @@
 import {
   ArrowRight,
   BookOpen,
+  Bot,
+  Brain,
   Briefcase,
   Check,
   Mic2,
   Quote,
   Sparkles,
+  TrendingUp,
   Users,
   X,
 } from "lucide-react";
@@ -29,35 +32,35 @@ import { siteConfig } from "@/lib/site-config";
 
 const faqItems: FaqItem[] = [
   {
-    question: "What skills help you stand out in the age of AI?",
+    question: "What is career launch coaching?",
     answer:
-      "The skills AI cannot replicate: clear storytelling, leadership that moves work forward, and calm confidence under pressure. Be Remarkable teaches all three through a practical field guide, workshops, and guides built for young adults and early career professionals.",
-  },
-  {
-    question: "How can young adults develop executive presence?",
-    answer:
-      "Executive presence starts before you have the title. Be Remarkable focuses on how you show up in meetings, interviews, and high-stakes conversations: speaking with clarity, leading with intention, and projecting calm confidence when others default to noise.",
-  },
-  {
-    question: "What is the difference between storytelling and presenting?",
-    answer:
-      "Presenting delivers information. Storytelling makes people care, remember, and act. Be Remarkable teaches storytelling as a professional skill: turning your experiences into narratives that cut through in any room, not just slide decks.",
+      "Career launch coaching helps you stand out with substance at pivotal career moments: your first role, a career change, or a seasoned hire where you want the extra edge. Be Remarkable combines a field guide, workshops, and practical guides on storytelling, leadership through AI, executive presence, critical thinking, and emerging leader development.",
   },
   {
     question: "Who is Be Remarkable for?",
     answer:
-      "Young adults and early career entrants entering the workforce, with or without a degree. Whether you are in college, trade school, or starting work directly, Be Remarkable meets you at the moment that matters, not after you have a senior title.",
+      "Early career professionals launching their careers, job changers switching roles or industries, and experienced hires who want sharper presence and leadership in the age of AI. The book, workshops, and guides meet you at your stage, not only at the starting line.",
+  },
+  {
+    question: "What skills help you stand out in the age of AI?",
+    answer:
+      "The skills AI cannot replicate: clear storytelling, leadership that moves work forward, executive presence under pressure, and critical thinking that goes beyond the first answer. Be Remarkable teaches all of these through practical resources built from 15 years of coaching professionals across career stages.",
+  },
+  {
+    question: "How can professionals develop executive presence?",
+    answer:
+      "Executive presence starts with how you show up in meetings, interviews, and high-stakes conversations: speaking with clarity, leading with intention, and projecting calm confidence when others default to noise. Be Remarkable covers preparation, voice, and mindset for any career stage.",
   },
   {
     question: "How is Be Remarkable different from typical communication training?",
     answer:
-      "Most communication programs target executives with courses or coaching alone. Be Remarkable combines a field guide, workshops, and practical guides for early career professionals, with 15 years of hands-on experience developing this demographic and a focus on capability, not corporate fluff.",
+      "Most programs target senior executives with courses or coaching alone. Be Remarkable combines a field guide, workshops, and practical guides for professionals at every stage, with 15 years of hands-on experience and a focus on capability, not corporate fluff.",
   },
 ];
 
 const heroValueProps = [
-  "Built for young adults and early career entrants",
-  "Storytelling, leadership, and calm confidence",
+  "Career launch coaching for every stage",
+  "Six capability areas that compound over time",
   "Book, workshops, and guides, not courses alone",
   "15 years developing professionals who stand out",
 ];
@@ -98,7 +101,7 @@ const supportingSkills = [
 const skills = [
   {
     icon: BookOpen,
-    label: "Core skill",
+    label: "Capability",
     title: "Storytelling",
     description:
       "Turn your experiences into narratives people remember. Build storytelling skills that cut through in presentations, meetings, and the moments that define your work.",
@@ -107,34 +110,73 @@ const skills = [
   },
   {
     icon: Users,
-    label: "Core skill",
+    label: "Capability",
     title: "Leadership",
     description:
-      "Show up as a leader before you have the title. Lead with clarity when the stakes are high, earn trust, and move work forward when you are not the obvious choice.",
+      "Show up as a leader before you have the title. Lead with clarity when the stakes are high, earn trust, and move work forward at any career stage.",
     highlight: "Lead with confidence in any room",
     guideHref: "/guides/lead-before-you-have-the-title",
   },
   {
     icon: Mic2,
-    label: "Core skill",
-    title: "Calm Confidence",
+    label: "Capability",
+    title: "Executive Presence",
     description:
-      "Project the calm confidence that makes people listen. Show up with clarity and executive presence when the stakes are high.",
+      "Project the calm confidence that makes people listen. Show up with clarity and presence when the stakes are high, from first interviews to executive rooms.",
     highlight: "Make people listen",
     guideHref: "/guides/calm-confidence-under-pressure",
   },
+  {
+    icon: Bot,
+    label: "Capability",
+    title: "Leadership through AI",
+    description:
+      "Use AI as leverage without outsourcing your judgment. Lead decisions, meetings, and teams while the tool handles speed and structure.",
+    highlight: "Stay in charge of the call",
+    guideHref: "/guides/lead-with-ai-not-behind-it",
+  },
+  {
+    icon: Brain,
+    label: "Capability",
+    title: "Critical Thinking",
+    description:
+      "Evaluate ideas and challenge assumptions when everyone has the same first answer. Make better recommendations that hold up under pressure.",
+    highlight: "Think one layer deeper",
+    guideHref: "/guides/critical-thinking-beyond-the-first-answer",
+  },
+  {
+    icon: TrendingUp,
+    label: "Track",
+    title: "Emerging Leaders",
+    description:
+      "Build the habits new and newly promoted leaders need: clarity, trust, and momentum in the first ninety days and beyond.",
+    highlight: "Earn trust fast",
+    guideHref: "/guides/emerging-leaders-first-ninety-days",
+  },
 ];
 
-const audiencePoints = [
-  "Young adults entering the workforce, with or without a degree",
-  "Early career entrants building professional presence in any field",
-  "Anyone preparing to start work who knows AI can do the work, but not the presence",
+const audienceCategories = [
+  {
+    title: "Early career",
+    description:
+      "Launching your first role or building professional presence from the ground up. Interviews, first teams, and the moments that set your trajectory.",
+  },
+  {
+    title: "Job changers",
+    description:
+      "Switching careers, industries, or roles and need to translate your experience into a story that lands. Show up with clarity, not starting over from scratch.",
+  },
+  {
+    title: "Experienced hires",
+    description:
+      "Seasoned professionals who want the extra edge: executive presence, sharper thinking, and leadership that cuts through when AI handles the routine work.",
+  },
 ];
 
 const differentiators = [
   {
-    typical: "Built for senior executives",
-    remarkable: "Built for young adults and early career entrants",
+    typical: "Built for senior executives only",
+    remarkable: "Career launch coaching for every stage",
   },
   {
     typical: "Courses or coaching only",
@@ -154,7 +196,7 @@ const methodPoints = [
   {
     title: "Built for real moments",
     description:
-      "First interviews, team meetings, client conversations, and the defining moments of early career life, not abstract theory.",
+      "Interviews, team meetings, client conversations, career pivots, and the defining moments at any stage, not abstract theory.",
   },
   {
     title: "Capability, not hype",
@@ -169,7 +211,7 @@ const methodPoints = [
   {
     title: "Human skills in the AI era",
     description:
-      "When everyone has the same prompts, presence, story, and leadership become your unfair advantage.",
+      "When everyone has the same prompts, presence, story, leadership, and judgment become your unfair advantage.",
   },
 ];
 
@@ -179,19 +221,12 @@ const stats = [
     suffix: " yrs",
     label: "Developing professionals who show up with substance",
   },
-  { value: "3", suffix: "", label: "Core skills that compound" },
+  { value: "6", suffix: "", label: "Capability areas that compound" },
   {
     value: "3",
     suffix: "",
     label: "Learning formats: book, workshops, guides",
   },
-];
-
-const proofPoints = [
-  "Young adults in any field",
-  "Early career entrants and new hires",
-  "College, trade school, or straight to work",
-  "Career changers starting fresh",
 ];
 
 export default function Home() {
@@ -224,10 +259,10 @@ export default function Home() {
                   </span>
                 </h1>
                 <p className="mt-7 max-w-xl text-lg leading-relaxed text-hero-foreground/72 md:text-xl">
-                  A field guide, workshops, and practical guides for young
-                  adults and early career entrants. Build storytelling,
-                  leadership, and calm confidence that help you stand out with
-                  substance when AI is everywhere.
+                  Career launch coaching through a field guide, workshops, and
+                  practical guides. Build storytelling, leadership, executive
+                  presence, and critical thinking that help you stand out with
+                  substance at any career stage when AI is everywhere.
                 </p>
                 <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                   {heroValueProps.map((point) => (
@@ -288,11 +323,10 @@ export default function Home() {
                       Communication skills for standing out with substance.
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-hero-foreground/60">
-                      A field guide, workshops, and guides built for the age of
-                      AI. Storytelling, leadership, and calm confidence from
+                      Career launch coaching for the age of AI. Storytelling,
+                      leadership, executive presence, and critical thinking from
                       over 15 years coaching professionals to tell stronger
-                      stories, lead with influence, and show up with calm
-                      confidence.
+                      stories, lead with influence, and show up with substance.
                     </p>
                   </div>
                 </CardContent>
@@ -309,12 +343,12 @@ export default function Home() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 {
-                  title: "Early career focus",
-                  text: "For young adults starting work, not executives polishing a brand.",
+                  title: "Every career stage",
+                  text: "Early career, job changers, and experienced hires who want the extra edge.",
                 },
                 {
-                  title: "Three core skills",
-                  text: "Storytelling, leadership, and calm confidence that compound over time.",
+                  title: "Six capability areas",
+                  text: "Storytelling, leadership, executive presence, AI leadership, critical thinking, and emerging leaders.",
                 },
                 {
                   title: "Book plus workshops",
@@ -347,16 +381,21 @@ export default function Home() {
         <section className="border-b border-border/70 bg-card">
           <div className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-14">
             <p className="text-center text-xs font-semibold tracking-[0.22em] text-muted-foreground uppercase">
-              Built for young adults entering work
+              Career launch coaching for
             </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-              {proofPoints.map((point) => (
-                <span
-                  key={point}
-                  className="font-heading text-base text-foreground/75 md:text-lg"
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {audienceCategories.map((category) => (
+                <div
+                  key={category.title}
+                  className="rounded-lg border border-border/80 bg-background p-6 text-center md:text-left"
                 >
-                  {point}
-                </span>
+                  <h2 className="font-heading text-lg text-foreground md:text-xl">
+                    {category.title}
+                  </h2>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
+                    {category.description}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
@@ -369,13 +408,13 @@ export default function Home() {
           <div className="max-w-2xl">
             <p className="section-label">Why Be Remarkable</p>
             <h2 className="section-title mt-5">
-              Professional development built for your starting line, not the
+              Career launch coaching built for your stage, not just the
               C-suite.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               Most communication and leadership programs assume you already have
-              a title, a team, and years in the room. Be Remarkable is
-              different by design.
+              a title, a team, and years in the room. Be Remarkable meets you
+              where you are: launching, changing, or leveling up.
             </p>
           </div>
 
@@ -458,10 +497,10 @@ export default function Home() {
                 communication skills that actually separate them.
               </p>
               <p>
-                This is a field guide for standing out with substance: how to
-                tell stories with clarity, how to lead with influence before you
-                have authority, and how to project the calm confidence that
-                makes people listen.
+                This is career launch coaching for standing out with substance:
+                how to tell stories with clarity, how to lead with influence at
+                any stage, how to project executive presence, and how to think
+                critically when AI makes the first answer easy.
               </p>
               <p>
                 The goal isn&apos;t hype. It&apos;s capability, so you can walk
@@ -481,55 +520,52 @@ export default function Home() {
             <div className="max-w-2xl">
               <p className="section-label">What you&apos;ll build</p>
               <h2 className="section-title mt-5">
-                Three skills. One unfair advantage.
+                Six capabilities. One unfair advantage.
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Storytelling skills, leadership development, and executive
-                presence for young adults who want to lead with substance, not
-                just prompts.
+                Storytelling, leadership, executive presence, leadership through
+                AI, critical thinking, and emerging leader development for
+                professionals who want to stand out with substance, not just
+                prompts.
               </p>
             </div>
 
-            <div className="mt-14 divide-y divide-border/80 rounded-lg border border-border/80 bg-background">
-              {skills.map((skill, index) => (
+            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {skills.map((skill) => (
                 <div
                   key={skill.title}
-                  className="grid gap-6 p-7 md:grid-cols-[1fr_1.4fr] md:items-start md:p-9"
+                  className="flex flex-col rounded-lg border border-border/80 bg-background p-7"
                 >
-                  <div>
-                    <div className="flex items-center gap-3">
-                      <div
-                        className="flex size-11 items-center justify-center rounded-md bg-primary/8 text-primary"
-                        aria-hidden="true"
-                      >
-                        <skill.icon className="size-5" />
-                      </div>
-                      <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
-                        {skill.label}
-                      </p>
-                    </div>
-                    <h3 className="mt-4 font-heading text-2xl text-foreground md:text-3xl">
-                      {skill.title}
-                    </h3>
-                  </div>
-                  <div>
-                    <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-                      {skill.description}
-                    </p>
-                    <p className="mt-4 text-sm font-medium text-foreground">
-                      {skill.highlight}
-                    </p>
-                    <Button
-                      asChild
-                      variant="link"
-                      className="mt-2 h-auto p-0"
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="flex size-11 items-center justify-center rounded-md bg-primary/8 text-primary"
+                      aria-hidden="true"
                     >
-                      <a href={skill.guideHref}>
-                        Read the guide
-                        <ArrowRight className="size-4" aria-hidden="true" />
-                      </a>
-                    </Button>
+                      <skill.icon className="size-5" />
+                    </div>
+                    <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+                      {skill.label}
+                    </p>
                   </div>
+                  <h3 className="mt-4 font-heading text-xl text-foreground md:text-2xl">
+                    {skill.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
+                    {skill.description}
+                  </p>
+                  <p className="mt-4 text-sm font-medium text-foreground">
+                    {skill.highlight}
+                  </p>
+                  <Button
+                    asChild
+                    variant="link"
+                    className="mt-2 h-auto justify-start p-0"
+                  >
+                    <a href={skill.guideHref}>
+                      Read the guide
+                      <ArrowRight className="size-4" aria-hidden="true" />
+                    </a>
+                  </Button>
                 </div>
               ))}
             </div>
@@ -546,10 +582,10 @@ export default function Home() {
               You&apos;ll also build real-world capability.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-              The three core skills compound over time. These supporting skills
-              round out how you show up in interviews, meetings, and everyday
-              work, built from 15 years coaching young adults and early career
-              professionals.
+              The six capability areas compound over time. These supporting
+              skills round out how you show up in interviews, meetings, and
+              everyday work, built from 15 years coaching professionals across
+              career stages.
             </p>
           </div>
 
@@ -577,26 +613,32 @@ export default function Home() {
                 Built for
               </p>
               <h2 className="mt-5 font-heading text-3xl leading-[1.08] md:text-4xl lg:text-[2.75rem]">
-                Young adults and early career entrants who refuse to blend in.
+                Professionals at every stage who refuse to blend in.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-hero-foreground/70 md:text-lg">
-                Whether you are heading to college, trade school, or straight
-                to work, the book, workshops, and guides meet you where you are.
+                Whether you are launching your career, changing paths, or
+                sharpening your edge as an experienced hire, the book,
+                workshops, and guides meet you where you are.
               </p>
             </div>
             <ul className="space-y-4">
-              {audiencePoints.map((point) => (
+              {audienceCategories.map((category) => (
                 <li
-                  key={point}
+                  key={category.title}
                   className="flex gap-4 rounded-md border border-hero-foreground/10 bg-hero-foreground/[0.04] p-5"
                 >
                   <Briefcase
                     className="mt-0.5 size-5 shrink-0 text-accent"
                     aria-hidden="true"
                   />
-                  <span className="text-sm leading-relaxed md:text-base">
-                    {point}
-                  </span>
+                  <div>
+                    <p className="font-heading text-base text-hero-foreground md:text-lg">
+                      {category.title}
+                    </p>
+                    <p className="mt-1 text-sm leading-relaxed text-hero-foreground/75 md:text-base">
+                      {category.description}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -655,8 +697,8 @@ export default function Home() {
                   />
                   <p className="mt-4 font-heading text-xl leading-snug text-foreground md:text-2xl">
                     &ldquo;Executive coaches teach polish. I teach capability.
-                    That is the difference young professionals actually
-                    need.&rdquo;
+                    That is the difference professionals at every stage
+                    actually need.&rdquo;
                   </p>
                   <footer className="mt-4 text-sm text-muted-foreground">
                     {siteConfig.author.name}
@@ -672,26 +714,27 @@ export default function Home() {
                 <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
                   <p>
                     I am {siteConfig.author.name}, and for more than 15 years I
-                    have worked directly with young adults and early career
-                    entrants: people stepping into their first real roles,
-                    whether they came through college, trade school, or straight
-                    to work. My focus has always been the same: storytelling
-                    that people remember, leadership that moves work forward,
-                    and calm confidence when the stakes are high.
+                    have worked directly with professionals at every career
+                    stage: early career entrants stepping into their first real
+                    roles, job changers translating experience into new
+                    contexts, and experienced hires who want sharper presence
+                    and leadership. My focus has always been the same:
+                    storytelling that people remember, leadership that moves
+                    work forward, and executive presence when the stakes are
+                    high.
                   </p>
                   <p>
                     Be Remarkable is not a side project or a rebrand of
                     executive coaching. It is the work I have been doing all
                     along, now shaped into a field guide, workshops, and
-                    practical guides for the moment that actually matters: when
-                    you are starting out, not when you already have the title.
+                    practical guides for career launch moments at any stage,
+                    not only when you are starting out.
                   </p>
                   <p>
                     Most communication training assumes you are already in the
-                    room. Executive coaches rarely share a personal story about
-                    why this work matters at the starting line. I do, because I
-                    have spent my career with people who needed substance, not
-                    hype, before anyone was watching.
+                    room. I have spent my career with people who needed
+                    substance, not hype, whether they were launching, changing
+                    paths, or leveling up with years of experience behind them.
                   </p>
                   <p className="font-medium text-foreground">
                     My mission is simple: help you stand out with capability in
@@ -702,8 +745,8 @@ export default function Home() {
                 </div>
                 <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                   {[
-                    "15+ years with young adults and early career pros",
-                    "College, trade school, or straight to work",
+                    "15+ years across every career stage",
+                    "Early career, job changers, experienced hires",
                     "Book, workshops, and guides, not courses alone",
                     "Capability over hype, every time",
                   ].map((point) => (
@@ -779,11 +822,11 @@ export default function Home() {
           <div className="max-w-2xl">
             <p className="section-label">FAQ</p>
             <h2 className="section-title mt-5">
-              Questions about communication skills in the AI age
+              Questions about career launch coaching in the AI age
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-              Straight answers on storytelling, leadership development, executive
-              presence, and who Be Remarkable is for.
+              Straight answers on storytelling, leadership, executive presence,
+              critical thinking, and who Be Remarkable is for.
             </p>
           </div>
 
@@ -820,8 +863,8 @@ export default function Home() {
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
               Join the waitlist for launch updates, early excerpts, and
-              practical guides for young adults who want to lead with presence,
-              not just prompts.
+              practical guides for professionals who want to stand out with
+              presence and substance, not just prompts.
             </p>
             <div className="mx-auto mt-10 max-w-xl">
               <WaitlistForm />

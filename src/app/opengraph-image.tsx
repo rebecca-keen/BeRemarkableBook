@@ -53,8 +53,8 @@ export default function OpenGraphImage() {
               opacity: 0.88,
             }}
           >
-            Storytelling, leadership, and calm confidence for young adults and
-            early career professionals
+            Career launch coaching for every stage: storytelling, leadership
+            through AI, executive presence, and more
           </div>
         </div>
         <div

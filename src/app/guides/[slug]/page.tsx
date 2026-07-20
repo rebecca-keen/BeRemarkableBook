@@ -107,7 +107,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
             <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
               Join the waitlist for launch updates, early excerpts from the
               field guide, and new practical resources on storytelling,
-              leadership, and calm confidence.
+              leadership, executive presence, and more.
             </p>
             <Button asChild size="lg" className="mt-6 rounded-md">
               <Link href="/#waitlist">
@@ -131,7 +131,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
               href="/#skills"
               className="font-medium text-foreground underline-offset-4 hover:underline"
             >
-              Explore core skills
+              Explore capabilities
             </Link>
           </div>
         </div>

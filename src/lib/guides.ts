@@ -1,7 +1,10 @@
 export type GuideCapability =
   | "Storytelling"
   | "Leadership"
-  | "Calm Confidence";
+  | "Executive Presence"
+  | "Leadership through AI"
+  | "Critical Thinking"
+  | "Emerging Leaders";
 
 export type GuideSection =
   | { type: "paragraph"; text: string }
@@ -23,7 +26,7 @@ export const guides: Guide[] = [
     slug: "storytelling-that-gets-you-remembered",
     title: "Storytelling That Gets You Remembered",
     description:
-      "A practical framework for turning your experiences into stories that stick in interviews, meetings, and introductions. Built for early career professionals who need substance, not scripts.",
+      "A practical framework for turning your experiences into stories that stick in interviews, meetings, and introductions. Built for professionals at any career stage who need substance, not scripts.",
     capability: "Storytelling",
     publishedAt: "2026-07-19",
     readingTimeMinutes: 9,
@@ -151,7 +154,7 @@ export const guides: Guide[] = [
     slug: "lead-before-you-have-the-title",
     title: "How to Lead Before You Have the Title",
     description:
-      "Practical ways to lead with clarity and influence without formal authority. For early career professionals who want to move work forward in any setting.",
+      "Practical ways to lead with clarity and influence without formal authority. For professionals at any stage who want to move work forward in any setting.",
     capability: "Leadership",
     publishedAt: "2026-07-19",
     readingTimeMinutes: 10,
@@ -299,10 +302,10 @@ export const guides: Guide[] = [
   },
   {
     slug: "calm-confidence-under-pressure",
-    title: "Calm Confidence Under Pressure",
+    title: "Executive Presence Under Pressure",
     description:
       "How to project presence in high-stakes moments through preparation, body language, voice, and mindset. For professionals who need to be heard when the room gets tense.",
-    capability: "Calm Confidence",
+    capability: "Executive Presence",
     publishedAt: "2026-07-19",
     readingTimeMinutes: 9,
     sections: [
@@ -441,6 +444,403 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "lead-with-ai-not-behind-it",
+    title: "How to Lead with AI Without Falling Behind It",
+    description:
+      "A practical guide to using AI as a leadership tool without outsourcing your judgment, voice, or credibility. For managers and individual contributors at every career stage.",
+    capability: "Leadership through AI",
+    publishedAt: "2026-07-20",
+    readingTimeMinutes: 10,
+    sections: [
+      {
+        type: "paragraph",
+        text: "AI is now part of how work gets done. The mistake is treating it as a shortcut that replaces thinking. The opportunity is treating it as leverage that amplifies the judgment, clarity, and leadership you already bring.",
+      },
+      {
+        type: "paragraph",
+        text: "Leading with AI is not about generating more output faster. It is about knowing when to use the tool, when to push back on it, and when to show up as the human who makes the call. This guide covers how to do that without losing credibility or sounding like everyone else in the room.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What leadership through AI actually means",
+      },
+      {
+        type: "paragraph",
+        text: "Leadership through AI means you stay accountable for outcomes while AI handles repeatable tasks: drafting, summarizing, researching, structuring options. You own the frame, the recommendation, and the conversation with stakeholders. The tool assists. You decide.",
+      },
+      {
+        type: "paragraph",
+        text: "This matters at every level. Early career professionals who use AI to think more clearly stand out next to peers who paste generic answers. Job changers who use AI to translate experience into new contexts move faster than those who start from blank pages. Experienced hires who use AI to sharpen analysis without dulling their voice keep the edge that got them hired.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The three rules that keep you in charge",
+      },
+      {
+        type: "list",
+        items: [
+          "Never send what you have not edited. AI drafts are starting points, not finished work.",
+          "Always add context AI cannot know: politics, history, relationships, and what your audience actually cares about.",
+          "Make your recommendation visible. Leaders name a point of view. Tools do not.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "These rules sound simple. Most people break them under time pressure. That is exactly why following them builds trust. Your manager, client, or team learns that your work reflects your thinking, not a default template.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Use AI to lead meetings and decisions better",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Before the meeting",
+      },
+      {
+        type: "paragraph",
+        text: "Use AI to stress-test your agenda, surface likely objections, and draft three questions that move the conversation forward. Then cut anything that does not serve the decision you need. Your job is curation, not volume.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "During the meeting",
+      },
+      {
+        type: "paragraph",
+        text: "Do not read AI output aloud. Use it to stay prepared: key facts at hand, options already mapped, tradeoffs named. When someone asks a hard question, pause and answer from what you know. If you need to follow up, say so clearly. That honesty reads as leadership.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "After the meeting",
+      },
+      {
+        type: "paragraph",
+        text: "AI can draft recaps fast. You add what matters: decisions made, owners named, risks flagged, and the one thing that still needs a human conversation. Send the version you would sign your name to.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Prompts that build leadership, not dependency",
+      },
+      {
+        type: "paragraph",
+        text: "Weak prompts produce weak thinking. Strong prompts force clarity. Try these patterns on real work this week.",
+      },
+      {
+        type: "list",
+        items: [
+          "\"Here is the situation and the decision we need. Give me three options with tradeoffs and a recommendation I can defend to my team.\"",
+          "\"Play the skeptic. What is wrong with this plan? What am I missing?\"",
+          "\"Rewrite this for a busy executive: one paragraph, clear ask, no jargon.\"",
+          "\"Compare these two paths using criteria I care about: speed, risk, cost, and team capacity.\"",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Notice the pattern. You supply judgment. AI supplies structure and speed. The combination is what makes you useful in the age of AI.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What to avoid when leading with AI",
+      },
+      {
+        type: "list",
+        items: [
+          "Hiding AI use when accuracy or authorship matters. Transparency builds trust.",
+          "Letting AI flatten your voice into corporate filler. Edit until it sounds like you.",
+          "Using AI to avoid hard conversations. No tool replaces showing up in the room.",
+          "Chasing every new feature instead of mastering one workflow that saves real time.",
+          "Assuming AI output is correct. Verify facts, numbers, and names every time.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "A weekly habit for AI-savvy leaders",
+      },
+      {
+        type: "paragraph",
+        text: "Pick one recurring task you own: status updates, project briefs, client emails, or team agendas. Build a personal template for how you use AI on that task: input you always provide, edits you always make, and a final check you never skip. Run it for four weeks. You will move faster and still sound like the person people trust to lead.",
+      },
+      {
+        type: "paragraph",
+        text: "AI is not the competition. Professionals who combine tool speed with human judgment are. Leadership through AI is how you stay on the right side of that line.",
+      },
+    ],
+  },
+  {
+    slug: "critical-thinking-beyond-the-first-answer",
+    title: "Critical Thinking When Everyone Has the Same Answer",
+    description:
+      "How to evaluate ideas, challenge assumptions, and make better decisions when AI makes the first draft easy for everyone. Practical tools for any role or career stage.",
+    capability: "Critical Thinking",
+    publishedAt: "2026-07-20",
+    readingTimeMinutes: 10,
+    sections: [
+      {
+        type: "paragraph",
+        text: "When anyone can generate a plausible answer in seconds, the scarce skill is not information. It is judgment. Critical thinking is how you decide what to trust, what to test, and what to recommend when the easy answer is already on the table.",
+      },
+      {
+        type: "paragraph",
+        text: "This guide gives you a practical toolkit for everyday work: meetings, emails, project plans, and the moments when someone says \"AI already handled that.\" You do not need a philosophy degree. You need habits that slow you down just enough to think clearly.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Why critical thinking is a career differentiator now",
+      },
+      {
+        type: "paragraph",
+        text: "Teams drown in good-enough drafts. Slides look polished. Emails sound confident. The gap is between output that looks complete and decisions that actually hold up. The person who asks the right next question becomes indispensable fast.",
+      },
+      {
+        type: "paragraph",
+        text: "Critical thinking shows up as better recommendations, fewer rework cycles, and conversations that get to the real problem. It is valuable for early career hires proving they add more than execution, job changers translating old instincts into new contexts, and experienced professionals who need to stay sharp when the baseline keeps rising.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The VERIFY framework for any proposal",
+      },
+      {
+        type: "paragraph",
+        text: "Use VERIFY when you receive a plan, a deck, an AI draft, or a colleague's recommendation. It takes five minutes and prevents expensive yeses.",
+      },
+      {
+        type: "list",
+        items: [
+          "Valid sources: Where did this come from? Can you trace the facts?",
+          "Evidence quality: Is this anecdote, data, or guesswork dressed up as certainty?",
+          "Relevance: Does this answer the actual decision in front of us?",
+          "Incentives: Who benefits if we say yes? What are they not saying?",
+          "Feasibility: Do we have the time, people, and budget to do this well?",
+          "Yield: If this works, what changes? If it fails, what does failure cost?",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "You do not need to block every idea. You need to know which questions still need answers before the group commits.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Questions that upgrade any meeting",
+      },
+      {
+        type: "paragraph",
+        text: "The best critical thinkers sound curious, not combative. Keep these in your pocket.",
+      },
+      {
+        type: "list",
+        items: [
+          "\"What would have to be true for this to work?\"",
+          "\"What are we optimizing for, and what are we willing to trade off?\"",
+          "\"What did we see last time we tried something similar?\"",
+          "\"What is the smallest test that would tell us if this is worth scaling?\"",
+          "\"If we are wrong, how will we know, and how fast?\"",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "One well-placed question can save a quarter of misaligned work. That is why critical thinking is a leadership behavior, not a niche skill for analysts.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Thinking clearly with AI in the loop",
+      },
+      {
+        type: "paragraph",
+        text: "AI is useful for generating options and spotting gaps. It is weak at knowing your company's history, your customer's nuance, or your team's capacity this week. Use it to expand the option set, then apply VERIFY before you act.",
+      },
+      {
+        type: "paragraph",
+        text: "Try this workflow: ask AI for three approaches to a problem. For each one, write one sentence on why it might fail in your specific context. Pick the approach with the most manageable failure mode, or combine pieces into a fourth option AI did not propose. That last step is where your thinking shows.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Common traps that look like thinking",
+      },
+      {
+        type: "list",
+        items: [
+          "Confusing confidence with accuracy. Loud certainty is not evidence.",
+          "Anchoring on the first answer because it arrived fastest.",
+          "Treating consensus as proof. Groups can agree on the wrong frame.",
+          "Over-researching to avoid deciding. Analysis without a deadline is avoidance.",
+          "Critique without alternatives. Point out the flaw and offer a path forward.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Build a daily critical thinking practice",
+      },
+      {
+        type: "paragraph",
+        text: "Each day, pick one claim you accepted without question: a metric in a report, a assumption in a project plan, a headline summary. Spend ten minutes checking it. Follow one source upstream. Write one sentence on what you learned. Over a month you will catch patterns others miss and build a reputation for substance over speed.",
+      },
+      {
+        type: "paragraph",
+        text: "Critical thinking is not about being negative. It is about being responsible. When everyone has the same first answer, the person who thinks one layer deeper is the one people follow.",
+      },
+    ],
+  },
+  {
+    slug: "emerging-leaders-first-ninety-days",
+    title: "The Emerging Leader's First Ninety Days",
+    description:
+      "A field guide for new and newly promoted leaders who need to earn trust, set direction, and show up with substance fast. For first-time managers and rising contributors.",
+    capability: "Emerging Leaders",
+    publishedAt: "2026-07-20",
+    readingTimeMinutes: 11,
+    sections: [
+      {
+        type: "paragraph",
+        text: "The first ninety days as an emerging leader are not about proving you belong. They are about proving others can rely on you. That shift from individual contributor to leader, or from leader to leader of leaders, is where many talented people stumble. Not because they lack skill, but because no one taught them what to prioritize when the title changes.",
+      },
+      {
+        type: "paragraph",
+        text: "This guide is a practical map for that window: what to learn, what to say, what to decide, and what to defer. It works whether you were promoted internally, hired into a new team, or stepping up while you still look early career on paper.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The job in the first ninety days",
+      },
+      {
+        type: "paragraph",
+        text: "Your real job is not to fix everything. It is to build clarity, trust, and momentum in that order. Clarity means people know what matters. Trust means people believe you will follow through. Momentum means the team ships something visible that reflects shared priorities.",
+      },
+      {
+        type: "paragraph",
+        text: "Skip clarity and you get busy teams going in different directions. Skip trust and your best ideas die in silence. Skip momentum and leadership starts to look like meetings about meetings.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Days 1 to 30: Listen and learn",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Schedule the right conversations",
+      },
+      {
+        type: "paragraph",
+        text: "Meet one-on-one with every direct report, peer you depend on, and key stakeholder your manager names. Ask the same four questions: What is working? What is blocked? What should I know that is not in any doc? What would make your job easier in the next sixty days? Take notes. Look for repeats, not outliers.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Map the real workflow",
+      },
+      {
+        type: "paragraph",
+        text: "Watch how work actually moves: handoffs, approvals, bottlenecks, and the informal fixes people built while no one was looking. Emerging leaders who respect existing work before changing it earn trust faster than those who arrive with a new framework on day three.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Win one small visible improvement",
+      },
+      {
+        type: "paragraph",
+        text: "Pick a pain point everyone mentions and fix it fast: a confusing ritual, a missing template, a recurring miscommunication. Keep it small. Ship it in thirty days. Early wins prove you listen and act.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Days 31 to 60: Set direction",
+      },
+      {
+        type: "paragraph",
+        text: "By day thirty you should see patterns. Turn them into a simple team narrative: where we are, where we are going, and what we will not do this quarter. Share it in a short written doc and a live conversation. Invite pushback. Revise once. Then hold the line.",
+      },
+      {
+        type: "list",
+        items: [
+          "Name three priorities maximum. More than three is a wish list, not a strategy.",
+          "Connect each priority to a metric or observable outcome the team can track.",
+          "Assign one owner per priority, even if the owner is you for now.",
+          "Publish how decisions get made: who decides, who advises, who needs to know.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Direction without decision rules creates anxiety. People stop acting because they are afraid of guessing wrong. Make the rules explicit.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Days 61 to 90: Build leadership habits",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Run meetings that respect time",
+      },
+      {
+        type: "paragraph",
+        text: "Send agendas twenty-four hours ahead. Start with decisions needed. End with named owners and dates. Cancel meetings that should be docs. Your team will notice immediately.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Give feedback that builds capability",
+      },
+      {
+        type: "paragraph",
+        text: "Use behavior, impact, next step. \"When the update went out without the numbers, the exec team lost confidence in our timeline. Next time, loop me in before you send.\" Specific beats vague. Frequent beats dramatic.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Protect your own learning time",
+      },
+      {
+        type: "paragraph",
+        text: "Emerging leaders burn out when they stop growing. Block two hours weekly for reading, coaching, or reflection on what is not working. You cannot develop a team you are too exhausted to develop yourself.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Mistakes to avoid in the first ninety days",
+      },
+      {
+        type: "list",
+        items: [
+          "Changing systems before you understand why they exist.",
+          "Taking credit for team output instead of amplifying contributors.",
+          "Avoiding hard conversations until they become crises.",
+          "Managing up perfectly while your team waits for direction.",
+          "Confusing activity with progress because you feel pressure to look busy.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Your ninety-day check-in with yourself",
+      },
+      {
+        type: "paragraph",
+        text: "On day ninety, answer five questions in writing: Can my team state our top three priorities? Do people bring me problems early? Did we ship something that mattered? Where did I avoid a conversation I needed to have? What will I do differently in the next ninety days?",
+      },
+      {
+        type: "paragraph",
+        text: "Emerging leadership is not a personality type. It is a set of repeatable behaviors: listen, clarify, decide, follow through, develop others. Master those in your first ninety days and the title starts to mean something real.",
+      },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string): Guide | undefined {
@@ -458,5 +858,17 @@ export function getGuidesByCapability(capability: GuideCapability): Guide[] {
 export const capabilityHomeAnchors: Record<GuideCapability, string> = {
   Storytelling: "/#skills",
   Leadership: "/#skills",
-  "Calm Confidence": "/#skills",
+  "Executive Presence": "/#skills",
+  "Leadership through AI": "/#skills",
+  "Critical Thinking": "/#skills",
+  "Emerging Leaders": "/#skills",
 };
+
+export const capabilityOrder: GuideCapability[] = [
+  "Storytelling",
+  "Leadership",
+  "Executive Presence",
+  "Leadership through AI",
+  "Critical Thinking",
+  "Emerging Leaders",
+];

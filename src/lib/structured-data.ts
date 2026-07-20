@@ -125,9 +125,11 @@ export function getArticleSchema(guide: Guide) {
     articleSection: guide.capability,
     keywords: [
       guide.capability.toLowerCase(),
+      "career launch coaching",
       "professional development",
       "early career",
-      "young adults",
+      "job changers",
+      "experienced professionals",
     ],
     inLanguage: "en-US",
   };

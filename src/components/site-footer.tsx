@@ -38,9 +38,9 @@ export function SiteFooter() {
               <p className="font-heading text-lg">Be Remarkable</p>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-hero-foreground/70">
-              A field guide, workshops, and guides on storytelling, leadership,
-              and calm confidence for young adults and early career entrants in
-              the age of AI.
+              Career launch coaching through a field guide, workshops, and
+              guides. Storytelling, leadership through AI, executive presence,
+              and critical thinking for every career stage.
             </p>
           </div>
 
