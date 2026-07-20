@@ -60,10 +60,11 @@ export default function WorkbooksPage() {
             Apply what the guides teach.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Free guides explain the concepts. Workbooks help you put them into
-            practice with self-assessments, fill-in exercises, worksheets, and
-            action plans you can print or complete on screen. One workbook per
-            capability, built from research by leaders in each field.
+            Free guides explain the concepts. Workbooks help you apply them with
+            self-assessments, exercises, worksheets, and action plans. Each
+            workbook is a one-time purchase with full printable access after
+            checkout. One workbook per capability, built from research by leaders
+            in each field.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild variant="outline" className="rounded-md">
@@ -131,11 +132,21 @@ export default function WorkbooksPage() {
                           ${workbook.priceUsd}
                         </span>
                       </div>
+                      <ul className="mt-5 list-disc space-y-1.5 pl-5 marker:text-accent">
+                        {workbook.intro.whatYouGet.slice(0, 4).map((item) => (
+                          <li
+                            key={item}
+                            className="text-xs leading-relaxed text-muted-foreground md:text-sm"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
                       <Link
                         href={`/workbooks/${workbook.slug}`}
                         className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-accent"
                       >
-                        Get the workbook
+                        Get the workbook · ${workbook.priceUsd}
                         <ArrowRight className="size-4" aria-hidden="true" />
                       </Link>
                     </article>
@@ -155,12 +166,12 @@ export default function WorkbooksPage() {
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             Guides teach the frameworks. Workbooks give you the worksheets,
-            scorecards, and day-by-day plans to build real skill. Join the
-            waitlist for early access when purchases open.
+            scorecards, and day-by-day plans to build real skill. Preview any
+            workbook, then unlock the full version with a one-time purchase.
           </p>
           <Button asChild size="lg" className="mt-8 rounded-md">
-            <Link href="/#waitlist">
-              Join the waitlist
+            <Link href="/guides">
+              Start with the free guides
               <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
           </Button>

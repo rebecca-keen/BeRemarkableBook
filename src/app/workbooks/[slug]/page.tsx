@@ -3,9 +3,10 @@ import { ArrowLeft, ArrowRight, FileText } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { PrintButton } from "@/components/print-button";
-import { WorkbookContent } from "@/components/workbook-content";
+import { BuyWorkbookButton } from "@/components/buy-workbook-button";
+import { WorkbookPreviewContent } from "@/components/workbook-preview-content";
 import { Button } from "@/components/ui/button";
+import { isWorkbookCheckoutConfigured } from "@/lib/workbook-prices";
 import {
   getAllWorkbookSlugs,
   getWorkbookBySlug,
@@ -56,15 +57,16 @@ export default async function WorkbookPage({ params }: WorkbookPageProps) {
     notFound();
   }
 
+  const checkoutConfigured = isWorkbookCheckoutConfigured(slug);
   const otherWorkbooks = workbooks.filter((item) => item.slug !== workbook.slug);
 
   return (
     <article className="workbook-page overflow-hidden">
-      <header className="border-b border-border/70 bg-secondary/35 print:border-none print:bg-transparent">
+      <header className="border-b border-border/70 bg-secondary/35">
         <div className="mx-auto max-w-3xl px-6 py-12 md:px-8 md:py-20">
           <Link
             href="/workbooks"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground print:hidden"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="size-4" aria-hidden="true" />
             All workbooks
@@ -84,32 +86,35 @@ export default async function WorkbookPage({ params }: WorkbookPageProps) {
               ${workbook.priceUsd}
             </span>
           </div>
-          <div className="mt-6 print:hidden">
-            <PrintButton />
+          <div className="mt-8" id="buy">
+            <BuyWorkbookButton
+              slug={workbook.slug}
+              priceUsd={workbook.priceUsd}
+              checkoutConfigured={checkoutConfigured}
+            />
           </div>
         </div>
       </header>
 
       <div className="mx-auto max-w-3xl px-6 py-12 md:px-8 md:py-16">
-        <WorkbookContent workbook={workbook} />
+        <WorkbookPreviewContent workbook={workbook} />
 
-        <div className="workbook-cta mt-16 rounded-lg border border-border/80 bg-secondary/35 p-7 md:p-9 print:hidden">
+        <div className="workbook-cta mt-16 rounded-lg border border-border/80 bg-secondary/35 p-7 md:p-9">
           <p className="section-label">Get this workbook</p>
           <h2 className="mt-4 font-heading text-2xl text-foreground md:text-3xl">
-            Ready to apply what you learned?
+            Unlock exercises, worksheets, and action plans
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-            Full printable access with all exercises and worksheets. Purchases
-            open soon. Join the waitlist for early access or preview the free
-            guide while you wait.
+            One-time purchase. Full printable access with every exercise and
+            worksheet. Read the free guide first, then apply it with the
+            workbook.
           </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" className="rounded-md">
-              <Link href={`/workbooks/${workbook.slug}/checkout`}>
-                Get this workbook · ${workbook.priceUsd}
-                <ArrowRight className="size-4" aria-hidden="true" />
-              </Link>
-            </Button>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-start">
+            <BuyWorkbookButton
+              slug={workbook.slug}
+              priceUsd={workbook.priceUsd}
+              checkoutConfigured={checkoutConfigured}
+            />
             <Button asChild variant="outline" size="lg" className="rounded-md">
               <Link href={`/guides/${workbook.relatedGuideSlug}`}>
                 Read the free guide
@@ -118,7 +123,7 @@ export default async function WorkbookPage({ params }: WorkbookPageProps) {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-wrap gap-4 text-sm print:hidden">
+        <div className="mt-10 flex flex-wrap gap-4 text-sm">
           <Link
             href="/workbooks"
             className="font-medium text-foreground underline-offset-4 hover:underline"
@@ -138,7 +143,7 @@ export default async function WorkbookPage({ params }: WorkbookPageProps) {
       </div>
 
       {otherWorkbooks.length > 0 ? (
-        <section className="border-t border-border/70 bg-card print:hidden">
+        <section className="border-t border-border/70 bg-card">
           <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
             <p className="section-label">More workbooks</p>
             <h2 className="section-title mt-4">Keep building</h2>
