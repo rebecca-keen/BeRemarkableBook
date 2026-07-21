@@ -6,7 +6,7 @@ import { notFound, redirect } from "next/navigation";
 import { DownloadWorkbookButton } from "@/components/download-workbook-button";
 import { PrintButton } from "@/components/print-button";
 import { WorkbookContent } from "@/components/workbook-content";
-import { hasWorkbookAccess } from "@/lib/workbook-access";
+import { hasOwnerAccess, hasWorkbookAccess } from "@/lib/workbook-access";
 import { getAllWorkbookSlugs, getWorkbookBySlug } from "@/lib/workbooks";
 
 type FullWorkbookPageProps = {
@@ -42,6 +42,7 @@ export default async function FullWorkbookPage({ params }: FullWorkbookPageProps
   }
 
   const hasAccess = await hasWorkbookAccess(slug);
+  const isOwnerAccess = await hasOwnerAccess();
 
   if (!hasAccess) {
     redirect(`/workbooks/${slug}`);
@@ -73,6 +74,11 @@ export default async function FullWorkbookPage({ params }: FullWorkbookPageProps
 
       <div className="mx-auto max-w-3xl px-6 py-12 md:px-8 md:py-16">
         <WorkbookContent workbook={workbook} />
+        {isOwnerAccess ? (
+          <p className="mt-12 text-center text-xs text-muted-foreground/70 print:hidden">
+            Owner access active
+          </p>
+        ) : null}
       </div>
     </article>
   );

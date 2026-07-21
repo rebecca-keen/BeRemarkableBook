@@ -45,7 +45,14 @@ const capabilityIcons: Record<WorkbookCapability, LucideIcon> = {
   "Emerging Leaders": TrendingUp,
 };
 
-export default function WorkbooksPage() {
+type WorkbooksPageProps = {
+  searchParams: Promise<{ owner?: string }>;
+};
+
+export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps) {
+  const { owner } = await searchParams;
+  const ownerUnlocked = owner === "unlocked";
+
   const workbooksByCapability = capabilityOrder.map((capability) => ({
     capability,
     workbooks: workbooks.filter((workbook) => workbook.capability === capability),
@@ -66,6 +73,11 @@ export default function WorkbooksPage() {
             checkout. One workbook per capability, built from research by leaders
             in each field.
           </p>
+          {ownerUnlocked ? (
+            <p className="mt-6 max-w-2xl rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
+              Owner access active — all workbooks are unlocked on this device.
+            </p>
+          ) : null}
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild variant="outline" className="rounded-md">
               <Link href="/guides">
