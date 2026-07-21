@@ -16,6 +16,7 @@ import Image from "next/image";
 
 import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 
+import { BookIntroVideo } from "@/components/book-intro-video";
 import { StructuredData } from "@/components/structured-data";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { Button } from "@/components/ui/button";
@@ -380,6 +381,56 @@ export default function Home() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="book-intro"
+          aria-labelledby="book-intro-heading"
+          className="border-b border-border/70 bg-card"
+        >
+          <div className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
+            <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:items-start">
+              <div>
+                <p className="section-label">Book intro</p>
+                <h2 id="book-intro-heading" className="section-title mt-5">
+                  The field guide, in one session
+                </h2>
+                <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+                  <p>
+                    Before you open the field guide, watch how the Be Remarkable
+                    blueprint works in practice. This session walks through the
+                    same teachable fundamentals the book is built on: one big
+                    idea that anchors everything, stories that move people,
+                    simplicity that respects your audience, and preparation that
+                    turns nervous energy into calm confidence.
+                  </p>
+                  <p>
+                    The core message is simple. Being remarkable means being
+                    worthy of attention. It is not a gift reserved for natural
+                    presenters. It is a standard you can reach with a clear
+                    framework, repeated practice, and the human skills that AI
+                    cannot replace.
+                  </p>
+                  <p>
+                    Use this video as your on-ramp to the book: see the
+                    blueprint at a high level, then go deeper with the field
+                    guide, workshops, and practical guides when you are ready
+                    to stand out with substance.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <Button asChild size="lg" className="rounded-md">
+                    <a href="#waitlist">
+                      Get the book
+                      <ArrowRight className="size-4" aria-hidden="true" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              <BookIntroVideo title="Be Remarkable book intro" />
             </div>
           </div>
         </section>
