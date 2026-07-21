@@ -93,7 +93,7 @@ export default async function WorkbookPage({ params }: WorkbookPageProps) {
             {hasAccess ? (
               <>
                 <p className="mb-4 rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
-                  You have access — view the full workbook or download the PDF.
+                  You have access: view the full workbook or download the PDF.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild size="lg" className="rounded-md">

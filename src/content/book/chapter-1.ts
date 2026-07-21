@@ -10,6 +10,18 @@ export const chapter1: BookChapter = {
   sections: [
     {
       type: "paragraph",
+      text: "Marcus is thirty-one, a product manager who spent six years in healthcare technology and is trying to move into enterprise software. His resume gets callbacks. His interviews do not convert. After four months of searching and a string of polite rejections, he is starting to wonder if the problem is him. He has strong experience and thoughtful answers, but he watches peers with thinner track records walk away with offers while he leaves rooms feeling competent and forgettable.",
+    },
+    {
+      type: "paragraph",
+      text: "When we first spoke, Marcus described the pattern the way most job changers do: he prepared thoroughly, answered every question accurately, and still watched interviewers' eyes drift toward their notes as if nothing he said required a follow-up. He was not failing on knowledge. He was failing on attention. The role he wanted would mean a significant step up in scope and compensation, but more than that, it would validate a bet he had made to leave an industry where he had built real credibility. The stakes were personal, financial, and professional all at once.",
+    },
+    {
+      type: "paragraph",
+      text: "Marcus is not naturally charismatic. He told me he used to dread interviews because he felt like he was performing a version of himself that did not fit. He prepared obsessively and still left rooms feeling invisible. What changed was not his personality. It was his method. Before we get to what he did differently, you need to see what it looked like when it worked.",
+    },
+    {
+      type: "paragraph",
       text: "The room goes quiet when Marcus finishes. Not the polite quiet of people waiting for their turn. The kind where three interviewers look down at their notes at the same time, as if something worth writing just happened.",
     },
     {
@@ -18,7 +30,7 @@ export const chapter1: BookChapter = {
     },
     {
       type: "paragraph",
-      text: "Marcus is not naturally charismatic. He told me later, over coffee, that he used to dread interviews because he felt like he was performing a version of himself that did not fit. He prepared obsessively and still left rooms feeling invisible. What changed was not his personality. It was his method. He learned to anchor every answer to one clear idea, support it with a specific story, and strip away everything that did not serve the person listening. The result looked effortless. It was not.",
+      text: "Over coffee afterward, Marcus said the difference came down to four practices he now treats as non-negotiable: one big idea per answer, a specific story to carry it, ruthless simplicity, and preparation that included rehearsing out loud in his car twenty minutes before he walked in. He learned to anchor every answer to one clear idea, support it with a specific story, and strip away everything that did not serve the person listening. The result looked effortless. It was not.",
     },
     {
       type: "paragraph",
@@ -52,7 +64,7 @@ export const chapter1: BookChapter = {
     },
     {
       type: "paragraph",
-      text: "The word gets misused. In marketing, remarkable means buzzworthy. In performance reviews, it sometimes means \" exceeded expectations\" without explaining how. In this book, remarkable means something narrower and more useful: you are worth remarking on. People talk about you after the meeting. They repeat your idea in the next conversation. They recommend you for the project because they can describe what you contribute in a sentence that holds up.",
+      text: "The word gets misused. In marketing, remarkable means buzzworthy. In performance reviews, it sometimes means \"exceeded expectations\" without explaining how. In this book, remarkable means something narrower and more useful: you are worthy of attention. People talk about you after the meeting. They repeat your idea in the next conversation. They recommend you for the project because they can describe what you contribute in a sentence that holds up. Worthy of attention does not mean loud or flashy. It means the time someone spent with you brought value they can name.",
     },
     {
       type: "paragraph",
@@ -129,7 +141,7 @@ export const chapter1: BookChapter = {
     },
     {
       type: "paragraph",
-      text: "Over fifteen years of coaching, I have watched the same failure mode repeat across industries and career stages. Smart people prepare the wrong thing. They prepare more content when they need clearer content. They prepare answers when they need stories. They prepare to impress when they need to connect. The Be Remarkable framework reverses those instincts. It is built on four practices that work together: one big idea, storytelling, simplicity, and preparation.",
+      text: "Over fifteen years of coaching, I have watched the same failure mode repeat across industries and career stages. Smart people prepare the wrong thing. They prepare more content when they need clearer content. They prepare answers when they need stories. They prepare to impress when they need to connect. The Be Remarkable framework reverses those instincts. It began as a presenting blueprint: teachable fundamentals based on what the best communicators actually do, not on personality myths. The bridge from competent to memorable is not charisma. It is method. The blueprint rests on four practices that work together: one big idea, storytelling, simplicity, and preparation.",
     },
     {
       type: "paragraph",

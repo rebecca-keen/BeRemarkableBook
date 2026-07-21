@@ -80,7 +80,7 @@ export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps
           {justUnlocked && ownerAccess ? (
             <div className="mt-6 max-w-2xl space-y-3">
               <p className="rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
-                Access unlocked — all workbooks are available on this device.
+                Access unlocked: all workbooks are available on this device.
               </p>
               <p className="text-sm text-muted-foreground">
                 <Link
@@ -94,7 +94,7 @@ export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps
           ) : accessUnlocked ? (
             <div className="mt-6 max-w-2xl space-y-3">
               <p className="rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
-                Owner access active — download or view any workbook below.
+                Owner access active: download or view any workbook below.
               </p>
               <p className="text-sm text-muted-foreground">
                 <Link
