@@ -44,15 +44,4 @@ export const siteConfig = {
     description:
       "A field guide for standing out with substance through storytelling, leadership, executive presence, and critical thinking in the age of AI.",
   },
-  bookIntroVideo: {
-    id: "Z4QkwLsXkGA",
-    title: "Remarkable Presenting Enablement: The Program",
-    description:
-      "A high-level walkthrough of the Remarkable Presenting blueprint: the teachable fundamentals behind presentations that are worthy of attention.",
-    duration: "PT40M43S",
-    publishedAt: "2019-04-03T17:10:21-07:00",
-    embedUrl: "https://www.youtube.com/embed/Z4QkwLsXkGA",
-    watchUrl: "https://www.youtube.com/watch?v=Z4QkwLsXkGA",
-    thumbnailUrl: "https://i.ytimg.com/vi/Z4QkwLsXkGA/hqdefault.jpg",
-  },
 } as const;

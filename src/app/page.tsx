@@ -16,7 +16,6 @@ import Image from "next/image";
 
 import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 
-import { BookIntroVideo } from "@/components/book-intro-video";
 import { StructuredData } from "@/components/structured-data";
 import { WaitlistForm } from "@/components/waitlist-form";
 import { Button } from "@/components/ui/button";
@@ -390,47 +389,66 @@ export default function Home() {
           aria-labelledby="book-intro-heading"
           className="border-b border-border/70 bg-card"
         >
-          <div className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
-            <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:items-start">
-              <div>
-                <p className="section-label">Book intro</p>
-                <h2 id="book-intro-heading" className="section-title mt-5">
-                  The field guide, in one session
-                </h2>
-                <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-                  <p>
-                    Before you open the field guide, watch how the Be Remarkable
-                    blueprint works in practice. This session walks through the
-                    same teachable fundamentals the book is built on: one big
-                    idea that anchors everything, stories that move people,
-                    simplicity that respects your audience, and preparation that
-                    turns nervous energy into calm confidence.
-                  </p>
-                  <p>
-                    The core message is simple. Being remarkable means being
-                    worthy of attention. It is not a gift reserved for natural
-                    presenters. It is a standard you can reach with a clear
-                    framework, repeated practice, and the human skills that AI
-                    cannot replace.
-                  </p>
-                  <p>
-                    Use this video as your on-ramp to the book: see the
-                    blueprint at a high level, then go deeper with the field
-                    guide, workshops, and practical guides when you are ready
-                    to stand out with substance.
-                  </p>
-                </div>
-                <div className="mt-8">
-                  <Button asChild size="lg" className="rounded-md">
-                    <a href="#waitlist">
-                      Get the book
-                      <ArrowRight className="size-4" aria-hidden="true" />
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              <BookIntroVideo title="Be Remarkable book intro" />
+          <div className="mx-auto max-w-3xl px-6 py-20 md:px-8 md:py-28">
+            <p className="section-label">Book intro</p>
+            <h2 id="book-intro-heading" className="section-title mt-5">
+              A field guide for standing out with substance
+            </h2>
+            <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p>
+                Be Remarkable is built on a simple premise: the professionals
+                who get noticed are not the loudest in the room. They are the
+                ones who earn attention with clarity, conviction, and a message
+                worth remembering. This field guide gives you the blueprint to
+                get there, whether you are launching your career, changing
+                paths, or leading at the executive level in the age of AI.
+              </p>
+              <p>
+                At the center is a repeatable framework. Start with one big
+                idea that anchors everything you say. Use storytelling to move
+                people from understanding to action. Cut through complexity with
+                simplicity that respects your audience. And prepare with
+                intention so nervous energy becomes calm confidence when it
+                matters most.
+              </p>
+              <p>
+                Being remarkable means being worthy of attention. That standard
+                is teachable, not innate. It connects directly to the human
+                skills this book develops: storytelling that lands, leadership
+                that inspires followership, and executive presence that makes
+                people lean in before you ever say a word.
+              </p>
+              <p>
+                The field guide is your foundation. Pair it with workshops for
+                live practice and practical guides for specific moments, from
+                your first big presentation to the leadership conversations
+                that define your next chapter.
+              </p>
+            </div>
+            <ul className="mt-8 space-y-3 text-base leading-relaxed text-muted-foreground md:text-lg">
+              {[
+                "One big idea that anchors every message you deliver",
+                "Storytelling that moves people to understand and act",
+                "Simplicity that respects your audience and cuts through noise",
+                "Preparation that turns pressure into presence",
+                "Leadership and executive presence for every career stage",
+              ].map((item) => (
+                <li key={item} className="flex gap-3">
+                  <Check
+                    className="mt-1 size-4 shrink-0 text-accent"
+                    aria-hidden="true"
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-10">
+              <Button asChild size="lg" className="rounded-md">
+                <a href="#waitlist">
+                  Get the book
+                  <ArrowRight className="size-4" aria-hidden="true" />
+                </a>
+              </Button>
             </div>
           </div>
         </section>

@@ -82,34 +82,6 @@ export function getBookSchema() {
   };
 }
 
-export function getVideoObjectSchema(pageUrl: string = siteConfig.url) {
-  const video = siteConfig.bookIntroVideo;
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    name: video.title,
-    description: video.description,
-    thumbnailUrl: video.thumbnailUrl,
-    uploadDate: video.publishedAt,
-    duration: video.duration,
-    embedUrl: video.embedUrl,
-    contentUrl: video.watchUrl,
-    url: video.watchUrl,
-    inLanguage: "en-US",
-    isPartOf: {
-      "@type": "Book",
-      name: siteConfig.book.name,
-      url: pageUrl,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      url: siteConfig.url,
-    },
-  };
-}
-
 export function getFaqSchema(faqItems: FaqItem[]) {
   return {
     "@context": "https://schema.org",
@@ -171,7 +143,6 @@ export function getStructuredDataGraph(faqItems: FaqItem[]) {
       getWebSiteSchema(),
       getPersonSchema(),
       getBookSchema(),
-      getVideoObjectSchema(),
       getFaqSchema(faqItems),
     ],
   };
