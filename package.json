@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "tsx scripts/generate-workbook-pdfs.ts && next build",
-    "generate-pdfs": "tsx scripts/generate-workbook-pdfs.ts",
+    "build": "tsx scripts/generate-workbook-pdfs.ts && tsx scripts/generate-book-pdfs.ts && next build",
+    "generate-pdfs": "tsx scripts/generate-workbook-pdfs.ts && tsx scripts/generate-book-pdfs.ts",
     "start": "next start",
     "lint": "eslint"
   },

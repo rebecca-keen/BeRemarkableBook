@@ -78,13 +78,33 @@ export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps
             in each field.
           </p>
           {justUnlocked && ownerAccess ? (
-            <p className="mt-6 max-w-2xl rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
-              Access unlocked — all workbooks are available on this device.
-            </p>
+            <div className="mt-6 max-w-2xl space-y-3">
+              <p className="rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
+                Access unlocked — all workbooks are available on this device.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <Link
+                  href="/book/chapter-1"
+                  className="font-medium text-foreground underline-offset-4 hover:text-accent hover:underline"
+                >
+                  Download Chapter 1 of Be Remarkable (PDF)
+                </Link>
+              </p>
+            </div>
           ) : accessUnlocked ? (
-            <p className="mt-6 max-w-2xl rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
-              Owner access active — download or view any workbook below.
-            </p>
+            <div className="mt-6 max-w-2xl space-y-3">
+              <p className="rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
+                Owner access active — download or view any workbook below.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <Link
+                  href="/book/chapter-1"
+                  className="font-medium text-foreground underline-offset-4 hover:text-accent hover:underline"
+                >
+                  Download Chapter 1 of Be Remarkable (PDF)
+                </Link>
+              </p>
+            </div>
           ) : null}
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild variant="outline" className="rounded-md">
