@@ -1,10 +1,13 @@
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
+import type { NextResponse } from "next/server";
 
 const COOKIE_PREFIX = "workbook-access-";
-const OWNER_COOKIE_NAME = "workbook-owner-access";
+export const OWNER_COOKIE_NAME = "workbook-owner-access";
 const ACCESS_DAYS = 30;
 const OWNER_ACCESS_DAYS = 365;
+const WORKBOOK_COOKIE_PATH = "/workbooks";
+const OWNER_COOKIE_PATH = "/";
 
 type WorkbookAccessPayload = {
   slug: string;
@@ -67,19 +70,50 @@ export async function verifyAccessToken(
   }
 }
 
+function workbookCookieOptions() {
+  return {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax" as const,
+    maxAge: ACCESS_DAYS * 24 * 60 * 60,
+    path: WORKBOOK_COOKIE_PATH,
+  };
+}
+
+function ownerCookieOptions() {
+  return {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax" as const,
+    maxAge: OWNER_ACCESS_DAYS * 24 * 60 * 60,
+    path: OWNER_COOKIE_PATH,
+  };
+}
+
+export function applyWorkbookAccessCookie(
+  response: NextResponse,
+  slug: string,
+  token: string,
+): NextResponse {
+  response.cookies.set(cookieName(slug), token, workbookCookieOptions());
+  return response;
+}
+
+export function applyOwnerAccessCookie(
+  response: NextResponse,
+  token: string,
+): NextResponse {
+  response.cookies.set(OWNER_COOKIE_NAME, token, ownerCookieOptions());
+  return response;
+}
+
 export async function setWorkbookAccessCookie(
   slug: string,
   token: string,
 ): Promise<void> {
   const cookieStore = await cookies();
 
-  cookieStore.set(cookieName(slug), token, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge: ACCESS_DAYS * 24 * 60 * 60,
-    path: `/workbooks/${slug}`,
-  });
+  cookieStore.set(cookieName(slug), token, workbookCookieOptions());
 }
 
 function getOwnerSigningKey(): Uint8Array | null {
@@ -129,13 +163,7 @@ export async function verifyOwnerAccessToken(token: string): Promise<boolean> {
 export async function setOwnerAccessCookie(token: string): Promise<void> {
   const cookieStore = await cookies();
 
-  cookieStore.set(OWNER_COOKIE_NAME, token, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge: OWNER_ACCESS_DAYS * 24 * 60 * 60,
-    path: "/workbooks",
-  });
+  cookieStore.set(OWNER_COOKIE_NAME, token, ownerCookieOptions());
 }
 
 export function getOwnerSecret(): string | undefined {

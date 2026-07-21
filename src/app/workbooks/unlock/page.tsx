@@ -18,7 +18,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function WorkbookUnlockPage() {
+const errorMessages: Record<string, string> = {
+  incorrect: "Incorrect password",
+  unavailable: "Access is unavailable right now. Please try again later.",
+};
+
+type WorkbookUnlockPageProps = {
+  searchParams: Promise<{ error?: string }>;
+};
+
+export default async function WorkbookUnlockPage({
+  searchParams,
+}: WorkbookUnlockPageProps) {
+  const { error: errorCode } = await searchParams;
+  const error = errorCode ? errorMessages[errorCode] ?? errorMessages.incorrect : undefined;
+
   return (
     <div className="overflow-hidden">
       <section className="border-b border-border/70 bg-secondary/35">
@@ -37,7 +51,7 @@ export default function WorkbookUnlockPage() {
             workbooks on this device.
           </p>
           <div className="mt-8 rounded-lg border border-border/80 bg-card p-7 shadow-sm">
-            <WorkbookUnlockForm />
+            <WorkbookUnlockForm error={error} />
           </div>
         </div>
       </section>

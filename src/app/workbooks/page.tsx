@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+import { DownloadWorkbookButton } from "@/components/download-workbook-button";
 import { Button } from "@/components/ui/button";
 import { capabilityOrder } from "@/lib/guides";
 import { siteConfig } from "@/lib/site-config";
@@ -52,7 +53,9 @@ type WorkbooksPageProps = {
 
 export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps) {
   const { owner } = await searchParams;
-  const accessUnlocked = owner === "unlocked" || (await hasOwnerAccess());
+  const ownerAccess = await hasOwnerAccess();
+  const justUnlocked = owner === "unlocked";
+  const accessUnlocked = ownerAccess;
 
   const workbooksByCapability = capabilityOrder.map((capability) => ({
     capability,
@@ -74,9 +77,13 @@ export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps
             checkout. One workbook per capability, built from research by leaders
             in each field.
           </p>
-          {accessUnlocked ? (
+          {justUnlocked && ownerAccess ? (
             <p className="mt-6 max-w-2xl rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
               Access unlocked — all workbooks are available on this device.
+            </p>
+          ) : accessUnlocked ? (
+            <p className="mt-6 max-w-2xl rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
+              Owner access active — download or view any workbook below.
             </p>
           ) : null}
           <div className="mt-8 flex flex-wrap gap-3">
@@ -159,9 +166,20 @@ export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps
                         href={`/workbooks/${workbook.slug}`}
                         className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-accent"
                       >
-                        Get the workbook · ${workbook.priceUsd}
+                        {accessUnlocked ? "View overview" : `Get the workbook · $${workbook.priceUsd}`}
                         <ArrowRight className="size-4" aria-hidden="true" />
                       </Link>
+                      {accessUnlocked ? (
+                        <div className="mt-4 flex flex-wrap gap-3">
+                          <Button asChild variant="default" size="sm" className="rounded-md">
+                            <Link href={`/workbooks/${workbook.slug}/full`}>
+                              View workbook
+                              <ArrowRight className="size-4" aria-hidden="true" />
+                            </Link>
+                          </Button>
+                          <DownloadWorkbookButton slug={workbook.slug} />
+                        </div>
+                      ) : null}
                     </article>
                   ))}
                 </div>

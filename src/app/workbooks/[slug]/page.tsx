@@ -4,9 +4,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { BuyWorkbookButton } from "@/components/buy-workbook-button";
+import { DownloadWorkbookButton } from "@/components/download-workbook-button";
 import { WorkbookPreviewContent } from "@/components/workbook-preview-content";
 import { Button } from "@/components/ui/button";
 import { isWorkbookCheckoutConfigured } from "@/lib/workbook-prices";
+import { hasWorkbookAccess } from "@/lib/workbook-access";
 import {
   getAllWorkbookSlugs,
   getWorkbookBySlug,
@@ -58,6 +60,7 @@ export default async function WorkbookPage({ params }: WorkbookPageProps) {
   }
 
   const checkoutConfigured = isWorkbookCheckoutConfigured(slug);
+  const hasAccess = await hasWorkbookAccess(slug);
   const otherWorkbooks = workbooks.filter((item) => item.slug !== workbook.slug);
 
   return (
@@ -87,11 +90,28 @@ export default async function WorkbookPage({ params }: WorkbookPageProps) {
             </span>
           </div>
           <div className="mt-8" id="buy">
-            <BuyWorkbookButton
-              slug={workbook.slug}
-              priceUsd={workbook.priceUsd}
-              checkoutConfigured={checkoutConfigured}
-            />
+            {hasAccess ? (
+              <>
+                <p className="mb-4 rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
+                  You have access — view the full workbook or download the PDF.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Button asChild size="lg" className="rounded-md">
+                    <Link href={`/workbooks/${workbook.slug}/full`}>
+                      View workbook
+                      <ArrowRight className="size-4" aria-hidden="true" />
+                    </Link>
+                  </Button>
+                  <DownloadWorkbookButton slug={workbook.slug} />
+                </div>
+              </>
+            ) : (
+              <BuyWorkbookButton
+                slug={workbook.slug}
+                priceUsd={workbook.priceUsd}
+                checkoutConfigured={checkoutConfigured}
+              />
+            )}
           </div>
         </div>
       </header>
@@ -100,27 +120,51 @@ export default async function WorkbookPage({ params }: WorkbookPageProps) {
         <WorkbookPreviewContent workbook={workbook} />
 
         <div className="workbook-cta mt-16 rounded-lg border border-border/80 bg-secondary/35 p-7 md:p-9">
-          <p className="section-label">Get this workbook</p>
-          <h2 className="mt-4 font-heading text-2xl text-foreground md:text-3xl">
-            Unlock exercises, worksheets, and action plans
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-            One-time purchase. Full printable access with every exercise and
-            worksheet. Read the free guide first, then apply it with the
-            workbook.
-          </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-start">
-            <BuyWorkbookButton
-              slug={workbook.slug}
-              priceUsd={workbook.priceUsd}
-              checkoutConfigured={checkoutConfigured}
-            />
-            <Button asChild variant="outline" size="lg" className="rounded-md">
-              <Link href={`/guides/${workbook.relatedGuideSlug}`}>
-                Read the free guide
-              </Link>
-            </Button>
-          </div>
+          {hasAccess ? (
+            <>
+              <p className="section-label">Your workbook</p>
+              <h2 className="mt-4 font-heading text-2xl text-foreground md:text-3xl">
+                Full access unlocked
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+                Open the complete workbook in your browser or download a PDF for
+                offline use.
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-start">
+                <Button asChild size="lg" className="rounded-md">
+                  <Link href={`/workbooks/${workbook.slug}/full`}>
+                    View workbook
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
+                </Button>
+                <DownloadWorkbookButton slug={workbook.slug} />
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="section-label">Get this workbook</p>
+              <h2 className="mt-4 font-heading text-2xl text-foreground md:text-3xl">
+                Unlock exercises, worksheets, and action plans
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+                One-time purchase. Full printable access with every exercise and
+                worksheet. Read the free guide first, then apply it with the
+                workbook.
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-start">
+                <BuyWorkbookButton
+                  slug={workbook.slug}
+                  priceUsd={workbook.priceUsd}
+                  checkoutConfigured={checkoutConfigured}
+                />
+                <Button asChild variant="outline" size="lg" className="rounded-md">
+                  <Link href={`/guides/${workbook.relatedGuideSlug}`}>
+                    Read the free guide
+                  </Link>
+                </Button>
+              </div>
+            </>
+          )}
         </div>
 
         <div className="mt-10 flex flex-wrap gap-4 text-sm">

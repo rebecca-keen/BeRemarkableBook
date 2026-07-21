@@ -1,25 +1,13 @@
-"use client";
-
-import { useActionState } from "react";
-import { Loader2 } from "lucide-react";
-
-import {
-  unlockWorkbooks,
-  type UnlockState,
-} from "@/app/workbooks/unlock/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-const initialState: UnlockState = {};
+type WorkbookUnlockFormProps = {
+  error?: string;
+};
 
-export function WorkbookUnlockForm() {
-  const [state, formAction, pending] = useActionState(
-    unlockWorkbooks,
-    initialState,
-  );
-
+export function WorkbookUnlockForm({ error }: WorkbookUnlockFormProps) {
   return (
-    <form action={formAction} className="space-y-4">
+    <form action="/api/workbooks/unlock" method="POST" className="space-y-4">
       <div className="space-y-2">
         <label
           htmlFor="workbook-access-password"
@@ -33,31 +21,18 @@ export function WorkbookUnlockForm() {
           type="password"
           required
           autoComplete="current-password"
-          disabled={pending}
-          aria-invalid={Boolean(state.error)}
-          aria-describedby={state.error ? "unlock-error" : undefined}
+          aria-invalid={Boolean(error)}
+          aria-describedby={error ? "unlock-error" : undefined}
           className="h-12 rounded-md border-border/80 bg-background px-4 text-base shadow-sm"
         />
       </div>
-      {state.error ? (
+      {error ? (
         <p id="unlock-error" className="text-sm text-destructive" role="alert">
-          {state.error}
+          {error}
         </p>
       ) : null}
-      <Button
-        type="submit"
-        size="lg"
-        disabled={pending}
-        className="w-full rounded-md sm:w-auto"
-      >
-        {pending ? (
-          <>
-            <Loader2 className="size-4 animate-spin" aria-hidden="true" />
-            Unlocking...
-          </>
-        ) : (
-          "Unlock access"
-        )}
+      <Button type="submit" size="lg" className="w-full rounded-md sm:w-auto">
+        Unlock access
       </Button>
     </form>
   );
