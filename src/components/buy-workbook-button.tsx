@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, Loader2 } from "lucide-react";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
@@ -71,11 +72,19 @@ export function BuyWorkbookButton({
         )}
       </Button>
       {!checkoutConfigured ? (
-        <p className="text-sm leading-relaxed text-muted-foreground">
-          Checkout is not configured yet. Stripe keys and price IDs are required
-          before purchases can open. Full workbook content stays locked until
-          then.
-        </p>
+        <div className="space-y-2">
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            Checkout is not configured yet. Stripe keys and price IDs are required
+            before purchases can open. Full workbook content stays locked until
+            then.
+          </p>
+          <Link
+            href="/workbooks/unlock"
+            className="inline-block text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+          >
+            Have an access code?
+          </Link>
+        </div>
       ) : null}
       {error ? (
         <p className="text-sm text-destructive" role="alert">

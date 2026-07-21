@@ -1,6 +1,7 @@
 import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 import { Separator } from "@/components/ui/separator";
 import { siteConfig } from "@/lib/site-config";
+import Link from "next/link";
 
 const footerLinks = {
   explore: [
@@ -92,9 +93,17 @@ export function SiteFooter() {
 
         <div className="flex flex-col gap-3 text-sm text-hero-foreground/55 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Be Remarkable. All rights reserved.</p>
-          <p className="text-xs tracking-[0.16em] uppercase">
-            Stand out with substance when AI is everywhere.
-          </p>
+          <div className="flex flex-col gap-2 md:items-end">
+            <Link
+              href="/workbooks/unlock"
+              className="text-xs text-hero-foreground/45 transition-colors hover:text-hero-foreground/70"
+            >
+              Workbook access
+            </Link>
+            <p className="text-xs tracking-[0.16em] uppercase">
+              Stand out with substance when AI is everywhere.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

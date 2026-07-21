@@ -15,6 +15,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { capabilityOrder } from "@/lib/guides";
 import { siteConfig } from "@/lib/site-config";
+import { hasOwnerAccess } from "@/lib/workbook-access";
 import {
   workbooks,
   type WorkbookCapability,
@@ -51,7 +52,7 @@ type WorkbooksPageProps = {
 
 export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps) {
   const { owner } = await searchParams;
-  const ownerUnlocked = owner === "unlocked";
+  const accessUnlocked = owner === "unlocked" || (await hasOwnerAccess());
 
   const workbooksByCapability = capabilityOrder.map((capability) => ({
     capability,
@@ -73,9 +74,9 @@ export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps
             checkout. One workbook per capability, built from research by leaders
             in each field.
           </p>
-          {ownerUnlocked ? (
+          {accessUnlocked ? (
             <p className="mt-6 max-w-2xl rounded-md border border-accent/30 bg-accent/5 px-4 py-3 text-sm text-foreground">
-              Owner access active — all workbooks are unlocked on this device.
+              Access unlocked — all workbooks are available on this device.
             </p>
           ) : null}
           <div className="mt-8 flex flex-wrap gap-3">

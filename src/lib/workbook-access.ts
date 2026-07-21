@@ -142,6 +142,10 @@ export function getOwnerSecret(): string | undefined {
   return process.env.WORKBOOK_OWNER_SECRET;
 }
 
+export function getWorkbookAccessPassword(): string | undefined {
+  return process.env.WORKBOOK_ACCESS_PASSWORD;
+}
+
 export async function hasOwnerAccess(): Promise<boolean> {
   const cookieStore = await cookies();
   const token = cookieStore.get(OWNER_COOKIE_NAME)?.value;
