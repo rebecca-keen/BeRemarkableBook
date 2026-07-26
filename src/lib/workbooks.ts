@@ -110,7 +110,7 @@ export const workbooks: Workbook[] = [
     description:
       "Turn experiences into stories people remember. CLEAR framework worksheets, five story templates, a SUCCESs audit, and a seven-day practice plan for interviews, meetings, and introductions.",
     capability: "Storytelling",
-    priceUsd: 29,
+    priceUsd: 99,
     pageCount: 22,
     exerciseCount: 8,
     relatedGuideSlug: "storytelling-that-gets-you-remembered",
@@ -338,7 +338,7 @@ export const workbooks: Workbook[] = [
     description:
       "Lead before you have the title. Kouzes and Posner self-assessment, Multipliers audit, influence mapping, stakeholder worksheet, and a 30-day lead-without-title plan.",
     capability: "Leadership",
-    priceUsd: 39,
+    priceUsd: 99,
     pageCount: 24,
     exerciseCount: 7,
     relatedGuideSlug: "lead-before-you-have-the-title",
@@ -545,7 +545,7 @@ export const workbooks: Workbook[] = [
     description:
       "Project calm confidence under pressure. Gravitas, communication, and appearance scorecard, presence audit, high-stakes prep worksheet, voice and body language checklist, and a 14-day plan.",
     capability: "Executive Presence",
-    priceUsd: 39,
+    priceUsd: 99,
     pageCount: 23,
     exerciseCount: 6,
     relatedGuideSlug: "calm-confidence-under-pressure",
@@ -755,7 +755,7 @@ export const workbooks: Workbook[] = [
     description:
       "Lead with AI, not behind it. AI literacy self-assessment, co-intelligence principles, human edge audit, workflow templates, and a team AI policy draft.",
     capability: "Leadership through AI",
-    priceUsd: 29,
+    priceUsd: 99,
     pageCount: 21,
     exerciseCount: 6,
     relatedGuideSlug: "lead-with-ai-not-behind-it",
@@ -935,7 +935,7 @@ export const workbooks: Workbook[] = [
     description:
       "Think one layer deeper than the first answer. VERIFY framework practice, bias spotting exercises, decision journal, second opinion worksheet, and Paul and Elder intellectual standards rubric.",
     capability: "Critical Thinking",
-    priceUsd: 29,
+    priceUsd: 99,
     pageCount: 22,
     exerciseCount: 7,
     relatedGuideSlug: "critical-thinking-beyond-the-first-answer",
@@ -1163,7 +1163,7 @@ export const workbooks: Workbook[] = [
     description:
       "Your first ninety days as a leader. Watkins transition map, STARS situation diagnosis, early wins planner, stakeholder conversation scripts, and 30-60-90 day plan template.",
     capability: "Emerging Leaders",
-    priceUsd: 39,
+    priceUsd: 99,
     pageCount: 25,
     exerciseCount: 7,
     relatedGuideSlug: "emerging-leaders-first-ninety-days",
