@@ -18,7 +18,7 @@ import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 import { SubstackIcon } from "@/components/icons/substack-icon";
 
 import { StructuredData } from "@/components/structured-data";
-import { WaitlistForm } from "@/components/waitlist-form";
+import { SubstackSubscribe } from "@/components/substack-subscribe";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -898,12 +898,12 @@ export default function Home() {
               Be first when the field guide and workshops launch.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Join the waitlist for launch updates, early excerpts, and
+              Subscribe on Substack for launch updates, early excerpts, and
               practical guides for professionals who want to stand out with
               presence and substance, not just prompts.
             </p>
             <div className="mx-auto mt-10 max-w-xl">
-              <WaitlistForm />
+              <SubstackSubscribe />
             </div>
             <p className="mt-5 text-sm text-muted-foreground">
               Questions?{" "}
