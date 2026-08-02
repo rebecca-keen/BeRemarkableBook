@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "Be Remarkable",
   url: "https://beremarkablebook.com",
   email: "hello@beremarkablebook.com",
-  title: "Be Remarkable | Career Launch Coaching for the AI Age",
+  title: "Be Remarkable | Professional Development for the AI Age",
   description:
-    "Career launch coaching for every stage: storytelling, leadership through AI, executive presence, critical thinking, and more. A field guide, workshops, and guides for standing out with substance.",
+    "Professional development for the AI age: build the storytelling, leadership, executive presence, and critical thinking skills AI can't replace. A field guide, workshops, and guides for standing out with substance at every career stage.",
   author: {
     name: "Rebecca Keen",
     initials: "RK",

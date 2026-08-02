@@ -266,10 +266,11 @@ export default function Home() {
                   </span>
                 </h1>
                 <p className="mt-7 max-w-xl text-lg leading-relaxed text-hero-foreground/72 md:text-xl">
-                  Career launch coaching through a field guide, workshops, and
-                  practical guides. Build storytelling, leadership, executive
-                  presence, and critical thinking that help you stand out with
-                  substance at any career stage when AI is everywhere.
+                  Professional development coaching through a field guide,
+                  workshops, and practical guides. Build storytelling,
+                  leadership, executive presence, and critical thinking that
+                  help you stand out with substance at any career stage when AI
+                  is everywhere.
                 </p>
                 <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                   {heroValueProps.map((point) => (
@@ -415,7 +416,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <p className="section-label">Why Be Remarkable</p>
             <h2 className="section-title mt-5">
-              Career launch coaching built for your stage, not just the
+              Professional development built for your stage, not just the
               C-suite.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
