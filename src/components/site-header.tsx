@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
+import { BrandMark } from "@/components/brand-mark";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -28,9 +29,7 @@ export function SiteHeader() {
           className="group flex items-center gap-3"
           onClick={() => setOpen(false)}
         >
-          <span className="flex size-9 items-center justify-center rounded-md bg-primary font-heading text-base text-primary-foreground">
-            B
-          </span>
+          <BrandMark />
           <div className="leading-tight">
             <p className="font-heading text-base text-foreground">Be Remarkable</p>
             <p className="hidden text-[10px] tracking-[0.22em] text-muted-foreground uppercase sm:block">

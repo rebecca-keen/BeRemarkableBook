@@ -40,6 +40,10 @@ export const siteConfig = {
   ],
   ogImageAlt:
     "Be Remarkable: career launch coaching for standing out with substance in the AI age",
+  latestPost: {
+    title: "The skills AI can't fake",
+    url: "https://beremarkablebook.substack.com/p/the-skills-ai-cant-fake",
+  },
   book: {
     name: "Be Remarkable",
     description:

@@ -905,6 +905,17 @@ export default function Home() {
             <div className="mx-auto mt-10 max-w-xl">
               <SubstackSubscribe />
             </div>
+            <p className="mt-6 text-sm text-muted-foreground">
+              Latest post:{" "}
+              <a
+                href={siteConfig.latestPost.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-foreground underline-offset-4 hover:underline"
+              >
+                {siteConfig.latestPost.title}
+              </a>
+            </p>
             <p className="mt-5 text-sm text-muted-foreground">
               Questions?{" "}
               <a

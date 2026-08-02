@@ -1,3 +1,4 @@
+import { BrandMark } from "@/components/brand-mark";
 import { LinkedinIcon } from "@/components/icons/linkedin-icon";
 import { SubstackIcon } from "@/components/icons/substack-icon";
 import { Separator } from "@/components/ui/separator";
@@ -42,9 +43,7 @@ export function SiteFooter() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex size-9 items-center justify-center rounded-md bg-hero-foreground/10 font-heading text-base">
-                B
-              </span>
+              <BrandMark className="bg-hero-foreground/10 text-hero-foreground" />
               <p className="font-heading text-lg">Be Remarkable</p>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-hero-foreground/70">
