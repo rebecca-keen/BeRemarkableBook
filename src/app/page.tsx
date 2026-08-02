@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 
 import { LinkedinIcon } from "@/components/icons/linkedin-icon";
+import { SubstackIcon } from "@/components/icons/substack-icon";
 
 import { StructuredData } from "@/components/structured-data";
 import { WaitlistForm } from "@/components/waitlist-form";
@@ -693,21 +694,38 @@ export default function Home() {
                 <p className="mt-2 text-sm font-medium text-muted-foreground md:text-base">
                   {siteConfig.author.title}
                 </p>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="mt-6 rounded-md"
-                >
-                  <a
-                    href={siteConfig.author.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="rounded-md"
                   >
-                    <LinkedinIcon />
-                    Connect on LinkedIn
-                  </a>
-                </Button>
+                    <a
+                      href={siteConfig.author.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <LinkedinIcon />
+                      Connect on LinkedIn
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="rounded-md"
+                  >
+                    <a
+                      href={siteConfig.author.substack}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <SubstackIcon />
+                      Read on Substack
+                    </a>
+                  </Button>
+                </div>
                 <blockquote className="mt-8 w-full rounded-lg border border-border/80 bg-background p-6 text-left md:p-8">
                   <Quote
                     className="size-7 text-accent/80"

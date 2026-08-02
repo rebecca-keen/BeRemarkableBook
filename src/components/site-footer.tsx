@@ -1,4 +1,5 @@
 import { LinkedinIcon } from "@/components/icons/linkedin-icon";
+import { SubstackIcon } from "@/components/icons/substack-icon";
 import { Separator } from "@/components/ui/separator";
 import { siteConfig } from "@/lib/site-config";
 import Link from "next/link";
@@ -23,6 +24,13 @@ const footerLinks = {
       href: siteConfig.author.linkedin,
       label: "LinkedIn",
       external: true,
+      icon: "linkedin" as const,
+    },
+    {
+      href: siteConfig.author.substack,
+      label: "Substack",
+      external: true,
+      icon: "substack" as const,
     },
   ],
 };
@@ -78,8 +86,11 @@ export function SiteFooter() {
                       ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
                   >
-                    {"external" in link && link.external ? (
+                    {"icon" in link && link.icon === "linkedin" ? (
                       <LinkedinIcon />
+                    ) : null}
+                    {"icon" in link && link.icon === "substack" ? (
+                      <SubstackIcon />
                     ) : null}
                     {link.label}
                   </a>

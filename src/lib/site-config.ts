@@ -10,6 +10,7 @@ export const siteConfig = {
     initials: "RK",
     image: "/rebecca-keen.jpg",
     linkedin: "https://www.linkedin.com/in/rebeccakeen/",
+    substack: "https://substack.com/@beremarkablebook",
     title: "Author and career launch coach",
     bio: "For more than 15 years, Rebecca Keen has helped professionals at every career stage build storytelling, leadership, executive presence, and the human skills that AI cannot replace.",
     expertise: [
