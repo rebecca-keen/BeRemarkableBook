@@ -6,13 +6,13 @@
 
 Everyone says professionals need to "tell better stories." Almost no one tells you how. So over the years I went to the people who studied this seriously, and I read the field closely: Carmine Gallo, Nancy Duarte, Matthew Dicks, John Walsh, and Annette Simmons.
 
-Here is what I actually kept from each one, and how it shows up when I coach someone for a high-stakes interview, a promotion case, or a room they need to win over. This is the practical version, the part that survives contact with real careers.
+Here is what I actually kept from each one, and how it shows up when I help someone actually develop the skill of storytelling. This is the practical version, the part that survives contact with real work.
 
 ## 1. Carmine Gallo, "The Storyteller's Secret"
 
 **What I kept:** emotion is not decoration. It is the delivery system.
 
-Gallo's work made something clear to me that a lot of professionals resist: people do not remember your data, they remember how your data made them feel. The facts get you taken seriously. The feeling gets you remembered. When I work with someone who is technically excellent but keeps getting passed over, this is almost always the missing piece. They are arguing when they should be moving.
+Gallo's work made something clear to me that a lot of professionals resist: people do not remember your data, they remember how your data made them feel. The facts get you taken seriously. The feeling gets you remembered. When I work with someone who is technically excellent but whose ideas never quite land, this is almost always the missing piece. They are arguing when they should be moving.
 
 **How I use it:** before you refine what you are saying, find the moment in it that you actually care about. If nothing in your story moves you, it will not move anyone else.
 
@@ -22,7 +22,7 @@ Gallo's work made something clear to me that a lot of professionals resist: peop
 
 Duarte's biggest gift is a shape. A strong story is not a flat list of accomplishments. It moves back and forth between the world as it is and the world as it could be, and that contrast is what creates tension and momentum. And the hero is never you. The hero is the audience. You are the guide.
 
-**How I use it:** when someone tells me their "story" and it is really just a resume read aloud, we rebuild it around a gap. Here is where things were. Here is where they could be. Here is the part you played in closing that distance.
+**How I use it:** when someone tells me their "story" and it is really just a list of accomplishments read aloud, we rebuild it around a gap. Here is where things were. Here is where they could be. Here is the part you played in closing that distance.
 
 ## 3. Matthew Dicks, "Storyworthy"
 
@@ -46,7 +46,7 @@ It is easy to assume some people are just "naturals" and the rest of us should s
 
 Simmons showed me that influence has less to do with being right and more to do with being trusted, and that certain kinds of stories build that trust on purpose. Two of them changed how I coach: the "who I am" story and the "why I am here" story. Before anyone will follow your argument, they quietly decide whether they trust you. These stories answer that question before it is even asked.
 
-**How I use it:** in almost every interview or leadership setting, I have people prepare their "who I am" and "why I am here" first. Not because it is on the agenda, but because it is the thing the room is actually deciding.
+**How I use it:** when I help someone develop as a communicator or a leader, we build their "who I am" and "why I am here" stories first. Not because they are on any agenda, but because they are what a room quietly decides before anything else.
 
 ## Why this matters more now, not less
 
