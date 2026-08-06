@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/guides", label: "Guides" },
   { href: "/workbooks", label: "Workbooks" },
   { href: "/#about", label: "About" },
+  { href: "/#work-with-me", label: "Work with me" },
   { href: "/#faq", label: "FAQ" },
   { href: "/#waitlist", label: "Waitlist" },
 ];

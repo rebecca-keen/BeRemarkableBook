@@ -853,6 +853,78 @@ export default function Home() {
         </section>
 
         <section
+          id="work-with-me"
+          className="border-y border-border/70 bg-secondary/35"
+        >
+          <div className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28">
+            <div className="max-w-2xl">
+              <p className="section-label">Work with me</p>
+              <h2 className="section-title mt-5">
+                Ready to build these skills for real?
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+                Reading is a start. Real change comes from deliberate practice
+                with someone in your corner. Here are the two ways to work with
+                me directly.
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-4 md:grid-cols-2">
+              <div className="flex flex-col rounded-lg border border-border/80 bg-background p-8">
+                <div className="flex size-11 items-center justify-center rounded-md bg-primary/8 text-primary">
+                  <Briefcase className="size-5" aria-hidden="true" />
+                </div>
+                <h3 className="mt-5 font-heading text-2xl text-foreground">
+                  One-on-one coaching
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Focused, personal work on the skills that matter most for you:
+                  storytelling, leadership, executive presence, and critical
+                  thinking. We find the gaps worth closing first and build real
+                  capability, one deliberate rep at a time.
+                </p>
+                <Button asChild size="lg" className="mt-6 w-fit rounded-md">
+                  <a
+                    href={`mailto:${siteConfig.email}?subject=Coaching%20inquiry`}
+                  >
+                    Inquire about coaching
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </a>
+                </Button>
+              </div>
+
+              <div className="flex flex-col rounded-lg border border-border/80 bg-background p-8">
+                <div className="flex size-11 items-center justify-center rounded-md bg-primary/8 text-primary">
+                  <Users className="size-5" aria-hidden="true" />
+                </div>
+                <h3 className="mt-5 font-heading text-2xl text-foreground">
+                  Workshops for teams
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Practical, hands-on sessions for teams and groups who want to
+                  develop the human skills AI cannot replace. Built around your
+                  people and where they are, from emerging talent to experienced
+                  leaders.
+                </p>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="mt-6 w-fit rounded-md"
+                >
+                  <a
+                    href={`mailto:${siteConfig.email}?subject=Workshop%20inquiry`}
+                  >
+                    Inquire about a workshop
+                    <ArrowRight className="size-4" aria-hidden="true" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
           id="faq"
           className="mx-auto max-w-6xl px-6 py-20 md:px-8 md:py-28"
         >
