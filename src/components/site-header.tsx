@@ -16,7 +16,7 @@ const navLinks = [
   { href: "/#about", label: "About" },
   { href: "/#work-with-me", label: "Work with me" },
   { href: "/#faq", label: "FAQ" },
-  { href: "/#waitlist", label: "Subscribe" },
+  { href: "/#waitlist", label: "Newsletter" },
 ];
 
 export function SiteHeader() {
