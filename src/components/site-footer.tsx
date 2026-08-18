@@ -18,7 +18,7 @@ const footerLinks = {
     { href: "/organizations", label: "For organizations" },
   ],
   connect: [
-    { href: "/#waitlist", label: "Join waitlist" },
+    { href: "/#waitlist", label: "Subscribe" },
     {
       href: "mailto:hello@beremarkablebook.com",
       label: "hello@beremarkablebook.com",
@@ -49,7 +49,7 @@ export function SiteFooter() {
               <p className="font-heading text-lg">Be Remarkable</p>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-hero-foreground/70">
-              Career launch coaching through a field guide, workshops, and
+              Professional development through a field guide, workshops, and
               guides. Storytelling, leadership through AI, executive presence,
               and critical thinking for every career stage.
             </p>

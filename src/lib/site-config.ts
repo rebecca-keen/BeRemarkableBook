@@ -11,10 +11,10 @@ export const siteConfig = {
     image: "/rebecca-keen.jpg",
     linkedin: "https://www.linkedin.com/in/rebeccakeen/",
     substack: "https://beremarkablebook.substack.com",
-    title: "Author and career launch coach",
+    title: "Author and professional development coach",
     bio: "For more than 15 years, Rebecca Keen has helped professionals at every career stage build storytelling, leadership, executive presence, and the human skills that AI cannot replace.",
     expertise: [
-      "Career launch coaching",
+      "Professional development",
       "Storytelling for professionals",
       "Leadership through AI",
       "Executive presence",
@@ -23,7 +23,7 @@ export const siteConfig = {
     ],
   },
   keywords: [
-    "career launch coaching",
+    "professional development",
     "storytelling skills",
     "leadership development",
     "leadership through AI",
@@ -34,12 +34,12 @@ export const siteConfig = {
     "early career",
     "experienced professionals",
     "AI age",
-    "professional development",
+    "skill development",
     "communication skills",
     "career coaching",
   ],
   ogImageAlt:
-    "Be Remarkable: career launch coaching for standing out with substance in the AI age",
+    "Be Remarkable: professional development for standing out with substance in the AI age",
   latestPost: {
     title: "The skills AI can't fake",
     url: "https://beremarkablebook.substack.com/p/the-skills-ai-cant-fake",

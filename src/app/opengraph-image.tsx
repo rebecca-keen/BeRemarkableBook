@@ -53,7 +53,7 @@ export default function OpenGraphImage() {
               opacity: 0.88,
             }}
           >
-            Career launch coaching for every stage: storytelling, leadership
+            Professional development for every stage: storytelling, leadership
             through AI, executive presence, and more
           </div>
         </div>

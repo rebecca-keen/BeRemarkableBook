@@ -107,6 +107,12 @@ export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps
             </div>
           ) : null}
           <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild className="rounded-md">
+              <Link href="/book/chapter-1">
+                Read Chapter 1 free
+                <ArrowRight className="size-4" aria-hidden="true" />
+              </Link>
+            </Button>
             <Button asChild variant="outline" className="rounded-md">
               <Link href="/guides">
                 Read the free guides

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Guides | Be Remarkable",
     description:
-      "Practical guides on career launch coaching capabilities: storytelling, leadership, executive presence, and more.",
+      "Practical guides on professional development capabilities: storytelling, leadership, executive presence, and more.",
     url: `${siteConfig.url}/guides`,
     type: "website",
   },
@@ -142,13 +142,13 @@ export default function GuidesPage() {
             Get more guides when the field guide launches.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Join the waitlist for launch updates, early excerpts, and new
+            Subscribe for launch updates, early excerpts, and new
             practical guides for professionals building real presence at every
             career stage.
           </p>
           <Button asChild size="lg" className="mt-8 rounded-md">
             <Link href="/#waitlist">
-              Join the waitlist
+              Subscribe
               <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
           </Button>

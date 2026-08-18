@@ -125,8 +125,8 @@ export function getArticleSchema(guide: Guide) {
     articleSection: guide.capability,
     keywords: [
       guide.capability.toLowerCase(),
-      "career launch coaching",
       "professional development",
+      "skill development",
       "early career",
       "job changers",
       "experienced professionals",

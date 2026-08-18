@@ -16,7 +16,7 @@ const navLinks = [
   { href: "/#about", label: "About" },
   { href: "/#work-with-me", label: "Work with me" },
   { href: "/#faq", label: "FAQ" },
-  { href: "/#waitlist", label: "Waitlist" },
+  { href: "/#waitlist", label: "Subscribe" },
 ];
 
 export function SiteHeader() {
@@ -56,7 +56,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <Button asChild size="sm" className="hidden rounded-md sm:inline-flex">
-            <a href="/#waitlist">Join waitlist</a>
+            <a href="/#waitlist">Subscribe</a>
           </Button>
           <button
             type="button"
@@ -92,7 +92,7 @@ export function SiteHeader() {
           ))}
           <Button asChild className="mt-2 w-full rounded-md">
             <a href="#waitlist" onClick={() => setOpen(false)}>
-              Join waitlist
+              Subscribe
             </a>
           </Button>
         </nav>

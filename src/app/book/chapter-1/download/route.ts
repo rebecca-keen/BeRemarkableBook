@@ -2,20 +2,12 @@ import { NextResponse } from "next/server";
 
 import { getBookChapterBySlug } from "@/lib/book";
 import { getBookChapterPdfBuffer } from "@/lib/book-pdf";
-import { hasOwnerAccess } from "@/lib/workbook-access";
 
-export async function GET(request: Request) {
+export async function GET() {
   const chapter = getBookChapterBySlug("chapter-1");
 
   if (!chapter) {
     return NextResponse.json({ error: "Chapter not found" }, { status: 404 });
-  }
-
-  const ownerAccess = await hasOwnerAccess();
-
-  if (!ownerAccess) {
-    const redirectUrl = new URL("/workbooks/unlock", request.url);
-    return NextResponse.redirect(redirectUrl);
   }
 
   const pdfBuffer = await getBookChapterPdfBuffer(chapter);

@@ -33,9 +33,9 @@ import { siteConfig } from "@/lib/site-config";
 
 const faqItems: FaqItem[] = [
   {
-    question: "What is career launch coaching?",
+    question: "What is professional development?",
     answer:
-      "Career launch coaching helps you stand out with substance at pivotal career moments: your first role, a career change, or a seasoned hire where you want the extra edge. Be Remarkable combines a field guide, workshops, and practical guides on storytelling, leadership through AI, executive presence, critical thinking, and emerging leader development.",
+      "Professional development helps you stand out with substance at pivotal career moments: your first role, a career change, or a seasoned hire where you want the extra edge. Be Remarkable combines a field guide, workshops, and practical guides on storytelling, leadership through AI, executive presence, critical thinking, and emerging leader development.",
   },
   {
     question: "Who is Be Remarkable for?",
@@ -60,7 +60,7 @@ const faqItems: FaqItem[] = [
 ];
 
 const heroValueProps = [
-  "Career launch coaching for every stage",
+  "Professional development for every stage",
   "Six capability areas that compound over time",
   "Book, workshops, and guides, not courses alone",
   "15 years developing professionals who stand out",
@@ -183,7 +183,7 @@ const audienceCategories = [
 const differentiators = [
   {
     typical: "Built for senior executives only",
-    remarkable: "Career launch coaching for every stage",
+    remarkable: "Professional development for every stage",
   },
   {
     typical: "Courses or coaching only",
@@ -293,7 +293,7 @@ export default function Home() {
                     className="h-12 rounded-md bg-accent px-7 text-base font-semibold text-accent-foreground hover:bg-accent/90"
                   >
                     <a href="#waitlist">
-                      Join the waitlist for early access
+                      Subscribe for early access
                       <ArrowRight className="size-4" aria-hidden="true" />
                     </a>
                   </Button>
@@ -331,7 +331,7 @@ export default function Home() {
                       Communication skills for standing out with substance.
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-hero-foreground/60">
-                      Career launch coaching for the age of AI. Storytelling,
+                      Professional development for the age of AI. Storytelling,
                       leadership, executive presence, and critical thinking from
                       over 15 years coaching professionals to tell stronger
                       stories, lead with influence, and show up with substance.
@@ -389,7 +389,7 @@ export default function Home() {
         <section className="border-b border-border/70 bg-card">
           <div className="mx-auto max-w-6xl px-6 py-12 md:px-8 md:py-14">
             <p className="text-center text-xs font-semibold tracking-[0.22em] text-muted-foreground uppercase">
-              Career launch coaching for
+              Professional development for
             </p>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {audienceCategories.map((category) => (
@@ -473,7 +473,7 @@ export default function Home() {
           <div className="mt-10">
             <Button asChild size="lg" className="rounded-md">
               <a href="#waitlist">
-                Get on the waitlist
+                Subscribe
                 <ArrowRight className="size-4" aria-hidden="true" />
               </a>
             </Button>
@@ -505,7 +505,7 @@ export default function Home() {
                 communication skills that actually separate them.
               </p>
               <p>
-                This is career launch coaching for standing out with substance:
+                This is professional development for standing out with substance:
                 how to tell stories with clarity, how to lead with influence at
                 any stage, how to project executive presence, and how to think
                 critically when AI makes the first answer easy.
@@ -764,7 +764,7 @@ export default function Home() {
                     Be Remarkable is not a side project or a rebrand of
                     executive coaching. It is the work I have been doing all
                     along, now shaped into a field guide, workshops, and
-                    practical guides for career launch moments at any stage,
+                    practical guides for pivotal career moments at any stage,
                     not only when you are starting out.
                   </p>
                   <p>
@@ -994,7 +994,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <p className="section-label">FAQ</p>
             <h2 className="section-title mt-5">
-              Questions about career launch coaching in the AI age
+              Questions about professional development in the AI age
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               Straight answers on storytelling, leadership, executive presence,
