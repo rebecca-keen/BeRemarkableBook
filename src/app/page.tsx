@@ -303,7 +303,7 @@ export default function Home() {
                     size="lg"
                     className="h-12 rounded-md border-hero-foreground/20 bg-transparent px-7 text-base text-hero-foreground hover:bg-hero-foreground/8 hover:text-hero-foreground"
                   >
-                    <a href="#why-different">See what makes us different</a>
+                    <a href="/book/chapter-1">Read Chapter 1 free</a>
                   </Button>
                 </div>
               </div>
