@@ -10,7 +10,7 @@ export const chapter1: BookChapter = {
   sections: [
     {
       type: "paragraph",
-      text: "Marcus is thirty-one, a product manager who spent six years in healthcare technology and is trying to move into enterprise software. His resume gets callbacks. His interviews do not convert. After four months of searching and a string of polite rejections, he is starting to wonder if the problem is him. He has strong experience and thoughtful answers, but he watches peers with thinner track records walk away with offers while he leaves rooms feeling competent and forgettable.",
+      text: "Marcus is thirty-one, a product manager who spent six years in healthcare technology and is trying to move into enterprise software. He looks strong on paper and gets the callbacks. His interviews do not convert. After four months of searching and a string of polite rejections, he is starting to wonder if the problem is him. He has strong experience and thoughtful answers, but he watches peers with thinner track records walk away with offers while he leaves rooms feeling competent and forgettable.",
     },
     {
       type: "paragraph",
@@ -43,7 +43,7 @@ export const chapter1: BookChapter = {
     },
     {
       type: "paragraph",
-      text: "Most career advice treats visibility as a reward for good work. Do excellent work, the story goes, and someone will eventually notice. That advice was never fully true. In the age of AI, it is actively dangerous.",
+      text: "The conventional wisdom treats visibility as a reward for good work. Do excellent work, the story goes, and someone will eventually notice. That belief was never fully true. In the age of AI, it is actively dangerous.",
     },
     {
       type: "paragraph",
@@ -242,7 +242,7 @@ export const chapter1: BookChapter = {
     },
     {
       type: "paragraph",
-      text: "The second pillar is connection. This is where storytelling lives, along with listening, empathy, and the ability to make your idea about the listener's problem rather than your resume. Connection is what turns a correct answer into an answer that moves someone. It is the difference between informing and influencing. In later chapters, you will see connection show up in leadership, in difficult conversations, and in how emerging leaders build trust in their first ninety days.",
+      text: "The second pillar is connection. This is where storytelling lives, along with listening, empathy, and the ability to make your idea about the listener's problem rather than your own credentials. Connection is what turns a correct answer into an answer that moves someone. It is the difference between informing and influencing. In later chapters, you will see connection show up in leadership, in difficult conversations, and in how emerging leaders build trust in their first ninety days.",
     },
     {
       type: "paragraph",
