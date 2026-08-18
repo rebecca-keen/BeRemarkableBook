@@ -15,6 +15,7 @@ const footerLinks = {
     { href: "/#faq", label: "FAQ" },
     { href: "/#about", label: "About" },
     { href: "/#work-with-me", label: "Work with me" },
+    { href: "/organizations", label: "For organizations" },
   ],
   connect: [
     { href: "/#waitlist", label: "Join waitlist" },
