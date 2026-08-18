@@ -27,7 +27,7 @@ export const guides: Guide[] = [
     slug: "storytelling-that-gets-you-remembered",
     title: "Storytelling That Gets You Remembered",
     description:
-      "A practical framework for turning your experiences into stories that stick in interviews, meetings, and introductions. Built for professionals at any career stage who need substance, not scripts.",
+      "Build storytelling skills that turn your experience into stories people remember, in interviews, meetings, and introductions. A practical framework for professionals at any career stage who want substance, not scripts.",
     capability: "Storytelling",
     publishedAt: "2026-07-19",
     readingTimeMinutes: 12,
@@ -209,7 +209,7 @@ export const guides: Guide[] = [
     slug: "lead-before-you-have-the-title",
     title: "How to Lead Before You Have the Title",
     description:
-      "Practical ways to lead with clarity and influence without formal authority. For professionals at any stage who want to move work forward in any setting.",
+      "How to lead without a title: build the leadership skills, influence, and clarity to move work forward at any career stage, with or without formal authority.",
     capability: "Leadership",
     publishedAt: "2026-07-19",
     readingTimeMinutes: 12,
@@ -414,7 +414,7 @@ export const guides: Guide[] = [
     slug: "calm-confidence-under-pressure",
     title: "Executive Presence Under Pressure",
     description:
-      "How to project presence in high-stakes moments through preparation, body language, voice, and mindset. For professionals who need to be heard when the room gets tense.",
+      "How to build executive presence under pressure through preparation, body language, voice, and mindset. A practical guide for professionals who need to be heard when the stakes are high.",
     capability: "Executive Presence",
     publishedAt: "2026-07-19",
     readingTimeMinutes: 12,
@@ -612,7 +612,7 @@ export const guides: Guide[] = [
     slug: "lead-with-ai-not-behind-it",
     title: "How to Lead with AI Without Falling Behind It",
     description:
-      "A practical guide to using AI as a leadership tool without outsourcing your judgment, voice, or credibility. For managers and individual contributors at every career stage.",
+      "How to lead with AI without outsourcing your judgment, voice, or credibility. A practical guide to using AI as a leadership tool for managers and individual contributors at every career stage.",
     capability: "Leadership through AI",
     publishedAt: "2026-07-20",
     readingTimeMinutes: 12,
@@ -787,7 +787,7 @@ export const guides: Guide[] = [
     slug: "critical-thinking-beyond-the-first-answer",
     title: "Critical Thinking When Everyone Has the Same Answer",
     description:
-      "How to evaluate ideas, challenge assumptions, and make better decisions when AI makes the first draft easy for everyone. Practical tools for any role or career stage.",
+      "How to build critical thinking skills: evaluate ideas, challenge assumptions, and make better decisions when AI makes the first draft easy for everyone. Practical tools for any role or career stage.",
     capability: "Critical Thinking",
     publishedAt: "2026-07-20",
     readingTimeMinutes: 12,
@@ -945,7 +945,7 @@ export const guides: Guide[] = [
     slug: "emerging-leaders-first-ninety-days",
     title: "The Emerging Leader's First Ninety Days",
     description:
-      "A field guide for new and newly promoted leaders who need to earn trust, set direction, and show up with substance fast. For first-time managers and rising contributors.",
+      "A field guide for emerging leaders: how new and newly promoted managers earn trust, set direction, and build leadership skills fast in the first ninety days.",
     capability: "Emerging Leaders",
     publishedAt: "2026-07-20",
     readingTimeMinutes: 13,
