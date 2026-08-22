@@ -12,11 +12,16 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+import { BuyWorkbookButton } from "@/components/buy-workbook-button";
 import { DownloadWorkbookButton } from "@/components/download-workbook-button";
 import { Button } from "@/components/ui/button";
 import { capabilityOrder } from "@/lib/guides";
 import { siteConfig } from "@/lib/site-config";
 import { hasOwnerAccess } from "@/lib/workbook-access";
+import {
+  BUNDLE_PRICE_USD,
+  isBundleCheckoutConfigured,
+} from "@/lib/workbook-prices";
 import {
   workbooks,
   type WorkbookCapability,
@@ -61,6 +66,8 @@ export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps
     capability,
     workbooks: workbooks.filter((workbook) => workbook.capability === capability),
   }));
+
+  const bundleConfigured = isBundleCheckoutConfigured();
 
   return (
     <div className="overflow-hidden">
@@ -125,6 +132,33 @@ export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
             </Button>
+          </div>
+
+          <div className="mt-12 rounded-2xl border border-accent/30 bg-background p-8 shadow-sm md:p-10">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+              <div className="max-w-xl">
+                <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+                  Best value
+                </p>
+                <h2 className="mt-3 font-heading text-2xl text-foreground md:text-3xl">
+                  Get all six workbooks
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Every capability in one bundle: storytelling, leadership,
+                  executive presence, leadership through AI, critical thinking,
+                  and emerging leaders. ${BUNDLE_PRICE_USD} for all six, versus
+                  $234 bought individually.
+                </p>
+              </div>
+              <div className="shrink-0">
+                <BuyWorkbookButton
+                  bundle
+                  priceUsd={BUNDLE_PRICE_USD}
+                  checkoutConfigured={bundleConfigured}
+                  label={`Get all six · $${BUNDLE_PRICE_USD}`}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

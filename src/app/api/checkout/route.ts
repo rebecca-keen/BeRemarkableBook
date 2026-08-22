@@ -2,27 +2,28 @@ import { NextResponse } from "next/server";
 
 import { siteConfig } from "@/lib/site-config";
 import { getStripe, isStripeConfigured } from "@/lib/stripe";
-import { getWorkbookPriceId } from "@/lib/workbook-prices";
+import { getBundlePriceId, getWorkbookPriceId } from "@/lib/workbook-prices";
 import { getWorkbookBySlug } from "@/lib/workbooks";
 
 export async function POST(request: Request) {
-  let body: { slug?: string };
+  let body: { slug?: string; bundle?: boolean };
 
   try {
-    body = (await request.json()) as { slug?: string };
+    body = (await request.json()) as { slug?: string; bundle?: boolean };
   } catch {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
+  const isBundle = body.bundle === true;
   const slug = body.slug;
 
-  if (!slug) {
+  if (!isBundle && !slug) {
     return NextResponse.json({ error: "Workbook slug is required." }, { status: 400 });
   }
 
-  const workbook = getWorkbookBySlug(slug);
+  const workbook = isBundle ? null : getWorkbookBySlug(slug as string);
 
-  if (!workbook) {
+  if (!isBundle && !workbook) {
     return NextResponse.json({ error: "Workbook not found." }, { status: 404 });
   }
 
@@ -36,12 +37,14 @@ export async function POST(request: Request) {
     );
   }
 
-  const priceId = getWorkbookPriceId(slug);
+  const priceId = isBundle ? getBundlePriceId() : getWorkbookPriceId(slug as string);
 
   if (!priceId) {
     return NextResponse.json(
       {
-        error: `No Stripe price ID configured for ${workbook.title}.`,
+        error: isBundle
+          ? "No Stripe price ID configured for the workbook bundle."
+          : `No Stripe price ID configured for ${workbook?.title}.`,
       },
       { status: 503 },
     );
@@ -60,9 +63,13 @@ export async function POST(request: Request) {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: [{ price: priceId, quantity: 1 }],
-      success_url: `${siteConfig.url}/workbooks/${slug}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${siteConfig.url}/workbooks/${slug}`,
-      metadata: { slug },
+      success_url: isBundle
+        ? `${siteConfig.url}/workbooks/bundle/success?session_id={CHECKOUT_SESSION_ID}`
+        : `${siteConfig.url}/workbooks/${slug}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: isBundle
+        ? `${siteConfig.url}/workbooks`
+        : `${siteConfig.url}/workbooks/${slug}`,
+      metadata: isBundle ? { bundle: "all" } : { slug: slug as string },
     });
 
     if (!session.url) {

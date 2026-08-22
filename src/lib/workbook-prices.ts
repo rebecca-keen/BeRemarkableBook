@@ -30,3 +30,13 @@ export function getWorkbookPriceEnvKeys(): Record<string, string> {
 export function getConfiguredWorkbookSlugs(): string[] {
   return getAllWorkbookSlugs().filter((slug) => isWorkbookCheckoutConfigured(slug));
 }
+
+export const BUNDLE_PRICE_USD = 99;
+
+export function getBundlePriceId(): string | null {
+  return process.env.STRIPE_PRICE_BUNDLE ?? null;
+}
+
+export function isBundleCheckoutConfigured(): boolean {
+  return Boolean(getBundlePriceId());
+}

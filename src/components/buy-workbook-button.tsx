@@ -7,9 +7,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 type BuyWorkbookButtonProps = {
-  slug: string;
+  slug?: string;
   priceUsd: number;
   checkoutConfigured: boolean;
+  bundle?: boolean;
+  label?: string;
   size?: "default" | "lg";
   className?: string;
 };
@@ -18,6 +20,8 @@ export function BuyWorkbookButton({
   slug,
   priceUsd,
   checkoutConfigured,
+  bundle = false,
+  label,
   size = "lg",
   className,
 }: BuyWorkbookButtonProps) {
@@ -32,7 +36,7 @@ export function BuyWorkbookButton({
       const response = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug }),
+        body: JSON.stringify(bundle ? { bundle: true } : { slug }),
       });
 
       const data = (await response.json()) as { url?: string; error?: string };
@@ -66,7 +70,7 @@ export function BuyWorkbookButton({
           </>
         ) : (
           <>
-            Get this workbook · ${priceUsd}
+            {label ?? `Get this workbook · $${priceUsd}`}
             <ArrowRight className="size-4" aria-hidden="true" />
           </>
         )}

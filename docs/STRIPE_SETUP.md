@@ -15,17 +15,19 @@ works, then repeat the key/price steps in **live mode**.
 ## 2. Create the six products
 
 In the Stripe Dashboard → **Products → Add product**, create one product per
-workbook, each with a **one-time** price (e.g. $99). After saving, open each
-price and copy its **Price ID** (looks like `price_...`).
+workbook (each a **one-time** price of **$39**), plus one **bundle** product at
+**$99**. After saving, open each price and copy its **Price ID** (looks like
+`price_...`).
 
-| Workbook | Env variable |
-| --- | --- |
-| Storytelling | `STRIPE_PRICE_STORYTELLING` |
-| Leadership | `STRIPE_PRICE_LEADERSHIP` |
-| Executive Presence | `STRIPE_PRICE_EXECUTIVE_PRESENCE` |
-| Leadership through AI | `STRIPE_PRICE_LEADERSHIP_AI` |
-| Critical Thinking | `STRIPE_PRICE_CRITICAL_THINKING` |
-| Emerging Leaders | `STRIPE_PRICE_EMERGING_LEADERS` |
+| Product | Price | Env variable |
+| --- | --- | --- |
+| Storytelling Workbook | $39 | `STRIPE_PRICE_STORYTELLING` |
+| Leadership Workbook | $39 | `STRIPE_PRICE_LEADERSHIP` |
+| Executive Presence Workbook | $39 | `STRIPE_PRICE_EXECUTIVE_PRESENCE` |
+| Leadership through AI Workbook | $39 | `STRIPE_PRICE_LEADERSHIP_AI` |
+| Critical Thinking Workbook | $39 | `STRIPE_PRICE_CRITICAL_THINKING` |
+| Emerging Leaders Workbook | $39 | `STRIPE_PRICE_EMERGING_LEADERS` |
+| The Complete Workbook Bundle (all 6) | $99 | `STRIPE_PRICE_BUNDLE` |
 
 ## 3. Get your API keys
 
