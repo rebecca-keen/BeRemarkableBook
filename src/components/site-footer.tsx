@@ -104,7 +104,34 @@ export function SiteFooter() {
         <Separator className="my-10 bg-hero-foreground/10" />
 
         <div className="flex flex-col gap-3 text-sm text-hero-foreground/55 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} Be Remarkable. All rights reserved.</p>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+            <p>
+              © {new Date().getFullYear()} Be Remarkable. All rights reserved.
+            </p>
+            <nav
+              aria-label="Legal"
+              className="flex flex-wrap gap-x-5 gap-y-2 text-xs"
+            >
+              <Link
+                href="/privacy"
+                className="text-hero-foreground/55 transition-colors hover:text-hero-foreground"
+              >
+                Privacy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-hero-foreground/55 transition-colors hover:text-hero-foreground"
+              >
+                Terms
+              </Link>
+              <Link
+                href="/refund"
+                className="text-hero-foreground/55 transition-colors hover:text-hero-foreground"
+              >
+                Refund
+              </Link>
+            </nav>
+          </div>
           <div className="flex flex-col gap-2 md:items-end">
             <Link
               href="/workbooks/unlock"

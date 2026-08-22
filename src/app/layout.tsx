@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
+import { CookieNotice } from "@/components/cookie-notice";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { siteConfig } from "@/lib/site-config";
@@ -99,6 +101,8 @@ export default function RootLayout({
           {children}
         </main>
         <SiteFooter />
+        <CookieNotice />
+        <Analytics />
       </body>
     </html>
   );
