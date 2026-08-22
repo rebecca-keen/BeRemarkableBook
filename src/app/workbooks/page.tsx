@@ -133,33 +133,6 @@ export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps
               </Link>
             </Button>
           </div>
-
-          <div className="mt-12 rounded-2xl border border-accent/30 bg-background p-8 shadow-sm md:p-10">
-            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-              <div className="max-w-xl">
-                <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
-                  Best value
-                </p>
-                <h2 className="mt-3 font-heading text-2xl text-foreground md:text-3xl">
-                  Get all six workbooks
-                </h2>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  Every capability in one bundle: storytelling, leadership,
-                  executive presence, leadership through AI, critical thinking,
-                  and emerging leaders. ${BUNDLE_PRICE_USD} for all six, versus
-                  $234 bought individually.
-                </p>
-              </div>
-              <div className="shrink-0">
-                <BuyWorkbookButton
-                  bundle
-                  priceUsd={BUNDLE_PRICE_USD}
-                  checkoutConfigured={bundleConfigured}
-                  label={`Get all six · $${BUNDLE_PRICE_USD}`}
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -246,6 +219,41 @@ export default async function WorkbooksPage({ searchParams }: WorkbooksPageProps
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-8 md:px-8 md:pb-12">
+        <div className="rounded-lg border border-accent/40 bg-card p-7 md:p-8">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-xl">
+              <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+                Best value
+              </p>
+              <h2 className="mt-4 font-heading text-xl leading-snug text-foreground md:text-2xl">
+                Get all six workbooks
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+                Every capability in one bundle: storytelling, leadership,
+                executive presence, leadership through AI, critical thinking,
+                and emerging leaders.
+              </p>
+              <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+                <span>6 workbooks</span>
+                <span className="font-medium text-foreground">
+                  ${BUNDLE_PRICE_USD}
+                </span>
+                <span className="text-muted-foreground/70 line-through">$234</span>
+              </div>
+            </div>
+            <div className="shrink-0">
+              <BuyWorkbookButton
+                bundle
+                priceUsd={BUNDLE_PRICE_USD}
+                checkoutConfigured={bundleConfigured}
+                label={`Get all six · $${BUNDLE_PRICE_USD}`}
+              />
+            </div>
+          </div>
         </div>
       </section>
 
