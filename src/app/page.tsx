@@ -254,7 +254,7 @@ export default function Home() {
             <div className="grid items-end gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
               <div>
                 <p className="text-xs font-semibold tracking-[0.24em] text-hero-foreground/55 uppercase">
-                  Coming soon · beremarkablebook.com
+                  Guides and workbooks available now
                 </p>
                 <h1
                   id="hero-heading"
@@ -292,8 +292,8 @@ export default function Home() {
                     size="lg"
                     className="h-12 rounded-md bg-accent px-7 text-base font-semibold text-accent-foreground hover:bg-accent/90"
                   >
-                    <a href="#waitlist">
-                      Subscribe for early access
+                    <a href="/workbooks">
+                      Browse the workbooks
                       <ArrowRight className="size-4" aria-hidden="true" />
                     </a>
                   </Button>
@@ -339,6 +339,92 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        <section
+          aria-label="What's available"
+          className="border-b border-border/70 bg-background"
+        >
+          <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
+            <div className="max-w-2xl">
+              <p className="section-label">Start here</p>
+              <h2 className="section-title mt-4">What&apos;s available now</h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+                Start free, then go deeper when you are ready. The full field
+                guide is on the way.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              <div className="flex flex-col rounded-lg border border-border/80 bg-card p-7">
+                <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+                  Free
+                </p>
+                <h3 className="mt-4 font-heading text-xl text-foreground md:text-2xl">
+                  Guides &amp; Chapter 1
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Six practical guides on the human skills AI cannot replace,
+                  plus the free first chapter of the book. Read them now, no
+                  signup required.
+                </p>
+                <div className="mt-6 flex flex-col items-start gap-3">
+                  <Button asChild className="rounded-md">
+                    <a href="/guides">
+                      Read the guides
+                      <ArrowRight className="size-4" aria-hidden="true" />
+                    </a>
+                  </Button>
+                  <Button asChild variant="link" className="h-auto justify-start p-0">
+                    <a href="/book/chapter-1">Read Chapter 1 free</a>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="flex flex-col rounded-lg border border-accent/40 bg-card p-7">
+                <p className="text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+                  Available now
+                </p>
+                <h3 className="mt-4 font-heading text-xl text-foreground md:text-2xl">
+                  Workbooks
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Put the guides into practice with printable workbooks:
+                  self-assessments, exercises, and action plans. $39 each, or
+                  all six for $99.
+                </p>
+                <div className="mt-6">
+                  <Button asChild className="rounded-md">
+                    <a href="/workbooks">
+                      Shop workbooks
+                      <ArrowRight className="size-4" aria-hidden="true" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="flex flex-col rounded-lg border border-border/80 bg-card p-7">
+                <p className="text-xs font-semibold tracking-[0.18em] text-muted-foreground uppercase">
+                  Coming soon
+                </p>
+                <h3 className="mt-4 font-heading text-xl text-foreground md:text-2xl">
+                  The field guide
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Be Remarkable, the full book, plus workshops. Subscribe on
+                  Substack for launch updates and early excerpts.
+                </p>
+                <div className="mt-6">
+                  <Button asChild variant="outline" className="rounded-md">
+                    <a href="#waitlist">
+                      Join the list
+                      <ArrowRight className="size-4" aria-hidden="true" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
