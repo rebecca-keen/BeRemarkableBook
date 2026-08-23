@@ -373,12 +373,12 @@ export default function Home() {
                 <div className="mt-6 flex flex-col items-start gap-3">
                   <Button asChild className="rounded-md">
                     <a href="/guides">
-                      Read the guides
+                      Read the free guides
                       <ArrowRight className="size-4" aria-hidden="true" />
                     </a>
                   </Button>
                   <Button asChild variant="link" className="h-auto justify-start p-0">
-                    <a href="/book/chapter-1">Read Chapter 1 free</a>
+                    <a href="/book/chapter-1">Read Chapter 1 now</a>
                   </Button>
                 </div>
               </div>
@@ -413,8 +413,9 @@ export default function Home() {
                   The field guide
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  Be Remarkable, the full book, plus workshops. Subscribe on
-                  Substack for launch updates and early excerpts.
+                  Be Remarkable, the full book, is coming to Amazon soon, with
+                  workshops to follow. Follow along on Substack to hear the
+                  moment it lands.
                 </p>
                 <div className="mt-6">
                   <Button asChild variant="outline" className="rounded-md">
@@ -1115,14 +1116,14 @@ export default function Home() {
           className="border-t border-border/70 bg-[linear-gradient(180deg,oklch(0.985_0.006_85),oklch(0.965_0.014_78))]"
         >
           <div className="mx-auto max-w-3xl px-6 py-20 text-center md:px-8 md:py-28">
-            <p className="section-label">Stay in the loop</p>
+            <p className="section-label">On Substack</p>
             <h2 className="section-title mt-5">
-              Be first when the field guide and workshops launch.
+              Practical advice for standing out, straight to your inbox.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              Subscribe on Substack for launch updates, early excerpts, and
-              practical guides for professionals who want to stand out with
-              presence and substance, not just prompts.
+              My Substack is where I share practical, no-fluff advice on the
+              human skills that set you apart, plus first word when the field
+              guide and workshops launch. Subscribe and follow along.
             </p>
             <div className="mx-auto mt-10 max-w-xl">
               <SubstackSubscribe />
