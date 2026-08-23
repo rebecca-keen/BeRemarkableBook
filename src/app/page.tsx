@@ -293,7 +293,7 @@ export default function Home() {
                     className="h-12 rounded-md bg-accent px-7 text-base font-semibold text-accent-foreground hover:bg-accent/90"
                   >
                     <a href="/workbooks">
-                      Browse the workbooks
+                      Shop the workbooks · from $39
                       <ArrowRight className="size-4" aria-hidden="true" />
                     </a>
                   </Button>
@@ -303,7 +303,7 @@ export default function Home() {
                     size="lg"
                     className="h-12 rounded-md border-hero-foreground/20 bg-transparent px-7 text-base text-hero-foreground hover:bg-hero-foreground/8 hover:text-hero-foreground"
                   >
-                    <a href="/book/chapter-1">Read Chapter 1 free</a>
+                    <a href="/guides">Read the free guides</a>
                   </Button>
                 </div>
               </div>
