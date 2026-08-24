@@ -35,7 +35,7 @@ const faqItems: FaqItem[] = [
   {
     question: "What is professional development?",
     answer:
-      "Professional development helps you stand out with substance at pivotal career moments: your first role, a career change, or a seasoned hire where you want the extra edge. Be Remarkable combines a field guide, workshops, and practical guides on storytelling, leadership through AI, executive presence, critical thinking, and emerging leader development.",
+      "Professional development helps you stand out with substance at pivotal career moments: your first role, a career change, or a seasoned hire where you want the extra edge. Be Remarkable combines the book, workshops, and practical guides on storytelling, leadership through AI, executive presence, critical thinking, and emerging leader development.",
   },
   {
     question: "Who is Be Remarkable for?",
@@ -55,7 +55,7 @@ const faqItems: FaqItem[] = [
   {
     question: "How is Be Remarkable different from typical communication training?",
     answer:
-      "Most programs target senior executives with courses or coaching alone. Be Remarkable combines a field guide, workshops, and practical guides for professionals at every stage, with 15 years of hands-on experience and a focus on capability, not corporate fluff.",
+      "Most programs target senior executives with courses or coaching alone. Be Remarkable combines the book, workshops, and practical guides for professionals at every stage, with 15 years of hands-on experience and a focus on capability, not corporate fluff.",
   },
 ];
 
@@ -187,7 +187,7 @@ const differentiators = [
   },
   {
     typical: "Courses or coaching only",
-    remarkable: "Field guide, workshops, and practical guides",
+    remarkable: "The book, workshops, and practical guides",
   },
   {
     typical: "Polish and performance focus",
@@ -213,7 +213,7 @@ const methodPoints = [
   {
     title: "Book, workshops, and guides",
     description:
-      "A field guide you can read, sessions you can attend, and resources you can use on the job right away.",
+      "The book you can read, sessions you can attend, and resources you can use on the job right away.",
   },
   {
     title: "Human skills in the AI era",
@@ -266,7 +266,7 @@ export default function Home() {
                   </span>
                 </h1>
                 <p className="mt-7 max-w-xl text-lg leading-relaxed text-hero-foreground/72 md:text-xl">
-                  Professional development coaching through a field guide,
+                  Professional development coaching through the book,
                   workshops, and practical guides. Build storytelling,
                   leadership, executive presence, and critical thinking that
                   help you stand out with substance at any career stage when AI
@@ -352,8 +352,8 @@ export default function Home() {
               <p className="section-label">Start here</p>
               <h2 className="section-title mt-4">What&apos;s available now</h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                Start free, then go deeper when you are ready. The full field
-                guide is on the way.
+                Start free, then go deeper when you are ready. The full book is
+                on the way.
               </p>
             </div>
 
@@ -410,10 +410,11 @@ export default function Home() {
                   Coming soon
                 </p>
                 <h3 className="mt-4 font-heading text-xl text-foreground md:text-2xl">
-                  The field guide
+                  The book
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  Be Remarkable, the full book, is coming to Amazon soon, with
+                  The Substack gives you practical advice today. The book drills
+                  down deeper. Be Remarkable is coming to Amazon soon, with
                   workshops to follow. Follow along on Substack to hear the
                   moment it lands.
                 </p>
@@ -447,7 +448,7 @@ export default function Home() {
                 },
                 {
                   title: "Book plus workshops",
-                  text: "A field guide you read, sessions you attend, guides you use on the job.",
+                  text: "The book you read, sessions you attend, guides you use on the job.",
                 },
                 {
                   title: "Built for the AI age",
@@ -850,7 +851,7 @@ export default function Home() {
                   <p>
                     Be Remarkable is not a side project or a rebrand of
                     executive coaching. It is the work I have been doing all
-                    along, now shaped into a field guide, workshops, and
+                    along, now shaped into the book, workshops, and
                     practical guides for pivotal career moments at any stage,
                     not only when you are starting out.
                   </p>
@@ -1122,8 +1123,8 @@ export default function Home() {
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
               My Substack is where I share practical, no-fluff advice on the
-              human skills that set you apart, plus first word when the field
-              guide and workshops launch. Subscribe and follow along.
+              human skills that set you apart, plus first word when the book and
+              workshops launch. Subscribe and follow along.
             </p>
             <div className="mx-auto mt-10 max-w-xl">
               <SubstackSubscribe />

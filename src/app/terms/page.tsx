@@ -32,7 +32,7 @@ export default function TermsPage() {
             What we offer
           </h2>
           <p>
-            Be Remarkable provides a field guide, guides, printable workbooks, a
+            Be Remarkable provides a book, guides, printable workbooks, a
             newsletter, and coaching and workshop services focused on
             professional skill development. Some resources are free and some are
             paid.

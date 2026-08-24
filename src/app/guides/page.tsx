@@ -80,7 +80,7 @@ export default function GuidesPage() {
         <div className="mx-auto max-w-3xl px-6 py-14 text-center md:px-8 md:py-16">
           <p className="section-label">Stay in the loop</p>
           <h2 className="section-title mt-5">
-            Get more guides when the field guide launches.
+            Get more guides when the book launches.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             Subscribe for launch updates, early excerpts, and new practical

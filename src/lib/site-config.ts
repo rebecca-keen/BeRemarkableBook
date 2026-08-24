@@ -4,7 +4,7 @@ export const siteConfig = {
   email: "hello@beremarkablebook.com",
   title: "Be Remarkable | Professional Development for the AI Age",
   description:
-    "Professional development for the AI age: build the storytelling, leadership, executive presence, and critical thinking skills AI can't replace. A field guide, workshops, and guides for standing out with substance at every career stage.",
+    "Professional development for the AI age: build the storytelling, leadership, executive presence, and critical thinking skills AI can't replace. The book, workshops, and guides for standing out with substance at every career stage.",
   author: {
     name: "Rebecca Keen",
     initials: "RK",
@@ -47,6 +47,6 @@ export const siteConfig = {
   book: {
     name: "Be Remarkable",
     description:
-      "A field guide for standing out with substance through storytelling, leadership, executive presence, and critical thinking in the age of AI.",
+      "A practical guide for standing out with substance through storytelling, leadership, executive presence, and critical thinking in the age of AI.",
   },
 } as const;

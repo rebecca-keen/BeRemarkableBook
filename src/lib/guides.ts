@@ -188,7 +188,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more field guides like this? Subscribe for launch updates, early excerpts, and new practical resources on storytelling, leadership, and the capabilities AI cannot replace.",
+        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources on storytelling, leadership, and the capabilities AI cannot replace.",
       },
       {
         type: "heading",
@@ -393,7 +393,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more field guides like this? Subscribe for launch updates, early excerpts, and new practical resources on leadership, influence, and the capabilities AI cannot replace.",
+        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources on leadership, influence, and the capabilities AI cannot replace.",
       },
       {
         type: "heading",
@@ -591,7 +591,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more field guides like this? Subscribe for launch updates, early excerpts, and new practical resources on executive presence and the capabilities AI cannot replace.",
+        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources on executive presence and the capabilities AI cannot replace.",
       },
       {
         type: "heading",
@@ -766,7 +766,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more field guides like this? Subscribe for launch updates, early excerpts, and new practical resources on leadership through AI and the capabilities that still require a human in the loop.",
+        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources on leadership through AI and the capabilities that still require a human in the loop.",
       },
       {
         type: "heading",
@@ -924,7 +924,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more field guides like this? Subscribe for launch updates, early excerpts, and new practical resources on critical thinking and the capabilities AI cannot replace.",
+        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources on critical thinking and the capabilities AI cannot replace.",
       },
       {
         type: "heading",
@@ -945,7 +945,7 @@ export const guides: Guide[] = [
     slug: "emerging-leaders-first-ninety-days",
     title: "The Emerging Leader's First Ninety Days",
     description:
-      "A field guide for emerging leaders: how new and newly promoted managers earn trust, set direction, and build leadership skills fast in the first ninety days.",
+      "A guide for emerging leaders: how new and newly promoted managers earn trust, set direction, and build leadership skills fast in the first ninety days.",
     capability: "Emerging Leaders",
     publishedAt: "2026-07-20",
     readingTimeMinutes: 13,
@@ -1124,7 +1124,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more field guides like this? Subscribe for launch updates, early excerpts, and new practical resources for emerging leaders at every career stage.",
+        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources for emerging leaders at every career stage.",
       },
       {
         type: "heading",

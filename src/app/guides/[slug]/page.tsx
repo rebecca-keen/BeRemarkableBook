@@ -106,7 +106,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
               Subscribe for launch updates, early excerpts from the
-              field guide, and new practical resources on storytelling,
+              book, and new practical resources on storytelling,
               leadership, executive presence, and more.
             </p>
             <Button asChild size="lg" className="mt-6 rounded-md">

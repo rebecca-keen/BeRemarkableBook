@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Chapter 1 (free)",
   description:
-    "Read Chapter 1 of Be Remarkable, free. A field guide to developing the human skills AI cannot replace.",
+    "Read Chapter 1 of Be Remarkable, free. A guide to developing the human skills AI cannot replace.",
   alternates: {
     canonical: `${siteConfig.url}/book/chapter-1`,
   },

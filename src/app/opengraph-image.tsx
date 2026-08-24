@@ -67,7 +67,7 @@ export default function OpenGraphImage() {
           }}
         >
           <span>Be Remarkable</span>
-          <span style={{ opacity: 0.7 }}>Field guide · Workshops · Guides</span>
+          <span style={{ opacity: 0.7 }}>Book · Workshops · Guides</span>
         </div>
       </div>
     ),
