@@ -80,3 +80,27 @@ CAPTION: You're not bad at presence. You're untrained. That's fixable. #careerto
 ## Bio (for your TikTok profile)
 Career coach. The human skills AI can't replace, for people who were never taught them. Free guides + Chapter 1 below.
 [link: beremarkablebook.com]
+
+---
+
+## 6. YAP FORMAT — Gen Z rant (deliver fast, high energy, like venting to a friend)
+
+HOOK: "Okay I need to yap about this for a second because it is driving me insane."
+
+SCRIPT (loose, ranty, do not over-rehearse):
+"Everyone is out here saying Gen Z cannot communicate, cannot handle the workplace, cannot talk to people. And I am like, okay, but who was supposed to teach them? Companies gutted their training. Nobody is mentoring anyone anymore. You got thrown into a job after two years of school over a screen, and we are shocked a 22-year-old has not mastered executive presence yet? Be so for real. Communication is a skill. It is not a vibe you are born with. You can literally learn it. Which is the entire reason I do what I do. Free guides in my bio. Go."
+
+CAPTION: yapping but make it a PSA. it's not a personality problem, it's a skill. #careertok #genz #newgrad #yap
+
+---
+
+## 7. YAP FORMAT — "yapping is a skill" (the reframe, very on-brand)
+
+HOOK: "Hot take. Yapping is a skill, and it is about to be the most valuable one you have."
+
+SCRIPT:
+"Everyone makes fun of yappers. But think about it. Being able to just talk. Hold a room. Tell a story. Explain your thinking out loud and make people actually care. That is the one thing AI cannot do for you. AI can write it down. It cannot be you in the meeting. So if you are a good yapper, that is not a flaw. That is a career skill most people are terrible at. Learn to aim it, point it at one clear idea, and you are unstoppable. That is not yapping anymore. That is presence."
+
+ON-SCREEN TEXT: "Yapping = talking, storytelling, presence" → "AI can't do that for you" → "Aim it at one idea = presence"
+
+CAPTION: your yapping is a career skill actually. aim it. #careertok #yap #ai #professionaldevelopment #presence
