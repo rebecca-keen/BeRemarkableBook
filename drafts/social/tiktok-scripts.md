@@ -79,7 +79,7 @@ CAPTION: You're not bad at presence. You're untrained. That's fixable. #careerto
 
 ## Bio (for your TikTok profile)
 Career coach. The human skills AI can't replace, for people who were never taught them. Free guides + Chapter 1 below.
-[link: beremarkablebook.com]
+[link: beremarkablebook.com/links]
 
 ---
 
