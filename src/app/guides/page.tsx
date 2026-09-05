@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Guides",
   description:
-    "Practical guides on storytelling, leadership, executive presence, leadership through AI, critical thinking, and emerging leaders. Free field-guide resources from Be Remarkable.",
+    "Practical guides on storytelling, leadership, executive presence, leadership through AI, critical thinking, and emerging leaders. Free resources from Be Remarkable.",
   alternates: {
     canonical: `${siteConfig.url}/guides`,
   },
@@ -32,7 +32,7 @@ export default function GuidesPage() {
             Practical guides for standing out with substance.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Free field-guide resources on the human skills AI cannot replace:
+            Free resources on the human skills AI cannot replace:
             storytelling, leadership, executive presence, leadership through AI,
             critical thinking, and emerging leaders.
           </p>
