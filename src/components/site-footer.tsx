@@ -7,6 +7,7 @@ import Link from "next/link";
 
 const footerLinks = {
   explore: [
+    { href: "/professional-development", label: "Professional development" },
     { href: "/#why-different", label: "Why us" },
     { href: "/#mission", label: "Mission" },
     { href: "/#skills", label: "Skills" },
