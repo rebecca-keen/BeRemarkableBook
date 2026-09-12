@@ -105,9 +105,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
               Want more guides like this?
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-              Subscribe for launch updates, early excerpts from the
-              book, and new practical resources on storytelling,
-              leadership, executive presence, and more.
+              I share practical advice on storytelling, leadership, executive
+              presence, and more on my Substack. Subscribe and read along.
             </p>
             <Button asChild size="lg" className="mt-6 rounded-md">
               <Link href="/#waitlist">

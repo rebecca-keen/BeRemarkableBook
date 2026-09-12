@@ -421,7 +421,7 @@ export default function Home() {
                 <div className="mt-6">
                   <Button asChild variant="outline" className="rounded-md">
                     <a href="#waitlist">
-                      Join the list
+                      Read on Substack
                       <ArrowRight className="size-4" aria-hidden="true" />
                     </a>
                   </Button>

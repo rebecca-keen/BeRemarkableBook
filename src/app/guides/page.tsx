@@ -78,13 +78,13 @@ export default function GuidesPage() {
 
       <section className="border-t border-border/70 bg-[linear-gradient(180deg,oklch(0.985_0.006_85),oklch(0.965_0.014_78))]">
         <div className="mx-auto max-w-3xl px-6 py-14 text-center md:px-8 md:py-16">
-          <p className="section-label">Stay in the loop</p>
+          <p className="section-label">On Substack</p>
           <h2 className="section-title mt-5">
-            Get more guides when the book launches.
+            More practical advice, every week.
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Subscribe for launch updates, early excerpts, and new practical
-            guides for professionals building real skills at every career stage.
+            My Substack is where I share practical, no-fluff advice on the human
+            skills that set you apart. Subscribe and read along.
           </p>
           <Button asChild size="lg" className="mt-8 rounded-md">
             <Link href="/#waitlist">

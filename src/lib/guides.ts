@@ -188,7 +188,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources on storytelling, leadership, and the capabilities AI cannot replace.",
+        text: "Want more guides like this? Subscribe to my Substack for practical advice on storytelling, leadership, and the capabilities AI cannot replace.",
       },
       {
         type: "heading",
@@ -393,7 +393,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources on leadership, influence, and the capabilities AI cannot replace.",
+        text: "Want more guides like this? Subscribe to my Substack for practical advice on leadership, influence, and the capabilities AI cannot replace.",
       },
       {
         type: "heading",
@@ -591,7 +591,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources on executive presence and the capabilities AI cannot replace.",
+        text: "Want more guides like this? Subscribe to my Substack for practical advice on executive presence and the capabilities AI cannot replace.",
       },
       {
         type: "heading",
@@ -766,7 +766,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources on leadership through AI and the capabilities that still require a human in the loop.",
+        text: "Want more guides like this? Subscribe to my Substack for practical advice on leadership through AI and the capabilities that still require a human in the loop.",
       },
       {
         type: "heading",
@@ -924,7 +924,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources on critical thinking and the capabilities AI cannot replace.",
+        text: "Want more guides like this? Subscribe to my Substack for practical advice on critical thinking and the capabilities AI cannot replace.",
       },
       {
         type: "heading",
@@ -1124,7 +1124,7 @@ export const guides: Guide[] = [
       },
       {
         type: "paragraph",
-        text: "Want more guides like this? Subscribe for launch updates, early excerpts, and new practical resources for emerging leaders at every career stage.",
+        text: "Want more guides like this? I share practical advice for emerging leaders on my Substack. Subscribe and read along.",
       },
       {
         type: "heading",
