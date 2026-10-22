@@ -1,5 +1,6 @@
 import type { Guide } from "@/lib/guides";
 import { siteConfig } from "@/lib/site-config";
+import type { Workbook } from "@/lib/workbooks";
 
 export type FaqItem = {
   question: string;
@@ -132,6 +133,43 @@ export function getArticleSchema(guide: Guide) {
       "experienced professionals",
     ],
     inLanguage: "en-US",
+  };
+}
+
+export function getWorkbookProductSchema(
+  workbook: Workbook,
+  checkoutAvailable: boolean,
+) {
+  const url = `${siteConfig.url}/workbooks/${workbook.slug}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: workbook.title,
+    description: workbook.description,
+    url,
+    image: `${siteConfig.url}/opengraph-image`,
+    category: workbook.capability,
+    brand: {
+      "@type": "Brand",
+      name: siteConfig.name,
+    },
+    ...(checkoutAvailable
+      ? {
+          offers: {
+            "@type": "Offer",
+            url,
+            price: workbook.priceUsd.toFixed(2),
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            seller: {
+              "@type": "Organization",
+              name: siteConfig.name,
+              url: siteConfig.url,
+            },
+          },
+        }
+      : {}),
   };
 }
 

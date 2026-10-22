@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { BuyWorkbookButton } from "@/components/buy-workbook-button";
 import { DownloadWorkbookButton } from "@/components/download-workbook-button";
 import { WorkbookPreviewContent } from "@/components/workbook-preview-content";
+import { WorkbookStructuredData } from "@/components/workbook-structured-data";
 import { Button } from "@/components/ui/button";
 import { isWorkbookCheckoutConfigured } from "@/lib/workbook-prices";
 import { hasWorkbookAccess } from "@/lib/workbook-access";
@@ -65,6 +66,10 @@ export default async function WorkbookPage({ params }: WorkbookPageProps) {
 
   return (
     <article className="workbook-page overflow-hidden">
+      <WorkbookStructuredData
+        workbook={workbook}
+        checkoutAvailable={checkoutConfigured}
+      />
       <header className="border-b border-border/70 bg-secondary/35">
         <div className="mx-auto max-w-3xl px-6 py-12 md:px-8 md:py-20">
           <Link
